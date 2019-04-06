@@ -1,5 +1,5 @@
 <?php
-echo "Test";
+echo "Home Page";
 ?>
 
 <!DOCTYPE html>
