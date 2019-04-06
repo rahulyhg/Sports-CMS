@@ -1,5 +1,5 @@
 <?php
-echo "Meaw";
+echo "Home Page";
 ?>
 
 <!DOCTYPE html>
