@@ -1,4 +1,77 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body
 {
     margin: 10px;
+}
+
+/* Player image placeholder */
+#player-image
+{
+	padding: 100px;
+	border: 1px solid black;
+	margin: 10% 0 0 5%;
+}
+
+
+/* Player name and region details placeholder */
+.player-details-border
+{
+  width: fit-content;	
+  margin: 0 0 0 8.25%;
+}
+
+/* Encompasses both single and double ratings for positioning */
+.player-ratings-border
+{
+  width: fit-content;
+  text-align: center;
+  line-height: 1.3;
+  margin: 0 0 0 8%;
+  border-collapse: separate;
+  border-spacing: 10px; 
+}
+
+.rating-header
+{
+  font-size: 36px;
+}
+
+.rating-value
+{
+  font-size: 20px;
+}
+
+
+/* Placeholder header until implemented for purposes of positioning elements */
+.top-border
+{
+	position: fixed;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+  	height: 10%;
+  	border: 1px solid;
+  	color: blue;
+  	text-align: center;
+}
+
+
+/* Placeholder footer until implemented for purposes of positioning elements */
+.bottom-border
+{
+	position: fixed;
+  	left: 0;
+  	bottom: 0;
+  	width: 100%;
+  	height: 15%;
+  	border: 1px solid;
+  	color: blue;
+  	text-align: center;
+  	overflow-y: hidden;
 }
