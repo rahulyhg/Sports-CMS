@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Test</title>
-</head>
-<body>
-
-<?php
-
-include_once './includes/database.php';
-include_once './includes/functions.php';
-
-
-$object = new Query();
-$output = $object->getAllPlayers();
-
-while($row = $output->fetch())
-{
-	echo $row["player_id"]. "    ".$row["given_name"];
-}
-
+<?php 
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  $title = "Peters Ratings | Home";
+  include("$path/includes/header.php");
+  include("$path/includes/navigation.php");
 ?>
 
+WORK HERE
 
-</body>
-</html>
+<?php
+  include("$path/includes/footer.php");
+?>

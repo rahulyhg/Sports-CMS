@@ -4,7 +4,7 @@ class Database
 {
 	public function connect()
 	{
-		$config = parse_ini_file("./configurations/config.ini");
+		$config = parse_ini_file("$path/configurations/config.ini");
 
 		try
 		{

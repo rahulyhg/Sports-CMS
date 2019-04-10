@@ -7,8 +7,14 @@
 
 body
 {
-    margin: 10px;
+  margin: 10px;
 }
+
+/* Home Page */
+
+
+
+/* Profile Page */
 
 /* Player image placeholder */
 #player-image
@@ -74,4 +80,9 @@ body
   	color: blue;
   	text-align: center;
   	overflow-y: hidden;
+}
+
+h1
+{
+  color: red;
 }
