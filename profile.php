@@ -1,9 +1,8 @@
 <?php
-  $path = $_SERVER['DOCUMENT_ROOT'];
   $title = "Peters Ratings | Profile";
   
-  include("$path/includes/header.php");
-  include("$path/includes/navigation.php");
+  include("./includes/header.php");
+  include("./includes/navigation.php");
 ?>
 
 <div class="image-border">
@@ -22,6 +21,6 @@
 </div>
 
 <?php
-  include("$path/includes/footer.php");
+  include("./includes/footer.php");
 ?>
 

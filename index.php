@@ -1,12 +1,21 @@
 <?php 
-  $path = $_SERVER['DOCUMENT_ROOT'];
   $title = "Peters Ratings | Home";
-  include("$path/includes/header.php");
-  include("$path/includes/navigation.php");
+  include("./includes/header.php");
+  include("./includes/navigation.php");
 ?>
 
-WORK HERE
+<?php
+
+  $query = new Query();
+  $stuff = $query->getAllPlayers();
+
+  while($row = $stuff->fetch())
+  {
+  	echo $row["given_name"]." ".$row["family_name"];
+  }
+
+?>
 
 <?php
-  include("$path/includes/footer.php");
+  include("./includes/footer.php");
 ?>
