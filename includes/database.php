@@ -2,6 +2,11 @@
 
 class Database
 {
+	public function __construct()
+	{
+
+	}
+
 	public function connect()
 	{
 		$config = parse_ini_file("./configurations/config.ini");
@@ -19,6 +24,13 @@ class Database
 		{
 			echo "Database connection failed. Contact the server administrator";
 		}
+	}
+
+	public function query($query, $parameters = NULL)
+	{
+		$statement = $this->$connection->prepare($query);
+		$statement->execute($parameters);
+		return $statement;
 	}
 }	
 
