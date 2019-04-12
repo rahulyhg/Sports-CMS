@@ -5,288 +5,14 @@
 	box-sizing: border-box;
 }
 
-body
+@media screen and (min-width: 320px)
 {
-  margin: 10px;
-}
-
-
-/* Styling For Viewports 1920px And Above */
-
-@media screen and (min-width: 1920px)
-{
-
+  body
+  {
+    margin: 10px;
+  }
+  
   /* Navigation */
-
-  .container
-  {
-    width: 100%;
-    margin: 0 auto;   
-  }
-
-  header
-  {
-    background: #55d6aa;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 10%;
-  }
-
-  header::after
-  {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  .logo
-  {
-    float: left;
-    padding: 5px 0;
-  }
-
-  nav
-  {
-    float: right;
-    top: 0;
-  }
-
-  nav ul 
-  {
-    margin: 10;
-    padding: 0;
-    list-style: none;
-  }
-
-  nav li 
-  {
-    display: inline-block;
-    margin-left: 30px;
-    padding-top: 2px;
-    top: 0;
-    position: relative;   
-  }
-
-  nav a
-  {
-    color: beige;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-  }
-
-  nav a:hover
-  {
-    color: black;
-    transition: all ease-in-out 250ms;
-  } 
-
-
-  /* Home Page */
-
-
-
-  /* Profile Page */
-
-  .player-profile-border
-  {
-    position: relative;
-    border: 1px solid black;
-    margin: 10% 0 0 5%;
-    display: inline-block;
-    width: 90%;       
-  }
-
-  /* Player image placeholder */
-  #player-image
-  {   
-    padding: 100px;
-    border: 1px solid blue;
-  }
-
-  .player-details-border
-  {
-    position: absolute;
-    top: 0;
-    left: 260px;
-    border: 1px solid black; 
-    height: 220px;
-  }
-
-  .player-bio
-  {
-    list-style: none;
-    line-height: 1.3;
-  }
-
-  .player-rating-table
-  {
-    position: absolute;
-    left: 0;
-    bottom: 0;    
-    text-align: center;
-    line-height: 1.3;   
-  }
-
-  .rating-value
-  {
-    border: 1px solid black;
-    font-size: 20px;
-  }
-
-  #sd
-  {    
-    float: right;
-    padding-left: 5px;
-    background-color: green;
-  }
-
-  .player-history-border
-  {
-    width: fit-content;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-  }
-
-  }
-
-  .player-history-table
-  {
-    margin-top: 20px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-  }
-
-} 
-
-
-/* Styling For Viewports Between 1680px and 900px  */
-
-@media screen and (max-width: 1680px)
-{
-
-/* Navigation */
-
-  .container
-  {
-    width: 100%;
-    margin: 0 auto;   
-  }
-
-  header
-  {
-    background: #55d6aa;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 10%;
-  }
-
-  header::after
-  {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  .logo
-  {
-    float: left;
-    padding: 5px 0;
-  }
-
-  nav
-  {
-    float: right;
-    top: 0;
-  }
-
-  nav ul 
-  {
-    margin: 10;
-    padding: 0;
-    list-style: none;
-  }
-
-  nav li 
-  {
-    display: inline-block;
-    margin-left: 30px;
-    padding-top: 2px;
-    top: 0;
-    position: relative;   
-  }
-
-  nav a
-  {
-    color: beige;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-  }
-
-  nav a:hover
-  {
-    color: black;
-    transition: all ease-in-out 250ms;
-  } 
-
-
-  /* Home Page */
-
-
-
-  /* Profile Page */
-
-  /* Player image placeholder */
-  #player-image
-  {
-    padding: 100px;
-    border: 1px solid black;
-    margin: 10% 0 0 5%;
-  }
-
-
-  /* Player name and region details placeholder */
-  .player-details-border
-  {
-    width: fit-content; 
-    margin: 0 0 0 11%;
-  }
-
-  /* Encompasses both single and double ratings for positioning */
-  .player-ratings-border
-  {
-    width: fit-content;
-    text-align: center;
-    line-height: 1.3;
-    margin: 0 0 0 10%;
-    border-collapse: separate;
-    border-spacing: 10px; 
-  }
-
-  .rating-header
-  {
-    font-size: 36px;
-  }
-
-  .rating-value
-  {
-    font-size: 20px;
-  }
-
-}
-
-
-
-/* Styling For Viewports 900px And Below */
-
-@media screen and (max-width: 900px)
-{
-
-/* Navigation */
 
   .container
   {
@@ -352,7 +78,6 @@ body
     transition: all ease-in-out 250ms;
   } 
 
-
   /* Home Page */
 
 
@@ -366,7 +91,6 @@ body
     border: 1px solid black;
     margin: 10% 0 0 5%;
   }
-
 
   /* Player name and region details placeholder */
   .player-details-border
@@ -395,5 +119,594 @@ body
   {
     font-size: 20px;
   }
+} 
 
+
+
+@media screen and (min-width: 480px)
+{
+  body
+  {
+    margin: 10px;
+  }
+  
+  /* Navigation */
+
+  .container
+  {
+    width: 100%;
+    margin: 0 auto;   
+  }
+
+  header
+  {
+    background: #55d6aa;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+  header::after
+  {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .logo
+  {
+    float: left;
+    padding: 5px 0;
+  }
+
+  nav
+  {
+    float: right;
+    top: 0;
+  }
+
+  nav ul 
+  {
+    margin: 10;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav li 
+  {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 2px;
+    top: 0;
+    position: relative;   
+  }
+
+  nav a
+  {
+    color:beige;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  nav a:hover
+  {
+    color: black;
+    transition: all ease-in-out 250ms;
+  } 
+
+  /* Home Page */
+
+
+
+  /* Profile Page */
+
+  /* Player image placeholder */
+  #player-image
+  {
+    padding: 100px;
+    border: 1px solid black;
+    margin: 10% 0 0 5%;
+  }
+
+  /* Player name and region details placeholder */
+  .player-details-border
+  {
+    width: fit-content; 
+    margin: 0 0 0 12%;
+  }
+
+  /* Encompasses both single and double ratings for positioning */
+  .player-ratings-border
+  {
+    width: fit-content;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 0 0 10%;
+    border-collapse: separate;
+    border-spacing: 10px; 
+  }
+
+  .rating-header
+  {
+    font-size: 36px;
+  }
+
+  .rating-value
+  {
+    font-size: 20px;
+  }
+}
+
+
+
+@media screen and (min-width: 768px)
+{
+  body
+  {
+    margin: 10px;
+  }
+  
+  /* Navigation */
+
+  .container
+  {
+    width: 100%;
+    margin: 0 auto;   
+  }
+
+  header
+  {
+    background: #55d6aa;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+  header::after
+  {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .logo
+  {
+    float: left;
+    padding: 5px 0;
+  }
+
+  nav
+  {
+    float: right;
+    top: 0;
+  }
+
+  nav ul 
+  {
+    margin: 10;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav li 
+  {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 2px;
+    top: 0;
+    position: relative;   
+  }
+
+  nav a
+  {
+    color:beige;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  nav a:hover
+  {
+    color: black;
+    transition: all ease-in-out 250ms;
+  } 
+
+  /* Home Page */
+
+
+
+  /* Profile Page */
+
+  /* Player image placeholder */
+  #player-image
+  {
+    padding: 100px;
+    border: 1px solid black;
+    margin: 10% 0 0 5%;
+  }
+
+  /* Player name and region details placeholder */
+  .player-details-border
+  {
+    width: fit-content; 
+    margin: 0 0 0 12%;
+  }
+
+  /* Encompasses both single and double ratings for positioning */
+  .player-ratings-border
+  {
+    width: fit-content;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 0 0 10%;
+    border-collapse: separate;
+    border-spacing: 10px; 
+  }
+
+  .rating-header
+  {
+    font-size: 36px;
+  }
+
+  .rating-value
+  {
+    font-size: 20px;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px)
+{
+  body
+  {
+    margin: 10px;
+  }
+  
+  /* Navigation */
+
+  .container
+  {
+    width: 100%;
+    margin: 0 auto;   
+  }
+
+  header
+  {
+    background: #55d6aa;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+  header::after
+  {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .logo
+  {
+    float: left;
+    padding: 5px 0;
+  }
+
+  nav
+  {
+    float: right;
+    top: 0;
+  }
+
+  nav ul 
+  {
+    margin: 10;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav li 
+  {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 2px;
+    top: 0;
+    position: relative;   
+  }
+
+  nav a
+  {
+    color:beige;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  nav a:hover
+  {
+    color: black;
+    transition: all ease-in-out 250ms;
+  } 
+
+  /* Home Page */
+
+
+
+  /* Profile Page */
+
+  /* Player image placeholder */
+  #player-image
+  {
+    padding: 100px;
+    border: 1px solid black;
+    margin: 10% 0 0 5%;
+  }
+
+  /* Player name and region details placeholder */
+  .player-details-border
+  {
+    width: fit-content; 
+    margin: 0 0 0 12%;
+  }
+
+  /* Encompasses both single and double ratings for positioning */
+  .player-ratings-border
+  {
+    width: fit-content;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 0 0 10%;
+    border-collapse: separate;
+    border-spacing: 10px; 
+  }
+
+  .rating-header
+  {
+    font-size: 36px;
+  }
+
+  .rating-value
+  {
+    font-size: 20px;
+  }
+}
+
+
+
+@media screen and (min-width: 1280px)
+{
+  body
+  {
+    margin: 10px;
+  }
+  
+  /* Navigation */
+
+  .container
+  {
+    width: 100%;
+    margin: 0 auto;   
+  }
+
+  header
+  {
+    background: #55d6aa;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+  header::after
+  {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .logo
+  {
+    float: left;
+    padding: 5px 0;
+  }
+
+  nav
+  {
+    float: right;
+    top: 0;
+  }
+
+  nav ul 
+  {
+    margin: 10;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav li 
+  {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 2px;
+    top: 0;
+    position: relative;   
+  }
+
+  nav a
+  {
+    color:beige;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  nav a:hover
+  {
+    color: black;
+    transition: all ease-in-out 250ms;
+  } 
+
+  /* Home Page */
+
+
+
+  /* Profile Page */
+
+  /* Player image placeholder */
+  #player-image
+  {
+    padding: 100px;
+    border: 1px solid black;
+    margin: 10% 0 0 5%;
+  }
+
+  /* Player name and region details placeholder */
+  .player-details-border
+  {
+    width: fit-content; 
+    margin: 0 0 0 12%;
+  }
+
+  /* Encompasses both single and double ratings for positioning */
+  .player-ratings-border
+  {
+    width: fit-content;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 0 0 10%;
+    border-collapse: separate;
+    border-spacing: 10px; 
+  }
+
+  .rating-header
+  {
+    font-size: 36px;
+  }
+
+  .rating-value
+  {
+    font-size: 20px;
+  }
+}
+
+
+
+@media screen and (min-width: 1920px)
+{
+  body
+  {
+    margin: 10px;
+  }
+  
+  /* Navigation */
+
+  .container
+  {
+    width: 100%;
+    margin: 0 auto;   
+  }
+
+  header
+  {
+    background: #55d6aa;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+  header::after
+  {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .logo
+  {
+    float: left;
+    padding: 5px 0;
+  }
+
+  nav
+  {
+    float: right;
+    top: 0;
+  }
+
+  nav ul 
+  {
+    margin: 10;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav li 
+  {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 2px;
+    top: 0;
+    position: relative;   
+  }
+
+  nav a
+  {
+    color:beige;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  nav a:hover
+  {
+    color: black;
+    transition: all ease-in-out 250ms;
+  } 
+
+  /* Home Page */
+
+
+
+  /* Profile Page */
+
+  /* Player image placeholder */
+  #player-image
+  {
+    padding: 100px;
+    border: 1px solid black;
+    margin: 10% 0 0 5%;
+  }
+
+  /* Player name and region details placeholder */
+  .player-details-border
+  {
+    width: fit-content; 
+    margin: 0 0 0 12%;
+  }
+
+  /* Encompasses both single and double ratings for positioning */
+  .player-ratings-border
+  {
+    width: fit-content;
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 0 0 10%;
+    border-collapse: separate;
+    border-spacing: 10px; 
+  }
+
+  .rating-header
+  {
+    font-size: 36px;
+  }
+
+  .rating-value
+  {
+    font-size: 20px;
+  }
 }
