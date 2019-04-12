@@ -1,5 +1,6 @@
 <?php
   $title = "Peters Ratings | Profile";
+  //require("./includes/initialize.php");
   
   include("./includes/header.php");
   include("./includes/navigation.php");

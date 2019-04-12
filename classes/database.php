@@ -2,14 +2,11 @@
 
 class Database
 {
+	private $connection;
+
 	public function __construct()
 	{
-
-	}
-
-	public function connect()
-	{
-		$config = parse_ini_file("./configurations/config.ini");
+		config = parse_ini_file("./configurations/config.ini");
 
 		try
 		{
@@ -17,8 +14,6 @@ class Database
 
 			$connection = new PDO($dsn, $config["username"], $config["password"]);
 			$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-			return $connection;
 		}
 		catch(PDOException $exception)
 		{

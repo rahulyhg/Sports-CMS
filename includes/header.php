@@ -1,9 +1,3 @@
-<?php 
-  session_start();
-  include("./includes/database.php");
-  include("./includes/functions.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
