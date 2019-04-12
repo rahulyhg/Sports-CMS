@@ -6,14 +6,14 @@ class Database
 
 	public function __construct()
 	{
-		config = parse_ini_file("./configurations/config.ini");
+		$config = parse_ini_file("./configurations/config.ini");
 
 		try
 		{
 			$dsn = "mysql:host=".$config["hostname"].";dbname=".$config["databaseName"].";charset=".$config["charset"];
 
-			$connection = new PDO($dsn, $config["username"], $config["password"]);
-			$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$this->connection = new PDO($dsn, $config["username"], $config["password"]);
+			$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
 		catch(PDOException $exception)
 		{
@@ -23,7 +23,7 @@ class Database
 
 	public function query($query, $parameters = NULL)
 	{
-		$statement = $this->$connection->prepare($query);
+		$statement = $this->connection->prepare($query);
 		$statement->execute($parameters);
 		return $statement;
 	}

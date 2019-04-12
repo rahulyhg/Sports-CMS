@@ -8,12 +8,13 @@
 
 <?php
 
-  //$stuff = $account->getAllPlayers();
+  $stuff = $account->getAllPlayers();
 
-  /*while($row = $stuff->fetch())
+  //while($row = $stuff->fetch())
+  while($row = $stuff->fetch())
   {
   	echo $row["given_name"]." ".$row["family_name"];
-  }*/
+  }
 
 ?>
 

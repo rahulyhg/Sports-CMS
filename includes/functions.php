@@ -1,6 +1,6 @@
 <?php
 
-public function redirect($url)
+function redirect($url)
 {
 	header("location: " . $url);
 	exit();

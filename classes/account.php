@@ -2,17 +2,24 @@
 
 class Account
 {
-	$database;
+	private $database;
 
 	public function __construct($database)
 	{
-		$this->$database = $database;
+		$this->database = $database;
+	}
+
+	public function register()
+	{
+
 	}
 
 	public function getAllPlayers()
 	{
-		$query = "SELECT * FROM player ORDER BY ASC";
-		return $database->query($query, null);
+		$query = "SELECT * FROM player";
+		$statement = $this->database->query($query, null);
+
+		return $statement;
 	}
 }
 
