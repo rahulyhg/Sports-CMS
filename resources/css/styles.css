@@ -93,11 +93,14 @@
     width: 90%;       
   }
 
-  /* Player image placeholder */
+  .player-image-border
+  {
+    display: inline-block;
+  }
+
   #player-image
   {   
     padding: 100px;
-    border: 1px solid blue;
   }
 
   .player-details-border
@@ -150,6 +153,11 @@
     margin-top: 20px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+  }
+
+  .player-history-table th
+  {
+    padding: 10px 10px;
   }
 } 
 
@@ -234,40 +242,80 @@
 
   /* Profile Page */
 
-  /* Player image placeholder */
-  #player-image
+  .player-profile-border
   {
-    padding: 100px;
+    position: relative;
     border: 1px solid black;
     margin: 10% 0 0 5%;
+    display: inline-block;
+    width: 90%;       
   }
 
-  /* Player name and region details placeholder */
+  .player-image-border
+  {
+    display: inline-block;
+  }
+
+  #player-image
+  {   
+    padding: 100px;
+  }
+
   .player-details-border
   {
-    width: fit-content; 
-    margin: 0 0 0 12%;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    border: 1px solid black; 
+    height: 220px;
   }
 
-  /* Encompasses both single and double ratings for positioning */
-  .player-ratings-border
+  .player-bio
   {
-    width: fit-content;
-    text-align: center;
+    list-style: none;
     line-height: 1.3;
-    margin: 0 0 0 10%;
-    border-collapse: separate;
-    border-spacing: 10px; 
   }
 
-  .rating-header
+  .player-rating-table
   {
-    font-size: 36px;
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+    text-align: center;
+    line-height: 1.3;   
   }
 
   .rating-value
   {
+    border: 1px solid black;
     font-size: 20px;
+  }
+
+  #sd
+  {    
+    float: right;
+    padding-left: 5px;
+    background-color: green;
+  }
+
+  .player-history-border
+  {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+  }
+
+  .player-history-table
+  {
+    margin-top: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .player-history-table th
+  {
+    padding: 10px 10px;
   }
 }
 
@@ -352,40 +400,80 @@
 
   /* Profile Page */
 
-  /* Player image placeholder */
-  #player-image
+  .player-profile-border
   {
-    padding: 100px;
+    position: relative;
     border: 1px solid black;
     margin: 10% 0 0 5%;
+    display: inline-block;
+    width: 90%;       
   }
 
-  /* Player name and region details placeholder */
+  .player-image-border
+  {
+    display: inline-block;
+  }
+
+  #player-image
+  {   
+    padding: 100px;
+  }
+
   .player-details-border
   {
-    width: fit-content; 
-    margin: 0 0 0 12%;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    border: 1px solid black; 
+    height: 220px;
   }
 
-  /* Encompasses both single and double ratings for positioning */
-  .player-ratings-border
+  .player-bio
   {
-    width: fit-content;
-    text-align: center;
+    list-style: none;
     line-height: 1.3;
-    margin: 0 0 0 10%;
-    border-collapse: separate;
-    border-spacing: 10px; 
   }
 
-  .rating-header
+  .player-rating-table
   {
-    font-size: 36px;
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+    text-align: center;
+    line-height: 1.3;   
   }
 
   .rating-value
   {
+    border: 1px solid black;
     font-size: 20px;
+  }
+
+  #sd
+  {    
+    float: right;
+    padding-left: 5px;
+    background-color: green;
+  }
+
+  .player-history-border
+  {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+  }
+
+  .player-history-table
+  {
+    margin-top: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .player-history-table th
+  {
+    padding: 10px 10px;
   }
 }
 
@@ -470,40 +558,80 @@
 
   /* Profile Page */
 
-  /* Player image placeholder */
-  #player-image
+  .player-profile-border
   {
-    padding: 100px;
+    position: relative;
     border: 1px solid black;
     margin: 10% 0 0 5%;
+    display: inline-block;
+    width: 90%;       
   }
 
-  /* Player name and region details placeholder */
+  .player-image-border
+  {
+    display: inline-block;
+  }
+
+  #player-image
+  {   
+    padding: 100px;
+  }
+
   .player-details-border
   {
-    width: fit-content; 
-    margin: 0 0 0 12%;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    border: 1px solid black; 
+    height: 220px;
   }
 
-  /* Encompasses both single and double ratings for positioning */
-  .player-ratings-border
+  .player-bio
   {
-    width: fit-content;
-    text-align: center;
+    list-style: none;
     line-height: 1.3;
-    margin: 0 0 0 10%;
-    border-collapse: separate;
-    border-spacing: 10px; 
   }
 
-  .rating-header
+  .player-rating-table
   {
-    font-size: 36px;
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+    text-align: center;
+    line-height: 1.3;   
   }
 
   .rating-value
   {
+    border: 1px solid black;
     font-size: 20px;
+  }
+
+  #sd
+  {    
+    float: right;
+    padding-left: 5px;
+    background-color: green;
+  }
+
+  .player-history-border
+  {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+  }
+
+  .player-history-table
+  {
+    margin-top: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .player-history-table th
+  {
+    padding: 10px 10px;
   }
 }
 
@@ -588,40 +716,80 @@
 
   /* Profile Page */
 
-  /* Player image placeholder */
-  #player-image
+  .player-profile-border
   {
-    padding: 100px;
+    position: relative;
     border: 1px solid black;
     margin: 10% 0 0 5%;
+    display: inline-block;
+    width: 90%;       
   }
 
-  /* Player name and region details placeholder */
+  .player-image-border
+  {
+    display: inline-block;
+  }
+
+  #player-image
+  {   
+    padding: 100px;
+  }
+
   .player-details-border
   {
-    width: fit-content; 
-    margin: 0 0 0 12%;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    border: 1px solid black; 
+    height: 220px;
   }
 
-  /* Encompasses both single and double ratings for positioning */
-  .player-ratings-border
+  .player-bio
   {
-    width: fit-content;
-    text-align: center;
+    list-style: none;
     line-height: 1.3;
-    margin: 0 0 0 10%;
-    border-collapse: separate;
-    border-spacing: 10px; 
   }
 
-  .rating-header
+  .player-rating-table
   {
-    font-size: 36px;
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+    text-align: center;
+    line-height: 1.3;   
   }
 
   .rating-value
   {
+    border: 1px solid black;
     font-size: 20px;
+  }
+
+  #sd
+  {    
+    float: right;
+    padding-left: 5px;
+    background-color: green;
+  }
+
+  .player-history-border
+  {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+  }
+
+  .player-history-table
+  {
+    margin-top: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .player-history-table th
+  {
+    padding: 10px 10px;
   }
 }
 
@@ -712,14 +880,19 @@
     border: 1px solid black;
     margin: 10% 0 0 5%;
     display: inline-block;
-    width: 90%;       
+    width: 90%; 
+    height: 80%;      
   }
 
-  /* Player image placeholder */
+  .player-image-border
+  {
+    display: inline-block;
+  }
+
   #player-image
   {   
     padding: 100px;
-    border: 1px solid blue;
+    border: 1px solid black;
   }
 
   .player-details-border
@@ -763,8 +936,8 @@
   {
     width: fit-content;
     position: absolute;
-    left: 50%;
-    bottom: 0;
+    left: 0;
+    top: 50%;
   }
 
   .player-history-table
@@ -772,5 +945,31 @@
     margin-top: 20px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .player-history-table th
+  {    
+    padding: 30px 40px;
+  }
+
+  .player-history-table td
+  {
+    padding: 30px 40px;
+  }
+
+  #odd-row
+  {
+    background-color: grey;
+  }
+
+  #even-row
+  {
+    background-color: lightgrey;
+  }
+
+  #player-history-view-more
+  {
+    float: right;
   }
 }
