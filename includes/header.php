@@ -1,3 +1,7 @@
+<?php
+    require("./includes/initialize.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
