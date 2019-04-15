@@ -7,7 +7,7 @@
 
 <?php
 
-  /*  TEST QUERY (Get Access Level - WORKING)
+  /*  TEST QUERY (Get Access Level - Working)
       $stuff = $account->getAccessLevel();
       echo $stuff["access_level"];
   */
