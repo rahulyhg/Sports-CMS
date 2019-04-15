@@ -1,5 +1,15 @@
 <?php
     require("./includes/initialize.php");
+
+    if(isset($_POST["create-account"]))
+    {
+        $success = $account->register($_POST["given-name"], $_POST["family-name"], $_POST["email"], $_POST["password"]);
+    }
+
+    if(isset($_POST["login"]))
+    {
+    	  $account->login($_POST["email"], $_POST["password"]);
+    }
 ?>
 
 <!DOCTYPE html>

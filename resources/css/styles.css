@@ -246,7 +246,7 @@
   .register-modal-content
   {
     width: 600px;
-    height: 800px;
+    height: 600px;
     background-color: white;
     border-radius: 5px;
   }
@@ -269,6 +269,16 @@
     font-size: 16px;
   }
 
+  .register-modal-fields h2
+  {
+    color: #242A36;
+  }
+
+  .register-modal-fields-wrapper
+  {
+    display: block;
+  }
+
   .register-modal-fields hr
   {
     border: 0;
@@ -283,9 +293,10 @@
     height: 40px;
     font-size: 16px;
     padding: 0px 10px 0px 10px;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 25px 0px;
     background-color: #F4F4F4;
     box-shadow: none;
+    border: 1px solid #DEDEDE;
   }
 
   .register-modal-exit-button
@@ -298,7 +309,59 @@
     cursor: pointer;
   }
 
+  #create-account-button
+  {
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 20px 0px 0px 0px;
+    padding: 12px 20px 12px 20px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+  }
 
+  #create-account-button:hover
+  {
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    background: #0275CC;
+  }
+
+  .register-input-group-double input
+  {
+    display: inline-flex;
+    width: 48%;
+  }
+
+  .register-input-group-single input
+  {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  #input-given-name
+  {
+    float: left;
+  }
+
+  #input-family-name
+  {
+    float: right;
+  }
+
+  #input-password
+  {
+    float: left;
+  }
+
+  #input-confirm-password
+  {
+    float: right;
+  }
+
+ 
 
 
 

@@ -6,16 +6,24 @@
   	</div>
 
   	<div class="register-modal-fields">
-  	  <h2>Create Account</h2>
+  	  <h2>Create Event Coordinator Account</h2>
   	  <hr/>
-  	  <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
-        <input type="text" name="given-name" pattern="[a-zA-Z\s]{1,45}" required title="Given name must be within 1-45 characters">
-  		<input type="text" name="family-name" pattern="[a-zA-Z\s]{1,45}" required title="Family name must be within 1-45 characters">
-  		<input type="email" name="email">
-  		<input type="password" name="password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,255}" required title="Password must be at least 6 characters, and contain a capital letter and a number">
-  		<input type="password" name="confirm-password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,255}" required title="Password must be at least 6 characters, and contain a capital letter and a number">
-  		<button type="submit" name="create-account" onclick="">Create Account</button>
+      <div class="register-modal-field-wrapper">
+        <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
+        <div class="register-input-group-double">
+          <input type="text" id="input-given-name" name="given-name" placeholder="Given Name" pattern="[a-zA-Z\s]{1,45}" required title="Given name must be within 1-45 characters">
+          <input type="text" id="input-family-name" name="family-name" placeholder="Family Name" pattern="[a-zA-Z\s]{1,45}" required title="Family name must be within 1-45 characters">
+        </div>
+        <div class="register-input-group-single">
+          <input type="email" id="input-email" name="email" placeholder="Email">    
+        </div>
+        <div class="register-input-group-double">
+          <input type="password" id="input-password" name="password" placeholder="Password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,255}" required title="Password must be at least 6 characters, and contain a capital letter and a number">
+          <input type="password" id="input-confirm-password" name="confirm-password" placeholder="Confirm Password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,255}" required title="Password must be at least 6 characters, and contain a capital letter and a number">
+        </div>    
+        <button type="submit" name="create-account" id="create-account-button" onclick="">Create Account</button>
       </form>
+      </div>
   	</div>
 
   </div>

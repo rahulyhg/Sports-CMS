@@ -21,27 +21,21 @@ class Account
 	}
 
 
-	public function register($email, $password, $givenName, $familyName, $clubId)
+	public function register($givenName, $familyName, $email, $password)
 	{
 		$filteredEmail = trim($email);
 		$filteredPassword = trim($password);
 		$filteredGivenName = trim($givenName);
 		$filteredFamilyName = trim($familyName);
-		$filteredClubId = trim($clubId);
+
+		$filteredGivenName = ucfirst($filteredGivenName);
+		$filteredFamilyName = ucfirst($filteredFamilyName);
+		$filteredEmail = strtolower($filteredEmail);
 
 		$hashedPassword = password_hash($filteredPassword, PASSWORD_DEFAULT);
 
-		$query = "INSERT INTO account (email, password, given_name, family_name, club_id) VALUES (?, ?, ?, ?, ?)";
-		$result = $this->database->query($query, [$filteredEmail, $hashedPassword, $filteredGivenName, $filteredFamilyName, $filteredClubId]);
-		
-		if($result)
-		{
-			return "Success";
-		}
-		else
-		{
-			return "Nope";
-		}
+		$query = "INSERT INTO account (email, password, given_name, family_name) VALUES (?, ?, ?, ?)";
+		$result = $this->database->query($query, [$filteredEmail, $hashedPassword, $filteredGivenName, $filteredFamilyName]);
 	}
 
 
@@ -49,6 +43,8 @@ class Account
 	{
 		$filteredEmail = trim($email);
 		$filteredPassword = trim($password);
+
+		$filteredEmail = strtolower($filteredEmail);
 
 		if($this->accountIsAuthenticated($filteredEmail, $filteredPassword))
 		{
@@ -122,8 +118,8 @@ class Account
 
 	public function setAccessLevel($email, $access)
 	{
-		$query = "UPDATE account SET access_level = ? WHERE email = ?";
-		$result = $this->database->query($query, [$access_level, $email]);		
+			$query = "UPDATE account SET access_level = ? WHERE email = ?";
+			$result = $this->database->query($query, [$access_level, $email]);	
 	}
 
 
@@ -140,6 +136,16 @@ class Account
 	{
 		$query = "UPDATE account SET active = ? WHERE email = ?";
 		$result = $this->database->query($query, [$state, $email]);		
+	}
+
+	public function emailExists($email)
+	{
+		//$filteredEmail = strtolower($email);
+
+		$query = "SELECT email FROM account WHERE email = ?";
+		$result = $this->database->query($query, [$email]);
+
+		return ($result->rowCount() > 0);	
 	}
 }
 

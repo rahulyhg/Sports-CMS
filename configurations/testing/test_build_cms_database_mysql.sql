@@ -108,10 +108,8 @@ CREATE TABLE IF NOT EXISTS `account` (
   `password` VARCHAR(255) NOT NULL,
   `access_level` TINYINT NOT NULL DEFAULT '2' CHECK (access_level IN ('0', '1', '2')),
   `date_created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `active` VARCHAR(1) NOT NULL DEFAULT 'N' ,
-  `club_id` INT NOT NULL,
-  PRIMARY KEY (`account_id`),
-  FOREIGN KEY (`club_id`) REFERENCES club(club_id)
+  `active` VARCHAR(1) NOT NULL DEFAULT 'N',
+  PRIMARY KEY (`account_id`)
 );
 
 CREATE TABLE IF NOT EXISTS `membership` (
