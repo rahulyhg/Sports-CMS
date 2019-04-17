@@ -205,6 +205,11 @@
     cursor: pointer;
   }
 
+  .signin-account-button:hover
+  {
+    background: var(--primary-green);
+  }
+
   .create-account-wrapper
   {
     display: inline-flex;
@@ -360,7 +365,7 @@
   {
     height: 20%;
     width: 100%;
-    background-color: var(--primary-green);
+    background-color: var(--hover-green);
     border-radius: 5px 5px 0px 0px;
     padding: 20px;
     position: relative;
@@ -426,16 +431,7 @@
 
   .event-details-border
   {
-    margin:auto;
-    background-color: #FAF8F7;
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    right:100px;
-    border: 1px solid black; 
-    height: 100%;
-    width:1080px;
-    padding: 0px 10px 10px 10px;  
+    padding: 20px 20px 20px 20px;
   }
 
   .event-name
@@ -476,15 +472,15 @@
  
   #submit
   {
-    position:relative;
-    width:200px;
-    height:50px;
-    background-color: black;
-    color:white;
-    font-family: sans-serif;
-    font-weight:700;
-    border-color: black; 
-    margin-top: 10px;
+    background: var(--hover-green);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
+    text-decoration: none;
+    width: 150px;
+    cursor: pointer;
   }
 
   .event-field-input,.sport-type,.event-type,.match-field-input
@@ -520,7 +516,7 @@
 
   #create-account-button
   {
-    background: var(--primary-green);
+    background: var(--hover-green);
     border-radius: 5px;
     color: #ffffff;
     font-size: 20px;
@@ -533,7 +529,7 @@
 
   #create-account-button:hover
   {
-    background: var(--hover-green);
+    background: var(--primary-green);
   }
 
   .register-input-group-double input
