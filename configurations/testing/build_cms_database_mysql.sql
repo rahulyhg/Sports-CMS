@@ -148,26 +148,3 @@ CREATE TABLE IF NOT EXISTS `match` (
   FOREIGN KEY (`match_result_id`) REFERENCES match_result(match_result_id),
   FOREIGN KEY (`match_statistics_id`) REFERENCES match_statistics(match_statistics_id)
 );
-
-insert into `country`(name) VALUES ('Australia');
-insert into `country`(name) VALUES ('New Zealand');
-
-insert into `state`(name, country_id) VALUES ('Tasmania', '1');
-insert into `state`(name, country_id) VALUES ('Western Australia', '1');
-insert into `state`(name, country_id) VALUES ('Auckland', '2');
-insert into `state`(name, country_id) VALUES ('Otago', '2');
-
-insert into `sport` (name) VALUES ('Badminton');
-insert into `sport` (name) VALUES ('Squash');
-insert into `sport` (name) VALUES ('Table tennis');
-
-insert into `club` (name, country_id, state_id) VALUES ('Launceston Squash Club', 1, 1);
-insert into `club` (name, country_id, state_Id) VALUES ('Otago Badminton Club', 2, 4);
-
-insert into `rating` (mean, standard_deviation, last_calculated, sport_id) VALUES (1500, 200, NOW(), 2);
-insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, rating_id) 
-  VALUES ('Grant', 'Upson', 'M', NOW(), 'grantaupson@gmail.com', NOW(), 'Y', '1', LAST_INSERT_ID());
-
-
-
-

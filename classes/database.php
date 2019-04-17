@@ -23,8 +23,16 @@ class Database
 
 	public function query($query, $parameters = NULL)
 	{
-		$result = $this->connection->prepare($query);
-		$result->execute($parameters);
+		try
+		{
+			$result = $this->connection->prepare($query);
+			$result->execute($parameters);
+		}
+		catch(PDOException $exception)
+		{
+			
+		}
+
 		return $result;
 	}
 }	

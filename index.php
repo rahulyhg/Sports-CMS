@@ -7,6 +7,7 @@
 
 <?php
 
+
   /*  TEST QUERY (Get Access Level - Working)
       $stuff = $account->getAccessLevel();
       echo $stuff["access_level"];
@@ -26,6 +27,10 @@
   */
       //$account->logout();
 ?>
+
+<article>
+  
+</article>
 
 <?php
     include("./includes/registerModal.php");
