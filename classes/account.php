@@ -21,21 +21,23 @@ class Account
 	}
 
 
-	public function register($givenName, $familyName, $email, $password)
+	public function register($givenName, $familyName, $organisation, $email, $password)
 	{
-		$filteredEmail = trim($email);
-		$filteredPassword = trim($password);
 		$filteredGivenName = trim($givenName);
 		$filteredFamilyName = trim($familyName);
+		$filteredClub = trim($club);
+		$filteredEmail = trim($email);
+		$filteredPassword = trim($password);
 
 		$filteredGivenName = ucfirst($filteredGivenName);
 		$filteredFamilyName = ucfirst($filteredFamilyName);
+		$filteredOrganisation = ucwords($filteredOrganisation);
 		$filteredEmail = strtolower($filteredEmail);
 
 		$hashedPassword = password_hash($filteredPassword, PASSWORD_DEFAULT);
 
-		$query = "INSERT INTO account (email, password, given_name, family_name) VALUES (?, ?, ?, ?)";
-		$result = $this->database->query($query, [$filteredEmail, $hashedPassword, $filteredGivenName, $filteredFamilyName]);
+		$query = "INSERT INTO account (given_name, family_name, organisation, email, password) VALUES (?, ?, ?, ?, ?)";
+		$result = $this->database->query($query, [$filteredGivenName, $filteredFamilyName, $filteredOrganisation, $filteredEmail, $hashedPassword]);
 	}
 
 

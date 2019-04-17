@@ -46,10 +46,21 @@ function isEmailTaken()
 function showRegisterModal()
 {
 	document.querySelector(".register-modal-background").style.display = "flex";
+    document.querySelector(".dropdown-menu").style.display = "none";
 }
 
 function hideRegisterModal()
 {
 	document.querySelector(".register-modal-background").style.display = "none";
+}
+
+function showDropdownMenu()
+{
+    document.querySelector(".dropdown-menu").style.display = "inline-block";
+}
+
+function colorHover()
+{
+    document.querySelector(".nav-sign-in-button").style.backgroundColor = "#61896a";
 }
 

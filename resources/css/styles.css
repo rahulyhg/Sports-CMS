@@ -8,6 +8,13 @@
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+:root
+{
+  --primary-green: #76A172;
+  --hover-green: #61896a;
+  --normal-text-color: #242A36;
+}
+
 
 /*
 @media screen and (min-width: 320px)
@@ -51,77 +58,175 @@
 
 } */
 
-
   body
   {
+    background-color: #FAF8F7;
+  }
 
+  article
+  {
+    height: 1000px; /* For Testing */
+    width: 1080px;
+    margin: 0 auto;
+    background-color: #efeeed;
   }
   
   /* Navigation */
 
-  .container
-  {
-    width: 100%;
-    margin: 0 auto;   
-  }
-
   header
   {
-    background: #242A36;
-    left: 0;
-    top: 0;
+    display: inline-flex;
+    background: var(--primary-green);
     width: 100%;
-    height: 10%;
-  }
-
-  header::after
-  {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  .logo
-  {
-    float: left;
-    padding: 5px 0;
+    height: 80px;
+    margin: 0px 0px 0px 0px;
   }
 
   nav
   {
-    float: right;
-    top: 0;
+    height: 100%;
+    width: 1080px;
+    margin: auto;
+    position: relative;
   }
 
-  nav ul 
+  .nav-menu-links a
   {
-    margin: 10;
-    padding: 0;
-    list-style: none;
-  }
-
-  nav li 
-  {
-    display: inline-block;
-    margin-left: 30px;
-    padding-top: 2px;
-    top: 0;
-    position: relative;   
-  }
-
-  nav a
-  {
-    color:beige;
+    color: white;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+    height: 80px;
+    display: inline-flex;
+    padding: 25px 15px 25px 15px;
   }
 
   nav a:hover
   {
-    color: black;
     transition: all ease-in-out 250ms;
-  } 
+    cursor: pointer;
+    background-color: var(--hover-green);
+  }
+
+  .nav-menu-logo img
+  {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 15px 0px 15px 0px;
+  }
+
+  .nav-menu-logo
+  {
+    height: 100%;
+    float: left;
+  }
+
+  .nav-menu-links
+  {
+    height: 80px;
+    display: inline-flex;
+    float: right;
+  }
+
+  .dropdown-menu
+  {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    background-color: #FBFDFA;
+    height: auto;
+    width: 300px;
+    z-index: 1;
+    border-radius: 5px 0px 5px 5px;
+  }
+
+  .dropdown-header
+  {
+    text-align: center;
+    color: white;
+    height: 20%;
+    width: 100%;
+    background-color: var(--hover-green);
+    border-radius: 5px 0px 0px 0px;
+    padding: 20px;
+  }
+
+  .dropdown-signin-fields
+  {
+    height: 80%;
+    padding: 20px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: white;
+  }
+
+  .dropdown-signin-fields input
+  {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0px 10px 0px 10px;
+    margin: 0px auto 15px auto;
+    background-color: #F4F4F4;
+    box-shadow: none;
+    border: 1px solid #DEDEDE;
+  }
+
+  .dropdown-signin-fields a
+  {
+    text-decoration: none;
+    color: #769ECB;
+    background-color: white;
+    height: auto;
+    padding: 0px;
+    font-size: 16px;
+    margin: 0px 0px 10px auto;
+    float: right;
+  }
+
+  .dropdown-signin-fields a:hover
+  {
+    color: #6881b7;
+    background-color: white;
+  }
+
+  .signin-account-button
+  {
+    background: var(--hover-green);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .create-account-wrapper
+  {
+    display: inline-flex;
+    text-decoration: none;
+    color: #242A36;
+  }
+
+  .create-account-wrapper a
+  {
+    color: #769ECB;
+    background-color: white;
+    height: auto;
+    padding: 0px;
+    font-size: 16px;
+    margin: 0px 0px 0px 10px;
+  }
+
+  .create-account-modal:hover
+  {
+    color: #6881b7;
+    background-color: white;
+  }
 
   /* Home Page */
 
@@ -253,17 +358,17 @@
 
   .register-modal-header
   {
-    height: 25%;
+    height: 20%;
     width: 100%;
-    background-color: #F4F4F4;
-    border-radius: 5px;
+    background-color: var(--primary-green);
+    border-radius: 5px 5px 0px 0px;
     padding: 20px;
     position: relative;
   }
 
   .register-modal-fields
   {
-    height: 75%;
+    height: 80%%;
     width: 100%;
     padding: 40px;
     font-size: 16px;
@@ -285,7 +390,7 @@
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 10px 0px 30px 0px;
+    margin: 10px 0px 25px 0px;
   }
 
   .register-modal-fields input
@@ -307,16 +412,16 @@
     font-size: 42px;
     transform: rotate(45deg);
     cursor: pointer;
+    color: white; 
   }
 
   #create-account-button
   {
-    background: #3498db;
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    background: var(--primary-green);
     border-radius: 5px;
     color: #ffffff;
     font-size: 20px;
-    margin: 20px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     padding: 12px 20px 12px 20px;
     text-decoration: none;
     width: 100%;
@@ -325,8 +430,7 @@
 
   #create-account-button:hover
   {
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    background: #0275CC;
+    background: var(--hover-green);
   }
 
   .register-input-group-double input
@@ -335,35 +439,40 @@
     width: 48%;
   }
 
-  .register-input-group-single input
+  #input-given-name, #input-organisation, #input-password
   {
-    display: inline-flex;
+    float: left;
+  }
+
+  #input-family-name, #input-email, #input-confirm-password
+  {
+    float: right;
+  }
+
+  .confirm-terms
+  {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
     width: 100%;
+    font-size: 16px;
+    color: var(--normal-text-color);
+    margin: 10px 0px 20px 0px;
   }
 
-  #input-given-name
+  .confirm-terms a
   {
-    float: left;
+    text-decoration: none;
+    color: var(--primary-green);
   }
 
-  #input-family-name
+  .confirm-terms a:hover
   {
-    float: right;
+    color: var(--hover-green);
   }
 
-  #input-password
-  {
-    float: left;
-  }
-
-  #input-confirm-password
-  {
-    float: right;
-  }
-
- 
 
 
-
-
+  
 
