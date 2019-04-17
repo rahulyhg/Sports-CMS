@@ -46,7 +46,7 @@ function isEmailTaken()
 function showRegisterModal()
 {
 	document.querySelector(".register-modal-background").style.display = "flex";
-    document.querySelector(".dropdown-menu").style.display = "none";
+    hideDropdownMenu();
 }
 
 function hideRegisterModal()
@@ -57,10 +57,35 @@ function hideRegisterModal()
 function showDropdownMenu()
 {
     document.querySelector(".dropdown-menu").style.display = "inline-block";
-}
-
-function colorHover()
-{
     document.querySelector(".nav-sign-in-button").style.backgroundColor = "#61896a";
 }
+
+function hideDropdownMenu()
+{
+    document.querySelector(".dropdown-menu").style.display = "none";
+    document.querySelector(".nav-sign-in-button").style.backgroundColor = "#76A172";
+}
+
+function toggleDropdownMenu()
+{
+    if($(".dropdown-menu").css("display") === "none")
+    {
+        showDropdownMenu();
+    }
+    else
+    {
+        hideDropdownMenu();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 

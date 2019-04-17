@@ -203,6 +203,7 @@
     text-decoration: none;
     width: 100%;
     cursor: pointer;
+    box-shadow: none;
   }
 
   .signin-account-button:hover
