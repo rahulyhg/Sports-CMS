@@ -255,7 +255,7 @@
     border: 1px solid black;
   }
 
-  .player-details-border
+  .player-details-border,
   {
     position: absolute;
     top: 0;
@@ -414,6 +414,104 @@
     cursor: pointer;
     color: white; 
   }
+   .event-form
+  {
+   
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  .event-details-border
+    {
+      margin:auto;
+      background-color: #FAF8F7;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      right:100px;
+      border: 1px solid black; 
+      height: 100%;
+      width:1080px;
+      padding: 0px 10px 10px 10px;
+     
+    }
+  .event-name
+  {
+    
+     grid-template-columns: repeat(2, 1fr);
+     grid-column: 1/span 2;
+  }
+ input[type="date"]::-webkit-inner-spin-button {
+        opacity: 0
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png) center/80% no-repeat;
+        color: rgba(0, 0, 0, 0);
+        opacity: 0.5
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+        background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png) center/80% no-repeat;
+        opacity: 0.8
+    }
+    .match-details-row
+  {
+   
+    display:flex;
+    height:auto;
+  }
+  
+  .match-details-column
+  {
+      flex: 33.33%;
+    font-size:20px;
+  }
+
+  
+  #submit
+  {
+    position:relative;
+    width:200px;
+    height:50px;
+    background-color: black;
+    color:white;
+    font-family: sans-serif;
+    font-weight:700;
+    border-color: black;
+    
+    margin-top: 10px;
+    
+    
+  }
+
+  .event-field-input,.sport-type,.event-type,.match-field-input
+  {
+    width: 250px;
+    height:40px;
+  }
+  .event-field-name, .winner-name,.loser-name, .match-date, .match-number-text
+  {
+    font-size: 20px;
+  }
+
+.event-field-input::-webkit-input-placeholder
+{
+  font-size:18px;
+}
+.sport-type::-webkit-input-placeholder,
+{
+  font-size:18px;
+}
+.event-type,.sport-type
+{
+  font-size: 18px;
+}
+.match-field-input
+{
+  font-size:18px;
+}
+
+  
+
 
   #create-account-button
   {
