@@ -2,17 +2,39 @@
 
 *
 {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
 :root
 {
-  --primary-green: #76A172;
-  --hover-green: #61896a;
-  --normal-text-color: #242A36;
+  --primary-color: #76a172; /* #4a2260 */
+  --primary-color-light: #8fb56d;
+  --primary-color-dark: #61896a;
+
+  --secondary-color: white;
+  --secondary-color-light: white;
+  --secondary-color-dark: white;
+
+  --text-light: white;
+  --text-dark: #242A36;
+
+  --form-background: white;
+  --form-input-background: #F4F4F4;
+  --form-input-border: #DEDEDE;
+
+  --link-light: #7EBBDA;
+  --link-dark: #6693c4;
+
+  --content-color: #F6F7F8;
+  --body-color: #DAE0E6;
+}
+
+body
+{
+	background-color: var(--body-color);
 }
 
 
@@ -58,17 +80,12 @@
 
 } */
 
-  body
-  {
-    background-color: #FAF8F7;
-  }
-
   article
   {
     height: 1000px; /* For Testing */
     width: 1080px;
     margin: 0 auto;
-    background-color: #efeeed;
+    background-color: var(--content-color);
   }
   
   /* Navigation */
@@ -76,7 +93,7 @@
   header
   {
     display: inline-flex;
-    background: var(--primary-green);
+    background: var(--primary-color);
     width: 100%;
     height: 80px;
     margin: 0px 0px 0px 0px;
@@ -92,7 +109,7 @@
 
   .nav-menu-links a
   {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     text-transform: capitalize;
     font-size: 20px;
@@ -106,7 +123,7 @@
   {
     transition: all ease-in-out 250ms;
     cursor: pointer;
-    background-color: var(--hover-green);
+    background-color: var(--primary-color-dark);
   }
 
   .nav-menu-logo img
@@ -136,10 +153,10 @@
     position: absolute;
     top: 80px;
     right: 0px;
-    background-color: #FBFDFA;
+    background-color: var(--form-background);
     height: auto;
     width: 300px;
-    z-index: 1;
+    z-index: 5;
     border-radius: 5px 0px 5px 5px;
   }
 
@@ -149,7 +166,7 @@
     color: white;
     height: 20%;
     width: 100%;
-    background-color: var(--hover-green);
+    background-color: var(--primary-color-dark);
     border-radius: 5px 0px 0px 0px;
     padding: 20px;
   }
@@ -159,7 +176,7 @@
     height: 80%;
     padding: 20px;
     border-radius: 0px 0px 5px 5px;
-    background-color: white;
+    background-color: var(--form-background);
   }
 
   .dropdown-signin-fields input
@@ -169,16 +186,16 @@
     font-size: 16px;
     padding: 0px 10px 0px 10px;
     margin: 0px auto 15px auto;
-    background-color: #F4F4F4;
+    background-color: var(--form-input-background);
     box-shadow: none;
-    border: 1px solid #DEDEDE;
+    border: 1px solid var(--form-input-border);
   }
 
   .dropdown-signin-fields a
   {
     text-decoration: none;
-    color: #769ECB;
-    background-color: white;
+    color: var(--link-light);
+    background-color: var(--form-background);
     height: auto;
     padding: 0px;
     font-size: 16px;
@@ -188,15 +205,15 @@
 
   .dropdown-signin-fields a:hover
   {
-    color: #6881b7;
-    background-color: white;
+    color: var(--link-dark);
+    background-color: var(--form-background);
   }
 
   .signin-account-button
   {
-    background: var(--hover-green);
+    background: var(--primary-color-dark);
     border-radius: 5px;
-    color: #ffffff;
+    color: var(--text-light);
     font-size: 16px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 10px 0px;
@@ -208,30 +225,24 @@
 
   .signin-account-button:hover
   {
-    background: var(--primary-green);
+    background: var(--primary-color);
   }
 
   .create-account-wrapper
   {
     display: inline-flex;
     text-decoration: none;
-    color: #242A36;
+    color: var(--text-dark);
   }
 
   .create-account-wrapper a
   {
-    color: #769ECB;
-    background-color: white;
+    color: var(--link-light);
+    background-color: var(--form-background);
     height: auto;
     padding: 0px;
     font-size: 16px;
     margin: 0px 0px 0px 10px;
-  }
-
-  .create-account-modal:hover
-  {
-    color: #6881b7;
-    background-color: white;
   }
 
   /* Home Page */
@@ -358,7 +369,7 @@
   {
     width: 600px;
     height: 600px;
-    background-color: white;
+    background-color: var(--form-background);
     border-radius: 5px;
   }
 
@@ -366,7 +377,7 @@
   {
     height: 20%;
     width: 100%;
-    background-color: var(--hover-green);
+    background-color: var(--primary-color-dark);
     border-radius: 5px 5px 0px 0px;
     padding: 20px;
     position: relative;
@@ -382,7 +393,7 @@
 
   .register-modal-fields h2
   {
-    color: #242A36;
+    color: var(--text-dark);
   }
 
   .register-modal-fields-wrapper
@@ -405,9 +416,9 @@
     font-size: 16px;
     padding: 0px 10px 0px 10px;
     margin: 10px 0px 25px 0px;
-    background-color: #F4F4F4;
+    background-color: var(--form-input-background);
     box-shadow: none;
-    border: 1px solid #DEDEDE;
+    border: 1px solid var(--form-input-border);
   }
 
   .register-modal-exit-button
@@ -418,7 +429,7 @@
     font-size: 42px;
     transform: rotate(45deg);
     cursor: pointer;
-    color: white; 
+    color: var(--text-light); 
   }
 
   /* Create Event Page */
@@ -473,9 +484,9 @@
  
   #submit
   {
-    background: var(--hover-green);
+    background: var(--primary-color);
     border-radius: 5px;
-    color: #ffffff;
+    color: var(--text-light);
     font-size: 16px;
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 10px 0px;
@@ -517,9 +528,9 @@
 
   #create-account-button
   {
-    background: var(--hover-green);
+    background: var(--primary-color-dark);
     border-radius: 5px;
-    color: #ffffff;
+    color: var(--text-light);
     font-size: 20px;
     margin: 0px 0px 0px 0px;
     padding: 12px 20px 12px 20px;
@@ -530,7 +541,7 @@
 
   #create-account-button:hover
   {
-    background: var(--primary-green);
+    background: var(--primary-color);
   }
 
   .register-input-group-double input
@@ -557,19 +568,19 @@
     display: inline-block;
     width: 100%;
     font-size: 16px;
-    color: var(--normal-text-color);
+    color: var(--text-dark);
     margin: 10px 0px 20px 0px;
   }
 
   .confirm-terms a
   {
     text-decoration: none;
-    color: var(--primary-green);
+    color: var(--primary-color);
   }
 
   .confirm-terms a:hover
   {
-    color: var(--hover-green);
+    color: var(--primary-color-light);
   }
 
 

@@ -25,7 +25,7 @@ class Account
 	{
 		$filteredGivenName = trim($givenName);
 		$filteredFamilyName = trim($familyName);
-		$filteredClub = trim($club);
+		$filteredOrganisation = trim($organisation);
 		$filteredEmail = trim($email);
 		$filteredPassword = trim($password);
 

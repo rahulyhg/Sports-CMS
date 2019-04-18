@@ -6,9 +6,14 @@
         $success = $account->register($_POST["given-name"], $_POST["family-name"], $_POST["organisation-name"], $_POST["email"], $_POST["password"]);
     }
 
-    if(isset($_POST["login"]))
+    if(isset($_POST["signin-account"]))
     {
     	  $account->login($_POST["email"], $_POST["password"]);
+    }
+
+    if(isset($_POST["signout-account"]))
+    {
+      $account->logout();
     }
 ?>
 
