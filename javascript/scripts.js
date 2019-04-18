@@ -57,13 +57,13 @@ function hideRegisterModal()
 function showDropdownMenu()
 {
     document.querySelector(".dropdown-menu").style.display = "inline-block";
-    document.querySelector(".nav-sign-in-button").style.backgroundColor = "#61896a";
+    document.querySelector(".nav-sign-in-button").style.backgroundColor = "var(--primary-color-dark)";
 }
 
 function hideDropdownMenu()
 {
     document.querySelector(".dropdown-menu").style.display = "none";
-    document.querySelector(".nav-sign-in-button").style.backgroundColor = "#76A172";
+    document.querySelector(".nav-sign-in-button").style.backgroundColor = "var(--primary-color)";
 }
 
 function toggleDropdownMenu()

@@ -27,13 +27,13 @@
                 
       <div class="coloum3">
         <div class="information">
-          <a href="#">Terms And Condition</a>
+          <a href="./terms-and-conditions">Terms And Condition</a>
         </div>
         <div class="information">
-          <a href="#">Privacy Policy</a>
+          <a href="./privacy-policy">Privacy Policy</a>
         </div>
         <div class="information">
-          <a href="#">FAQ</a>
+          <a href="./faqs">FAQ</a>
         </div>
       </div>
 

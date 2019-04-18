@@ -1,5 +1,5 @@
 <?php
-  $title = "Peters Ratings | Event details";
+  $title = "Peters Ratings | Upload Event";
   
   include("./includes/header.php");
   include("./includes/navigation.php");

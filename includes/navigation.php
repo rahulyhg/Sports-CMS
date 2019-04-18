@@ -9,7 +9,7 @@
 
     <div class="nav-menu-links">
       <a href="./index.php">home</a>
-      <a href="./ratings.php">players</a>
+      <a href="./players.php">players</a>
       <a href="./events.php">events</a>
       <a href="./clubs.php">clubs</a>
       <a href="#" class="nav-sign-in-button" onclick="toggleDropdownMenu()"> 
