@@ -1,53 +1,32 @@
 <footer>
-  <div class="container-footer-all">
-    <div class="container-body">
+  <div class="footer-container">
 
-      <div class="coloum1">
-        <img src ="LOGO.png" alt= "logo" class="logo"height="90"/>
+    <div class="footer-top-content">
+     <div class="footer-logo">
+        <a href="./index.php">
+          <img src="./resources/images/logo.png" alt="">
+        </a>
       </div>
-
-      <div class="coloum2">
-        <h1>Contact Us</h1>
-        <div class="row">
-          <a class="btn" href="#">
-            <img src="facebook.png" height="40" />
-          </a>
-        </div>
-        <div class="row">
-          <a class="btn" href="#">
-            <img src="twitter.png" height="40" />
-          </a>
-        </div>
-        <div class="row">
-          <a class="btn" href="#">
-            <img src="google.png" height="40" />
-          </a>
-        </div>
+      <div class="footer-information">
+        <h2 class="footer-heading">Information</h2>
+        <a href="./about-us.php">About Us</a>
+        <a href="./privacy-policy.php">Privacy Policy</a>
+        <a href="./terms-and-conditions.php">Terms & Conditions</a>
       </div>
-                
-      <div class="coloum3">
-        <div class="information">
-          <a href="./terms-and-conditions">Terms And Condition</a>
-        </div>
-        <div class="information">
-          <a href="./privacy-policy">Privacy Policy</a>
-        </div>
-        <div class="information">
-          <a href="./faqs">FAQ</a>
-        </div>
-      </div>
-
-    </div>
-    <div class="container-footer">
-      <hr color="black" style="width: 100%;">
-      <div class="footers">
-        <div class="footers">
-          <div class="copyright">
-            © 2019 . All Rights Reserved  | <a href="#">Peter's Ranking</a>
-          </div>
-        </div>
+    <!--  <p>|</p> -->
+      <div class="footer-social-media">
+        <h2 class="footer-heading">Follow Us</h2>
+        <a href="www.facebook.com">Facebook</a>
+        <a href="www.twitter.com">Twitter</a>
+        <a href="www.instagram.com">Instagram</a>
       </div>
     </div>
+
+    <div class="footer-bottom-content">
+      <hr/>
+      <small>&copy; <?php echo date('Y'); ?> Name. All Rights Reserved.</small>
+    </div>
+
   </div>
 </footer>
 

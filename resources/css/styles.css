@@ -10,15 +10,16 @@
 
 :root
 {
-  --primary-color: #76a172; /* 03353e */
+  --primary-color: #03353e; /* 76a172 */
   --primary-color-light: #8fb56d; 
-  --primary-color-dark: #61896a; /* 0294a5 */
+  --primary-color-dark: #0294a5; /* 61896a */
 
   --secondary-color: white;
   --secondary-color-light: white;
   --secondary-color-dark: white;
 
   --text-light: white;
+  --text-medium: #eaeaea;
   --text-dark: #242A36;
 
   --form-background: white;
@@ -28,13 +29,28 @@
   --link-light: #7EBBDA;
   --link-dark: #6693c4;
 
-  --content-color: #F6F7F8;
+  --content-background-color: #F6F7F8;
   --body-color: #DAE0E6;
+
+  --font-small: 16px;
+  --font-medium: 20px;
+  --font-large: 40px;
+  --font-extra-large: 60px;
 }
 
 body
 {
 	background-color: var(--body-color);
+}
+
+article /* Never change this (Except height to 100% once content is added to pages) */
+{
+  height: 1000px; 
+  width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  top: -3px;
+  background-color: var(--content-background-color);
 }
 
 
@@ -80,15 +96,9 @@ body
 
 } */
 
-  article
-  {
-    height: 1000px; /* For Testing */
-    width: 1080px;
-    margin: 0 auto;
-    background-color: var(--content-color);
-  }
-  
+
   /* Navigation */
+
 
   header
   {
@@ -112,7 +122,7 @@ body
     color: var(--text-light);
     text-decoration: none;
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: var(--font-medium);
     cursor: pointer;
     height: 80px;
     display: inline-flex;
@@ -183,7 +193,7 @@ body
   {
     height: 40px;
     width: 100%;
-    font-size: 16px;
+    font-size: var(--font-small);
     padding: 0px 10px 0px 10px;
     margin: 0px auto 15px auto;
     background-color: var(--form-input-background);
@@ -198,7 +208,7 @@ body
     background-color: var(--form-background);
     height: auto;
     padding: 0px;
-    font-size: 16px;
+    font-size: var(--font-small);
     margin: 0px 0px 10px auto;
     float: right;
   }
@@ -214,7 +224,7 @@ body
     background: var(--primary-color-dark);
     border-radius: 5px;
     color: var(--text-light);
-    font-size: 16px;
+    font-size: var(--font-small);
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 10px 0px;
     text-decoration: none;
@@ -241,15 +251,19 @@ body
     background-color: var(--form-background);
     height: auto;
     padding: 0px;
-    font-size: 16px;
+    font-size: var(--font-small);
     margin: 0px 0px 0px 10px;
   }
+
 
   /* Home Page */
 
 
 
+
+
   /* Profile Page */
+
 
   .player-profile-border
   {
@@ -299,7 +313,7 @@ body
   .rating-value
   {
     border: 1px solid black;
-    font-size: 20px;
+    font-size: var(--font-medium);
   }
 
   #sd
@@ -350,7 +364,9 @@ body
     float: right;
   }
 
+
   /* Register Modal */
+
 
   .register-modal-background
   {
@@ -388,7 +404,7 @@ body
     height: 80%%;
     width: 100%;
     padding: 40px;
-    font-size: 16px;
+    font-size: var(--font-small);
   }
 
   .register-modal-fields h2
@@ -413,7 +429,7 @@ body
   .register-modal-fields input
   {
     height: 40px;
-    font-size: 16px;
+    font-size: var(--font-small);
     padding: 0px 10px 0px 10px;
     margin: 10px 0px 25px 0px;
     background-color: var(--form-input-background);
@@ -426,7 +442,7 @@ body
     position: absolute;
     top: 0;
     right: 20px;
-    font-size: 42px;
+    font-size: var(--font-large);
     transform: rotate(45deg);
     cursor: pointer;
     color: var(--text-light); 
@@ -437,7 +453,7 @@ body
     background: var(--primary-color);
     border-radius: 5px;
     color: var(--text-light);
-    font-size: 20px;
+    font-size: var(--font-medium);
     margin: 0px 0px 0px 0px;
     padding: 12px 20px 12px 20px;
     text-decoration: none;
@@ -473,7 +489,7 @@ body
     align-items: center;
     display: inline-block;
     width: 100%;
-    font-size: 16px;
+    font-size: var(--font-small);
     color: var(--text-dark);
     margin: 10px 0px 20px 0px;
   }
@@ -489,7 +505,9 @@ body
     color: var(--link-light);
   }
 
-  /* Create Event Page */
+
+  /* Upload Event Page */
+
 
   .event-form
   {  
@@ -544,7 +562,7 @@ body
     background: var(--primary-color);
     border-radius: 5px;
     color: var(--text-light);
-    font-size: 16px;
+    font-size: var(--font-small);
     padding: 10px 0px 10px 0px;
     margin: 0px 0px 10px 0px;
     text-decoration: none;
@@ -560,28 +578,307 @@ body
 
   .event-field-name, .winner-name,.loser-name, .match-date, .match-number-text
   {
-    font-size: 20px;
+    font-size: var(--font-medium);
   }
 
   .event-field-input::-webkit-input-placeholder
   {
-    font-size:18px;
+    font-size: var(--font-small)
   }
 
   .sport-type::-webkit-input-placeholder,
   {
-    font-size:18px;
+    font-size: var(--font-small);
   }
 
   .event-type,.sport-type
   {
-    font-size: 18px;
+    font-size: var(--font-small);
   }
 
   .match-field-input
   {
-    font-size:18px;
+    font-size: var(--font-small);
   }
+
+  
+  /* Footer */
+
+  /* [All One Line]
+
+  footer
+  {
+    background-color: var(--primary-color);
+    height: 120px;
+    width: 100%;
+    position: relative;
+    font-size: var(--font-small);
+    color: white;
+  }
+
+  footer a
+  {
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--text-medium);
+    margin: 0px 20px 10px 0px;
+  }
+
+  .footer-container
+  {
+    height: inherit;
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .footer-container h2
+  {
+    font-size: var(--font-medium);
+    color: var(--text-light);
+    margin: 0px 0px 10px 0px;
+  }
+
+  .footer-top-content
+  {
+    width: 100%;
+    display: inline-flex;
+    margin: 30px 0px 10px 0px;
+  }
+
+  .footer-logo
+  {
+    display: inline-flex;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .footer-logo img
+  {
+    height: 25px;
+    width: 25px;
+  }
+
+  .footer-information
+  {
+    display: inline;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .footer-container a:hover
+  {
+    color: var(--primary-color-dark);
+  }
+
+  .footer-social-media
+  {
+    display: inline;
+    text-align: center;
+    margin-right: auto;
+    margin-left: 20px;
+  }
+
+  .footer-bottom-content
+  {
+    display: block;
+    width: 100%;
+  }
+
+  .footer-bottom-content hr
+  {
+    margin: 0px 0px 10px 0px;
+    background-color: var(--text-medium);
+  }
+
+  .footer-bottom-content small
+  {
+    color: var(--text-medium);
+  }
+
+  .footer-heading
+  {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  */
+
+  /* [Left Aligned Groups]
+
+  footer
+  {
+    background-color: var(--primary-color);
+    height: 220px;
+    width: 100%;
+    position: relative;
+    font-size: var(--font-small);
+  }
+
+  footer a
+  {
+    display: block;
+    text-decoration: none;
+    color: var(--text-medium);
+    margin: 0px 0px 10px 0px;
+  }
+
+  .footer-container
+  {
+    height: inherit;
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .footer-container h2
+  {
+    font-size: var(--font-medium);
+    color: var(--text-light);
+    margin: 0px 0px 10px 0px;
+  }
+
+  .footer-top-content
+  {
+    width: 100%;
+    display: inline-flex;
+    margin: 30px 0px 10px 0px;
+  }
+
+  .footer-logo
+  {
+    display: block;
+    margin: 0px 50px 0px 0px;
+  }
+
+  .footer-logo img
+  {
+    height: 115px;
+    width: 115px;
+  }
+
+  .footer-information
+  {
+    display: block;
+    margin: 0px 50px 0px 0px;
+  }
+
+  .footer-container a:hover
+  {
+    color: var(--text-dark);
+  }
+
+  .footer-social-media
+  {
+    display: block
+  }
+
+  .footer-bottom-content
+  {
+    display: block;
+    width: 100%;
+  }
+
+  .footer-bottom-content hr
+  {
+    margin: 0px 0px 10px 0px;
+    background-color: var(--text-medium);
+  }
+
+  .footer-bottom-content small
+  {
+    color: var(--text-medium);
+  } 
+
+  */
+
+  footer
+  {
+    background-color: var(--primary-color);
+    height: 220px;
+    width: 100%;
+    position: relative;
+    font-size: var(--font-small);
+  }
+
+  footer a
+  {
+    display: block;
+    text-decoration: none;
+    color: var(--text-medium);
+    margin: 0px 0px 10px 0px;
+  }
+
+  .footer-container
+  {
+    height: inherit;
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .footer-container h2
+  {
+    font-size: var(--font-medium);
+    color: var(--text-light);
+    margin: 0px 0px 10px 0px;
+  }
+
+  .footer-top-content
+  {
+    width: 100%;
+    display: inline-flex;
+    margin: 30px 0px 10px 0px;
+  }
+
+  .footer-logo
+  {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    margin-left: 150px;
+  }
+
+  .footer-logo img
+  {
+    height: 115px;
+    width: 115px;
+  }
+
+  .footer-information
+  {
+    display: block;
+    width: auto;
+  }
+
+  .footer-container a:hover
+  {
+    color: var(--text-dark);
+  }
+
+  .footer-social-media
+  {
+    display: block
+    width: auto;
+    margin: 0 auto;
+    margin-right: 150px;
+  }
+
+  .footer-bottom-content
+  {
+    display: block;
+    width: 100%;
+  }
+
+  .footer-bottom-content hr
+  {
+    margin: 0px 0px 10px 0px;
+    background-color: var(--text-medium);
+  }
+
+  .footer-bottom-content small
+  {
+    color: var(--text-medium);
+  }
+
+
 
 
 
