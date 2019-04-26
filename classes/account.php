@@ -52,7 +52,7 @@ class Account
 		{
 			$isActive = $this->getActiveState($email);
 			
-			if($isActive["active"] == "Y")
+			if($isActive == "Y")
 			{
 				$query = "SELECT account_id FROM account WHERE email = ?";
 				$result = $this->database->query($query, [$filteredEmail])->fetch();
@@ -61,7 +61,7 @@ class Account
 				$this->accountId = $result["account_id"];
 				$this->loggedIn = true;
 
-				//redirect("./profile.php"); //Account page once made
+				redirect("./account.php");
 			}
 			else
 			{
@@ -114,14 +114,23 @@ class Account
 		$query = "SELECT access_level FROM account WHERE account_id = ?";
 		$result = $this->database->query($query, [$this->accountId])->fetch();
 
-		return $result;
+		return $result["access_level"];
+	}
+
+
+	public function getAccountName()
+	{
+		$query = "SELECT given_name, family_name FROM account WHERE account_id = ?";
+		$result = $this->database->query($query, [$this->accountId])->fetch();
+
+		return $name = $result["given_name"] . " " . $result["family_name"];
 	}
 
 
 	public function setAccessLevel($email, $access)
 	{
-			$query = "UPDATE account SET access_level = ? WHERE email = ?";
-			$result = $this->database->query($query, [$access_level, $email]);	
+		$query = "UPDATE account SET access_level = ? WHERE email = ?";
+		$result = $this->database->query($query, [$access_level, $email]);	
 	}
 
 
@@ -130,7 +139,7 @@ class Account
 		$query = "SELECT active FROM account WHERE email = ?";
 		$result = $this->database->query($query, [$email])->fetch();
 
-		return $result;
+		return $result["active"];
 	}
 
 
@@ -142,10 +151,10 @@ class Account
 
 	public function emailExists($email)
 	{
-		//$filteredEmail = strtolower($email);
+		$filteredEmail = strtolower($email);
 
 		$query = "SELECT email FROM account WHERE email = ?";
-		$result = $this->database->query($query, [$email]);
+		$result = $this->database->query($query, [$filteredEmail]);
 
 		return ($result->rowCount() > 0);	
 	}

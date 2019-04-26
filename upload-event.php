@@ -3,6 +3,11 @@
   
   include("./includes/header.php");
   include("./includes/navigation.php");
+
+  if(!$account->isLoggedIn())
+  {
+  	redirect("./index.php");
+  }
 ?>
 
 <article class ="event-details-border" >

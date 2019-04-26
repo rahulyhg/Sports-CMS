@@ -6,7 +6,7 @@
 
     if(!$account->isLoggedIn())
     {
-    	redirect("index.php");
+    	redirect("./index.php");
     }
 ?>
 

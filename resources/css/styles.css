@@ -10,9 +10,9 @@
 
 :root
 {
-  --primary-color: #03353e; /* 76a172 */
+  --primary-color: #0294a5; /* 76a172 */
   --primary-color-light: #8fb56d; 
-  --primary-color-dark: #0294a5; /* 61896a */
+  --primary-color-dark: #03353e; /* 61896a */
 
   --secondary-color: white;
   --secondary-color-light: white;
@@ -253,6 +253,66 @@ article /* Never change this (Except height to 100% once content is added to pag
     padding: 0px;
     font-size: var(--font-small);
     margin: 0px 0px 0px 10px;
+  }
+
+  .dropdown-options
+  {
+    padding: 20px;
+    height: auto;
+    display: block;
+  }
+
+  .dropdown-options a
+  {
+    display: block;
+    height: 100%;
+    text-align: center;
+    background: var(--primary-color);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: var(--font-small);
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: none;
+  }
+
+  .dropdown-options a:hover
+  {
+    background: var(--primary-color-dark);
+  }
+
+  .dropdown-options hr
+  {
+    border: 1px solid var(--primary-color);
+  }
+
+  .dropdown-signout-form
+  {
+    height: 80%;
+    border-radius: 0px 0px 5px 5px;
+    background-color: var(--form-background);
+    margin: 20px 0px 0px 0px;
+  }
+
+  .signout-account-button
+  {
+    background: var(--primary-color-dark);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: var(--font-small);
+    padding: 10px 0px 10px 0px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: none;
+  }
+
+  .signout-account-button:hover
+  {
+    background: var(--primary-color);
   }
 
 

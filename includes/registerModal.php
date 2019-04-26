@@ -28,7 +28,7 @@
 
         <div class="confirm-terms">
           <p>By  clicking  below  and  creating  an  account,  you  agree  to  our  account</p>
-          <a href="https://www.w3schools.com">Terms and Conditions</a>
+          <a href="./terms-and-conditions.php">Terms and Conditions</a>
         </div>
 
         <button type="submit" name="create-account" id="create-account-button" onclick="">Create Account</button>
