@@ -5,7 +5,7 @@
   <div class="dropdown-signin-fields">
     <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
       <input type="email" id="signin-email" name="email" placeholder="Email" required>
-      <input type="password" id="signin-password" name="password" placeholder="Password" pattern="{1,255}" required>
+      <input type="password" id="signin-password" name="password" placeholder="Password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,255}" required>
       <a href="#" class="forgot-password" onclick="showRegisterModal()">Forgotten Password?</a>
       <button type="submit" name="signin-account" class="signin-account-button" onclick="">Sign In</button>
     </form>

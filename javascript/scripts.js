@@ -8,14 +8,17 @@ function passwordMatches()
 {
     var password = document.getElementById("input-password").value;
     var confirmPassword = document.getElementById("input-confirm-password").value;
-  
-    if(confirmPassword != password)
+
+    if(password && confirmPassword != null)
     {
-        document.getElementById("input-confirm-password").setCustomValidity("Passwords do not match");
-    }
-    else
-    {
-    	document.getElementById("input-confirm-password").setCustomValidity(""); 
+    	if(confirmPassword != password)
+    	{
+        	document.getElementById("input-confirm-password").setCustomValidity("Passwords do not match");
+    	}
+   		else
+    	{
+    		document.getElementById("input-confirm-password").setCustomValidity(""); 
+    	}
     }
 }
 

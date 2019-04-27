@@ -85,7 +85,6 @@
 </div>
 
 <?php
-  include("./includes/registerModal.php");
   include("./includes/footer.php");
 ?>
 

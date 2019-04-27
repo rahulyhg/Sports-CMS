@@ -1,3 +1,7 @@
+<?php
+  include("./includes/registerModal.php");
+?>
+
 <footer>
   <div class="footer-container">
 
