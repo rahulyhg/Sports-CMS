@@ -1,5 +1,5 @@
 <?php
-  include("./includes/registerModal.php");
+  include("./includes/register-modal.php");
 ?>
 
 <footer>

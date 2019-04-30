@@ -6,7 +6,9 @@
     include("./includes/functions.php");
     require("./classes/database.php");
     require("./classes/account.php");
+    require("./classes/content-manager.php");
 
     $database = new Database();
     $account = new Account($database);
+    $contentManager = new ContentManager($database);
 ?>

@@ -1,5 +1,5 @@
 <?php 
-    $title = "Peters Ratings | Privacy Policy";
+    $title = "Peterman Ratings | Privacy Policy";
 
     include("./includes/header.php");
     include("./includes/navigation.php");

@@ -10,13 +10,17 @@
 
 :root
 {
-  --primary-color: #0294a5; /* 76a172 */
-  --primary-color-light: #8fb56d; 
-  --primary-color-dark: #03353e; /* 61896a */
+  --primary-color: #31708F;
+  --primary-color-light: #89C5E8;
+  --primary-color-dark: #1E4D69;
 
-  --secondary-color: white;
-  --secondary-color-light: white;
-  --secondary-color-dark: white;
+  --secondary-color: #4F85A5;
+  --secondary-color-light: #F9E352;
+  --secondary-color-dark: #003e66;
+
+  --tertiary-color: #8FC1E2;
+  --tertiary-color-light: green;
+  --tertiary-color-dark: green;
 
   --text-light: white;
   --text-medium: #eaeaea;
@@ -45,11 +49,9 @@ body
 
 article /* Never change this (Except height to 100% once content is added to pages) */
 {
-  height: 1000px; 
+  height: 100%; 
   width: 1080px;
   margin: 0 auto;
-  position: relative;
-  top: -3px;
   background-color: var(--content-background-color);
 }
 
@@ -102,7 +104,7 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   header
   {
-    display: inline-flex;
+    display: flex;
     background: var(--primary-color);
     width: 100%;
     height: 80px;
@@ -133,7 +135,7 @@ article /* Never change this (Except height to 100% once content is added to pag
   {
     transition: all ease-in-out 250ms;
     cursor: pointer;
-    background-color: var(--primary-color-dark);
+    background-color: var(--secondary-color);
   }
 
   .nav-menu-logo img
@@ -162,12 +164,12 @@ article /* Never change this (Except height to 100% once content is added to pag
     display: none;
     position: absolute;
     top: 80px;
-    right: 0px;
+    right: -100px;
     background-color: var(--form-background);
     height: auto;
     width: 300px;
     z-index: 5;
-    border-radius: 5px 0px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
   }
 
   .dropdown-header
@@ -176,8 +178,8 @@ article /* Never change this (Except height to 100% once content is added to pag
     color: white;
     height: 20%;
     width: 100%;
-    background-color: var(--primary-color-dark);
-    border-radius: 5px 0px 0px 0px;
+    background-color: var(--secondary-color);
+    border-radius: 5px 5px 0px 0px;
     padding: 20px;
   }
 
@@ -221,7 +223,7 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   .signin-account-button
   {
-    background: var(--primary-color-dark);
+    background: var(--secondary-color);
     border-radius: 5px;
     color: var(--text-light);
     font-size: var(--font-small);
@@ -235,7 +237,7 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   .signin-account-button:hover
   {
-    background: var(--primary-color);
+    background: var(--secondary-color-dark);
   }
 
   .create-account-wrapper
@@ -299,7 +301,7 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   .signout-account-button
   {
-    background: var(--primary-color-dark);
+    background: var(--secondary-color);
     border-radius: 5px;
     color: var(--text-light);
     font-size: var(--font-small);
@@ -312,14 +314,155 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   .signout-account-button:hover
   {
-    background: var(--primary-color);
+    background: var(--secondary-color-dark);
   }
 
 
   /* Home Page */
 
+  
+  .slideshow-container 
+  {
+    width: 100%;
+    height: 540px;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+  }
 
+  .slideshow-image
+  {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; 
+    height: inherit;
+    overflow: hidden;
+  }
 
+  .slideshow-image img
+  {
+    height: inherit;
+    width: inherit;
+  }
+
+  .search-container 
+  {
+    width: 80%;
+    height: 300px;
+    position: block;
+    padding: 20px 20px 20px 20px;
+    margin: 40px auto 40px auto;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  .search-tab-container
+  {
+    width: 100%;
+    display: inline-flex;
+    border-radius: 5px;
+  }
+
+  .tab-selection
+  {
+    background-color: var(--form-background);
+    color: var(--text-light);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 20px 20px 20px;
+    font-size: var(--font-small);
+    width: 33.33%;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .tab-selection:hover 
+  {
+    background-color: white;
+  }
+
+  .tab-content 
+  {
+    height: 200px;
+    display: none;
+    padding: 20px 20px 20px 20px;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .search-box 
+  {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+  }
+
+  .search-field 
+  {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-input 
+  {
+    height: 40px;
+    width: 70%;
+    font-size: var(--font-small);
+    padding: 0px 10px 0px 10px;
+    background-color: var(--form-input-background);
+    box-shadow: none;
+    border: 1px solid var(--form-input-border);
+  }
+
+  .search-button
+  {
+    background: var(--form-background);
+    border-radius: 5px;
+    color: var(--text-dark);
+    font-size: var(--font-small);
+    padding: 10px 0px 10px 0px;
+    text-decoration: none;
+    width: 175px;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .search-button:hover 
+  {
+    background: var(--secondary-color-dark);
+  }
+
+  #player-tab
+  {
+    background-color: var(--primary-color);
+  }
+
+  #event-tab
+  {
+    background-color: var(--secondary-color);
+  }
+
+  #club-tab
+  {
+    background-color: var(--tertiary-color);
+  }
+
+  #player-content
+  {
+    background-color: var(--primary-color);
+  }
+
+  #event-content 
+  {
+    background-color: var(--secondary-color);
+  }
+
+  #club-content
+  {
+    background-color: var(--tertiary-color);
+  }
 
 
   /* Profile Page */
@@ -651,7 +794,7 @@ article /* Never change this (Except height to 100% once content is added to pag
     font-size: var(--font-small);
   }
 
-  .event-type,.sport-type
+  .event-type, .sport-type
   {
     font-size: var(--font-small);
   }
@@ -664,191 +807,6 @@ article /* Never change this (Except height to 100% once content is added to pag
   
   /* Footer */
 
-  /* [All One Line]
-
-  footer
-  {
-    background-color: var(--primary-color);
-    height: 120px;
-    width: 100%;
-    position: relative;
-    font-size: var(--font-small);
-    color: white;
-  }
-
-  footer a
-  {
-    display: inline-flex;
-    text-decoration: none;
-    color: var(--text-medium);
-    margin: 0px 20px 10px 0px;
-  }
-
-  .footer-container
-  {
-    height: inherit;
-    width: 1080px;
-    margin: 0 auto;
-  }
-
-  .footer-container h2
-  {
-    font-size: var(--font-medium);
-    color: var(--text-light);
-    margin: 0px 0px 10px 0px;
-  }
-
-  .footer-top-content
-  {
-    width: 100%;
-    display: inline-flex;
-    margin: 30px 0px 10px 0px;
-  }
-
-  .footer-logo
-  {
-    display: inline-flex;
-    margin: 0px 0px 0px 0px;
-  }
-
-  .footer-logo img
-  {
-    height: 25px;
-    width: 25px;
-  }
-
-  .footer-information
-  {
-    display: inline;
-    text-align: center;
-    margin-right: 5px;
-  }
-
-  .footer-container a:hover
-  {
-    color: var(--primary-color-dark);
-  }
-
-  .footer-social-media
-  {
-    display: inline;
-    text-align: center;
-    margin-right: auto;
-    margin-left: 20px;
-  }
-
-  .footer-bottom-content
-  {
-    display: block;
-    width: 100%;
-  }
-
-  .footer-bottom-content hr
-  {
-    margin: 0px 0px 10px 0px;
-    background-color: var(--text-medium);
-  }
-
-  .footer-bottom-content small
-  {
-    color: var(--text-medium);
-  }
-
-  .footer-heading
-  {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  */
-
-  /* [Left Aligned Groups]
-
-  footer
-  {
-    background-color: var(--primary-color);
-    height: 220px;
-    width: 100%;
-    position: relative;
-    font-size: var(--font-small);
-  }
-
-  footer a
-  {
-    display: block;
-    text-decoration: none;
-    color: var(--text-medium);
-    margin: 0px 0px 10px 0px;
-  }
-
-  .footer-container
-  {
-    height: inherit;
-    width: 1080px;
-    margin: 0 auto;
-  }
-
-  .footer-container h2
-  {
-    font-size: var(--font-medium);
-    color: var(--text-light);
-    margin: 0px 0px 10px 0px;
-  }
-
-  .footer-top-content
-  {
-    width: 100%;
-    display: inline-flex;
-    margin: 30px 0px 10px 0px;
-  }
-
-  .footer-logo
-  {
-    display: block;
-    margin: 0px 50px 0px 0px;
-  }
-
-  .footer-logo img
-  {
-    height: 115px;
-    width: 115px;
-  }
-
-  .footer-information
-  {
-    display: block;
-    margin: 0px 50px 0px 0px;
-  }
-
-  .footer-container a:hover
-  {
-    color: var(--text-dark);
-  }
-
-  .footer-social-media
-  {
-    display: block
-  }
-
-  .footer-bottom-content
-  {
-    display: block;
-    width: 100%;
-  }
-
-  .footer-bottom-content hr
-  {
-    margin: 0px 0px 10px 0px;
-    background-color: var(--text-medium);
-  }
-
-  .footer-bottom-content small
-  {
-    color: var(--text-medium);
-  } 
-
-  */
 
   footer
   {
@@ -910,7 +868,7 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   .footer-container a:hover
   {
-    color: var(--text-dark);
+    text-decoration: underline;
   }
 
   .footer-social-media
@@ -930,7 +888,10 @@ article /* Never change this (Except height to 100% once content is added to pag
   .footer-bottom-content hr
   {
     margin: 0px 0px 10px 0px;
-    background-color: var(--text-medium);
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .footer-bottom-content small

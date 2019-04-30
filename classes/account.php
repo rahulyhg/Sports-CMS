@@ -149,6 +149,14 @@ class Account
 		$result = $this->database->query($query, [$state, $email]);		
 	}
 
+	public function getAllInactiveAccounts()
+	{
+		$query = "SELECT * FROM account WHERE active = ?";
+		$result = $this->database->query($query, ["N"]);
+
+		return $result;
+	}
+
 	public function emailExists($email)
 	{
 		$filteredEmail = strtolower($email);

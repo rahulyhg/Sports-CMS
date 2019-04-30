@@ -1,5 +1,5 @@
 <?php 
-    $title = "Peters Ratings | Players";
+    $title = "Peterman Ratings | Players";
 
     include("./includes/header.php");
     include("./includes/navigation.php");

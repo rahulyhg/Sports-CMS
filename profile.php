@@ -1,11 +1,12 @@
 <?php
-  $title = "Peters Ratings | Profile";
+  $title = "Peterman Ratings | Profile";
   
   include("./includes/header.php");
   include("./includes/navigation.php");
 ?>
 
-<div class="player-profile-border">
+<article>
+  <div class="player-profile-border">
 
   <div class="player-image-border">
     <img id="player-image" alt="player">
@@ -83,6 +84,8 @@
   </div>
 
 </div>
+</article>
+
 
 <?php
   include("./includes/footer.php");

@@ -1,5 +1,5 @@
 <?php 
-    $title = "Peters Ratings | Terms and Conditions";
+    $title = "Peterman Ratings | Terms and Conditions";
 
     include("./includes/header.php");
     include("./includes/navigation.php");

@@ -28,11 +28,11 @@
       <?php
         if($account->isLoggedIn())
         {
-          include("navMenuSignedIn.php");
+          include("nav-menu-signed-in.php");
         }
         else
         {
-          include("navMenuSignedOut.php");
+          include("nav-menu-signed-out.php");
         }
       ?>
 
