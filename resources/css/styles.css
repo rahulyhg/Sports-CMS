@@ -49,7 +49,7 @@ body
 
 article /* Never change this (Except height to 100% once content is added to pages) */
 {
-  height: 100%; 
+  height: 1000px; 
   width: 1080px;
   margin: 0 auto;
   background-color: var(--content-background-color);
@@ -760,7 +760,7 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   .event-form
   {  
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
   }
@@ -819,10 +819,96 @@ article /* Never change this (Except height to 100% once content is added to pag
     cursor: pointer;
   }
 
-  .event-field-input,.sport-type,.event-type,.match-field-input
+  .event-details-header
   {
-    width: 250px;
-    height:40px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .event-field-input,.sport-type,.event-type
+  {
+    margin: 0px 0px 0px 0px;
+    width: 200px;
+    height:50px;
+    padding: 0px 10px 0px 10px;
+  }
+
+  .match-details-header
+  {
+    margin: 5px 0px 0px 0px;
+  }
+
+  .match-field-input
+  {
+    margin: 20px 0px 0px 0px;
+    width:200px; 
+    height:50px;
+    padding: 10px 0px 10px 10px;
+    color: var(--text-dark);
+  }
+
+  .match-submit 
+  {
+    margin: 50px 0px 0px 0px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    width:200px;
+    height:50px;
+    border-radius: 5px;
+    font-size: var(--font-small);
+  }
+  
+  .match-number-input
+  {
+    margin: 20px 0px 0px 0px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    width:200px;
+    height:50px;
+    border-radius: 5px;
+    font-size: var(--font-small);
+  }
+
+  .match-submit:hover
+  {
+    background: var(--primary-color-dark);
+    color: var(--text-light);
+  }
+ 
+  .match-number-input:hover
+  {
+    background: var(--primary-color-dark);
+  }
+
+  .search-button
+  {
+    width:100px; 
+    height:50px;
+    margin: 20px 100px 0px 0px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 5px;
+    font-size: var(--font-small);
+  }
+
+  .search-button:hover
+  {
+    background: var(--primary-color-dark);
+  }
+
+  .delete-button
+  {
+    width:100px; 
+    height:50px;
+    margin: 20px 10px 0px 10px;
+    background-color:var(--primary-color);
+    border-radius: 5px;
+    color:white;
+    font-size: var(--font-small);
+  }
+
+  .delete-button:hover
+  {
+    background-color:var(--primary-color-dark);
   }
 
   .event-field-name, .winner-name,.loser-name, .match-date, .match-number-text
@@ -835,12 +921,12 @@ article /* Never change this (Except height to 100% once content is added to pag
     font-size: var(--font-small)
   }
 
-  .sport-type::-webkit-input-placeholder,
+  .sport-type::-webkit-input-placeholder
   {
     font-size: var(--font-small);
   }
 
-  .event-type, .sport-type
+  .event-type,.sport-type
   {
     font-size: var(--font-small);
   }
