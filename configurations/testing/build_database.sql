@@ -41,9 +41,9 @@ CREATE TABLE IF NOT EXISTS `rating` (
   `standard_deviation` DOUBLE NOT NULL,
   `last_calculated` DATETIME NOT NULL,
   `sport_id` INT NOT NULL,
-  `player_id` INT NOT NULL,
+  `player_id` INT DEFAULT NULL,
   `team_id` INT DEFAULT NULL,
-  PRIMARY KEY (`rating_id`, `sport_id`, `player_id`),
+  PRIMARY KEY (`rating_id`, `sport_id`),
   FOREIGN KEY (`sport_id`) REFERENCES sport(sport_id),
   FOREIGN KEY (`player_id`) REFERENCES player(player_id),
   FOREIGN KEY (`team_id`) REFERENCES team(team_id)
@@ -121,7 +121,6 @@ CREATE TABLE IF NOT EXISTS `membership` (
 
 CREATE TABLE IF NOT EXISTS `match` (
   `match_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
-  `date_played` DATETIME NOT NULL,
   `mean_before_winning` DOUBLE NOT NULL,
   `mean_after_winning` DOUBLE,
   `standard_deviation_before_winning` DOUBLE NOT NULL,
