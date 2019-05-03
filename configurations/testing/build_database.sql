@@ -45,7 +45,8 @@ CREATE TABLE IF NOT EXISTS `rating` (
   `team_id` INT DEFAULT NULL,
   PRIMARY KEY (`rating_id`, `sport_id`, `player_id`),
   FOREIGN KEY (`sport_id`) REFERENCES sport(sport_id),
-  FOREIGN KEY (`player_id`) REFERENCES player(player_id)
+  FOREIGN KEY (`player_id`) REFERENCES player(player_id),
+  FOREIGN KEY (`team_id`) REFERENCES team(team_id)
 );
 
 CREATE TABLE IF NOT EXISTS `club` (
