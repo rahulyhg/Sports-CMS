@@ -35,29 +35,6 @@ CREATE TABLE IF NOT EXISTS `player` (
   FOREIGN KEY (`country_id`) REFERENCES country(country_id)
 );
 
-CREATE TABLE IF NOT EXISTS `team` (
-  `team_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
-  `player_one_id` INT NOT NULL,
-  `player_two_id` INT NOT NULL,
-  PRIMARY KEY (`team_id`, `player_one_id`, `player_two_id`),
-  FOREIGN KEY (`player_one_id`) REFERENCES player(player_id),
-  FOREIGN KEY (`player_two_id`) REFERENCES player(player_id)
-);
-
-CREATE TABLE IF NOT EXISTS `rating` (
-  `rating_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
-  `mean` DOUBLE NOT NULL,
-  `standard_deviation` DOUBLE NOT NULL,
-  `last_calculated` DATETIME NOT NULL,
-  `sport_id` INT NOT NULL,
-  `player_id` INT DEFAULT NULL,
-  `team_id` INT DEFAULT NULL,
-  PRIMARY KEY (`rating_id`, `sport_id`),
-  FOREIGN KEY (`sport_id`) REFERENCES sport(sport_id),
-  FOREIGN KEY (`player_id`) REFERENCES player(player_id),
-  FOREIGN KEY (`team_id`) REFERENCES team(team_id)
-);
-
 CREATE TABLE IF NOT EXISTS `club` (
   `club_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL UNIQUE,
@@ -90,12 +67,52 @@ CREATE TABLE IF NOT EXISTS `plays_at` (
   FOREIGN KEY (`event_id`) REFERENCES event(event_id)
 );
 
-CREATE TABLE IF NOT EXISTS `match_result` (
-  `match_result_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `team` (
+  `team_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
+  `player_one_id` INT NOT NULL,
+  `player_two_id` INT NOT NULL,
+  PRIMARY KEY (`team_id`, `player_one_id`, `player_two_id`),
+  FOREIGN KEY (`player_one_id`) REFERENCES player(player_id),
+  FOREIGN KEY (`player_two_id`) REFERENCES player(player_id)
+);
+
+CREATE TABLE IF NOT EXISTS `rating` (
+  `rating_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
+  `mean` DOUBLE NOT NULL,
+  `standard_deviation` DOUBLE NOT NULL,
+  `last_calculated` DATETIME NOT NULL,
+  `sport_id` INT NOT NULL,
+  `player_id` INT DEFAULT NULL,
+  `team_id` INT DEFAULT NULL,
+  PRIMARY KEY (`rating_id`, `sport_id`),
+  FOREIGN KEY (`sport_id`) REFERENCES sport(sport_id),
+  FOREIGN KEY (`player_id`) REFERENCES player(player_id),
+  FOREIGN KEY (`team_id`) REFERENCES team(team_id)
+);
+
+CREATE TABLE IF NOT EXISTS `game` (
+  `game_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
+  `mean_before_winning` DOUBLE NOT NULL,
+  `mean_after_winning` DOUBLE,
+  `standard_deviation_before_winning` DOUBLE NOT NULL,
+  `standard_deviation_after_winning` DOUBLE,
+  `mean_before_losing` DOUBLE NOT NULL,
+  `mean_after_losing` DOUBLE,
+  `standard_deviation_before_losing` DOUBLE NOT NULL,
+  `standard_deviation_after_losing` DOUBLE,
+  `event_id` INT NOT NULL,
+  PRIMARY KEY (`game_id`),
+  FOREIGN KEY (`event_id`) REFERENCES event(event_id)
+);
+
+CREATE TABLE IF NOT EXISTS `game_result` (
+  `game_result_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
   `won` VARCHAR(1) NOT NULL CHECK (won IN ('Y', 'N')),
   `player_id` INT NOT NULL,
-  PRIMARY KEY (`match_result_id`),
-  FOREIGN KEY (`player_id`) REFERENCES player(player_id)
+  `game_id` INT NOT NULL,
+  PRIMARY KEY (`game_result_id`),
+  FOREIGN KEY (`player_id`) REFERENCES player(player_id),
+  FOREIGN KEY (`game_id`) REFERENCES game(game_id)
 );
 
 CREATE TABLE IF NOT EXISTS `account` (
@@ -119,22 +136,6 @@ CREATE TABLE IF NOT EXISTS `membership` (
   FOREIGN KEY (`player_id`) REFERENCES player(player_id)
 );
 
-CREATE TABLE IF NOT EXISTS `match` (
-  `match_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
-  `mean_before_winning` DOUBLE NOT NULL,
-  `mean_after_winning` DOUBLE,
-  `standard_deviation_before_winning` DOUBLE NOT NULL,
-  `standard_deviation_after_winning` DOUBLE,
-  `mean_before_losing` DOUBLE NOT NULL,
-  `mean_after_losing` DOUBLE,
-  `standard_deviation_before_losing` DOUBLE NOT NULL,
-  `standard_deviation_after_losing` DOUBLE,
-  `event_id` INT NOT NULL,
-  `match_result_id` INT NOT NULL,
-  PRIMARY KEY (`match_id`),
-  FOREIGN KEY (`event_id`) REFERENCES event(event_id),
-  FOREIGN KEY (`match_result_id`) REFERENCES match_result(match_result_id)
-);
 
 
 insert into `country`(name) VALUES ('Australia');
