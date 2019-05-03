@@ -1,5 +1,5 @@
 
-;
+# ;
 
 # 
 restart;
@@ -110,6 +110,7 @@ UpdateAndOutput:= proc(
    Games::list([{name,string}, {name,string}]),
    match_ids::list,
    tournament_id::string,
+   tournament_date::string,
    num_matches::integer,
    {inplace::truefalse:= true},
    {showincremental::{And(numeric,positive),NoUserValue}:=':-NoUserValue'}
@@ -124,7 +125,7 @@ local count := 1;
 
 #Watkins: Open output file and output intial information
 local Out_File := fopen('output_file','WRITE','TEXT');
-fprintf(Out_File,"%s\n%d\n",tournament_id,num_matches);
+fprintf(Out_File,"%s\n%s\n%d\n",tournament_id,tournament_date,num_matches);
 
 
    for G in Games do
@@ -187,6 +188,6 @@ MakeTable:-initialize(TAB);
 
 #This call created the new standings for each match. The procedure had been updated to 
 #output the raw data to the output file. Note the updated input for the procedure.  
-NewStandings:= UpdateAndOutput(Standings, Games, Match_ids, tournament_id, numGames, inplace= false):
+NewStandings:= UpdateAndOutput(Standings, Games, Match_ids, tournament_id, d, numGames, inplace= false):
 
 
