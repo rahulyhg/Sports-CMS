@@ -34,16 +34,15 @@ class ContentManager
 	 */
 	public function updateAfterMatchStatisticComputed($tournamentDate, $sportID, $matchID, $winnerID, $winnerNewMean, $winnerNewSD, $loserID, $loserNewMean, $loserNewSD)
 	{
-		//update entry in match_statistic
-		$query = "UPDATE match_statistics, sports_cms.match
+		//update entry in game
+		$query = "UPDATE game
 					SET 
-						match_statistics.mean_after_winning = ?,
-						match_statistics.standard_deviation_after_winning = ?,
-						match_statistics.mean_after_losing = ?,
-						match_statistics.standard_deviation_after_losing = ?
+						game.mean_after_winning = ?,
+						game.standard_deviation_after_winning = ?,
+						game.mean_after_losing = ?,
+						game.standard_deviation_after_losing = ?
 					WHERE 
-						match.match_id = ? AND
-						match.match_statistics_id = match_statistics.match_statistics_id;";
+						game.game_id = ? AND;";
 		
 		$result = $this->database->query($query,[$winnerNewMean,$winnerNewSD, $loserNewMean, $loserNewSD, $matchID]);
 		
@@ -61,8 +60,6 @@ class ContentManager
 						rating.sport_id = ?;";
 
 		$result = $this->database->query($query,[$tournamentDate,$winnerNewMean,$winnerNewSD,$winnerID,$sportID]);
-		
-		var_dump($result);
 		
 		$result = $this->database->query($query,[$tournamentDate,$loserNewMean,$loserNewSD,$loserID,$sportID]);
 	}
