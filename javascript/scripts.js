@@ -154,15 +154,16 @@ function showUploadMatchRows()
     for(var insertCycle = 0; insertCycle < matchRows; insertCycle++)
     {
         var table = document.getElementById("match-input-table");
-
-        var row = table.insertRow(0);
+      
+          var row = table.insertRow(0);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3  = row.insertCell(2);
         var cell4  = row.insertCell(3);
         var cell5  =  row.insertCell(4);
-
-        var insertCell1 = document.createElement("input");
+       
+      
+      var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
         insertCell1.setAttribute('class','match-field-input');
         insertCell1.onkeyup="checkForm()";
@@ -189,6 +190,71 @@ function showUploadMatchRows()
         var insertCell5 = document.createElement("button");
         insertCell5.innerHTML = "Delete";
         insertCell5.setAttribute('class','delete-button');
+        
         cell5.appendChild(insertCell5);
-    } 
+      insertCell5.onclick = function() {deleteRow(this);};
+      
+      
+     
+}
+   /*var addButton = document.createElement("BUTTON");
+  
+  addButton.innerHTML = "Add More Rows";
+  addButton.setAttribute('class','add-button');
+  
+  document.body.appendChild(addButton);*/
+  document.getElementById("add-button").style.display = "block";
+  document. getElementById("match-final-submit").style.display = "block";
+}
+function deleteRow(selectedRow)
+{
+  var findRow= selectedRow.parentNode.parentNode.rowIndex;
+  document.getElementById("match-input-table").deleteRow(findRow);
+   
+}
+function addMoreRows()
+{
+  
+   var table = document.getElementById("match-input-table");
+      
+          var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3  = row.insertCell(2);
+        var cell4  = row.insertCell(3);
+        var cell5  =  row.insertCell(4);
+       
+      
+      var insertCell1 = document.createElement("input");
+        insertCell1.setAttribute('type','text');
+        insertCell1.setAttribute('class','match-field-input');
+        insertCell1.onkeyup="checkForm()";
+        insertCell1.placeholder = "Winner";
+        cell1.appendChild(insertCell1);
+
+        var insertCell2 = document.createElement("button");
+        insertCell2.innerHTML = "Search";
+        insertCell2.setAttribute('class','search-button');
+        cell2.appendChild(insertCell2);
+
+        var insertCell3 = document.createElement("input");
+        insertCell3.setAttribute('type','text');
+        insertCell3.setAttribute('class','match-field-input');
+        insertCell3.placeholder = "Loser";
+        insertCell3.onkeyup="checkForm()";
+        cell3.appendChild(insertCell3);
+
+        var insertCell4 = document.createElement("button");
+        insertCell4.innerHTML = "Search";
+        insertCell4.setAttribute('class','search-button');
+        cell4.appendChild(insertCell4);
+
+        var insertCell5 = document.createElement("button");
+        insertCell5.innerHTML = "Delete";
+        insertCell5.setAttribute('class','delete-button');
+        
+        cell5.appendChild(insertCell5);
+      insertCell5.onclick = function() {deleteRow(this);};
+  
+     
 }

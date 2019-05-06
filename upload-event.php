@@ -40,11 +40,14 @@
   <hr>
     <h1 class="match-details-header">Match Details</h1>
     <input class="match-field-input" id="match-field-input" type="number" id="match-number"  name="match-number"  placeholder="Add/Delete Matches" min="1" >
-    <input class = "match-number-input"id = "match-submit" type="submit" name="match-number-submission" value="Add Match" onclick="showUploadMatchRows()"><br/>
+    <input class = "match-number-input"id = "match-submit" type="submit" name="match-number-submission" value="Add Matches" onclick="showUploadMatchRows()"><br/>
     
     <form class="match-form" id="match-form" action="" autocomplete="off">
       <table id="match-input-table"></table>
-      <input class= "match-submit" id="match-submit" type="submit"  name="event-page-submission" value="Submit"><br/>
+      <input class="add-button" type="submit" name="add-button" id="add-button" value="Add  Match" onclick="addMoreRows(); return false;" >
+    
+
+      <input class= "match-submit" id="match-final-submit" type="submit"  name="event-page-submission" value="Submit"><br/>
     </form>
     
 </article>

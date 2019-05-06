@@ -855,6 +855,7 @@ article /* Never change this (Except height to 100% once content is added to pag
     height:50px;
     border-radius: 5px;
     font-size: var(--font-small);
+    display: none;
   }
   
   .match-number-input
@@ -909,6 +910,17 @@ article /* Never change this (Except height to 100% once content is added to pag
   .delete-button:hover
   {
     background-color:var(--primary-color-dark);
+  }
+  .add-button
+  {
+    display: none;
+    margin: 50px 0px 0px 0px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    width:200px;
+    height:50px;
+    border-radius: 5px;
+    font-size: var(--font-small);
   }
 
   .event-field-name, .winner-name,.loser-name, .match-date, .match-number-text
