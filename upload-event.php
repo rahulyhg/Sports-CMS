@@ -17,8 +17,24 @@
   <form class="event-form" action="">
     <div class="event-details-row">
       <input class="event-field-input" type="text" name="event-name"placeholder="Name"><br/><br/>
-      <input class="event-field-input" type="text" name="country-name" placeholder="Country"><br/><br/>
-      <input class="event-field-input" type="text" name="state-name" placeholder="State"><br/><br/>
+      <select class="event-type" name="country-id" id="country-id">
+		  <?php
+			$countries = $contentManager->getAllCountries();
+			while ($country = $countries->fetch())
+			{
+				echo "<option value=\"".$country["country_id"]."\">".$country["name"]."</option>";
+			}
+		  ?>
+      </select>
+      
+      <br/><br/>
+      <!-- <input class="event-field-input" type="text" name="state-name" placeholder="State"><br/><br/> -->
+      
+      <select class="event-type" name="state-name" id="state-name">
+
+      </select>
+      
+      <br /><br />
     </div>
   
     <div class="event-details-row">

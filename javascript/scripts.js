@@ -258,3 +258,47 @@ function addMoreRows()
   
      
 }
+
+/**
+ * ajax query for event upload page to fill in state box based upon user
+ * selection from country box.
+ * 
+ * Relies on getStatesByCountry.php for data. 
+ */
+function uploadEventChangeStates()
+{
+    var country = $("#country-id").val();
+    
+    //clear the options
+    $("#state-name").empty();
+	
+	//run ajax
+	$.ajax
+	({
+		url: "./get-states-by-country-ID.php",
+        type: "POST",
+        dataType: "text",
+        data: {countryID: country},
+        success: function(data) 
+        {
+			//parse the returned data
+			var jsonData = JSON.parse(data);
+            
+            //add a new option to state-name for each returned state.
+            $.each(jsonData, function(index, value)
+            {
+				$("#state-name").append($("<option>",{
+					value: value["state_id"],
+					text: value["name"]
+				}));
+			});
+        }
+    });
+}
+
+//This is required to fill in the boxes based upon the default contry selected
+//there must be a better way to do this.?
+uploadEventChangeStates();
+
+//event listener for change of country
+$("#country-id").change(uploadEventChangeStates);
