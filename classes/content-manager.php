@@ -18,6 +18,23 @@ class ContentManager
 		return $result;
 	}
 	
+	public function getAllCountries()
+	{
+		$query = "SELECT * FROM country;";
+		$result = $this->database->query($query,null);
+		
+		return $result;
+	}
+	
+	public function getStatesByCountry($countryID)
+	{
+		$query = "SELECT state_id, name FROM state WHERE country_id = ?;";
+		$result = $this->database->query($query,[$countryID]);
+		
+		return $result;
+		
+	}
+	
 	//returns the type of sport being played in an event
 	public function getEventSport($eventID)
 	{
