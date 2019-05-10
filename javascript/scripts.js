@@ -166,6 +166,7 @@ function showUploadMatchRows()
       var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
         insertCell1.setAttribute('class','match-field-input');
+        insertCell1.setAttribute('name','winner-name[]');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
         cell1.appendChild(insertCell1);
@@ -178,6 +179,7 @@ function showUploadMatchRows()
         var insertCell3 = document.createElement("input");
         insertCell3.setAttribute('type','text');
         insertCell3.setAttribute('class','match-field-input');
+        insertCell3.setAttribute('name','loser-name[]');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
         cell3.appendChild(insertCell3);
@@ -228,6 +230,7 @@ function addMoreRows()
       var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
         insertCell1.setAttribute('class','match-field-input');
+         insertCell1.setAttribute('name','winner-name[]');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
         cell1.appendChild(insertCell1);
@@ -240,6 +243,7 @@ function addMoreRows()
         var insertCell3 = document.createElement("input");
         insertCell3.setAttribute('type','text');
         insertCell3.setAttribute('class','match-field-input');
+        insertCell3.setAttribute('name','loser-name[]');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
         cell3.appendChild(insertCell3);
