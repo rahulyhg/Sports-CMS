@@ -12,9 +12,10 @@
 
 <article class ="event-details-border" >
   
+  <form class= "event-upload-form" action="">
   <h1 class="event-details-header">Event Details</h1>
-  
-  <form class="event-form" action="">
+ 
+  <div class="event-form" action="">
     <div class="event-details-row">
       <input class="event-field-input" type="text" name="event-name"placeholder="Name"><br/><br/>
       <select class="event-type" name="country-id" id="country-id">
@@ -51,22 +52,25 @@
        
       <input class="event-field-input" name="event-date" id="event-date" placeholder="Date"type="text"onfocus="(this.type='date')" onblur="(this.type='text')"><br/>
     </div>
-  </form>
+  </div>
   
   <hr>
     <h1 class="match-details-header">Match Details</h1>
     <input class="match-field-input" id="match-field-input" type="number" id="match-number"  name="match-number"  placeholder="Add/Delete Matches" min="1" >
-    <input class = "match-number-input"id = "match-submit" type="submit" name="match-number-submission" value="Add Matches" onclick="showUploadMatchRows()"><br/>
+  <button class = "match-number-input" id = "match-submit"  name="match-number-submission" value="Add Matches" onclick="showUploadMatchRows(); return false;">Add Matches</button><br/>
     
-    <form class="match-form" id="match-form" action="" autocomplete="off">
+    
       <table id="match-input-table"></table>
-      <input class="add-button" type="submit" name="add-button" id="add-button" value="Add  Match" onclick="addMoreRows(); return false;" >
+      <button class="add-button"  name="add-button" id="add-button"  onclick="addMoreRows(); return false;" > Add Match </button>
     
 
-      <input class= "match-submit" id="match-final-submit" type="submit"  name="event-page-submission" value="Submit"><br/>
-    </form>
+      
     
+  <input class= "match-submit" id="match-final-submit" type="submit"  name="event-page-submission" value="Submit"><br/>
+
+  </form>
 </article>
+
 
 <?php
   include("./includes/footer.php");
