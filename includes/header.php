@@ -28,6 +28,9 @@
   <meta name="author" content="Grant Upson, Yusuf Uzun, James Watkins, Mingxin Wen, Marcus Grantham, Harry Singh, Adib Ornob"> 
 
   <link rel="stylesheet" href="./resources/css/styles.css">
+  
+  <link rel="stylesheet" href="./resources/css/jquery-ui.min.css">
+  
   <link rel="icon" href="./resources/images/favicon.ico">
 
   <title> <?php echo $title; ?> </title>
