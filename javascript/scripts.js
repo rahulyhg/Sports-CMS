@@ -165,11 +165,17 @@ function showUploadMatchRows()
       
       var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
-        insertCell1.setAttribute('class','match-field-input');
+        insertCell1.setAttribute('class','match-field-input winner-loser-field');
         insertCell1.setAttribute('name','winner-name[]');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
         cell1.appendChild(insertCell1);
+        
+        //adds a hidden cell to contain ids of winners
+        var hiddenInput1 = document.createElement("input");
+        hiddenInput1.setAttribute('type','hidden');
+        hiddenInput1.setAttribute('name','winner-id[]');
+        cell1.appendChild(hiddenInput1);
 
         var insertCell2 = document.createElement("button");
         insertCell2.innerHTML = "Search";
@@ -178,11 +184,17 @@ function showUploadMatchRows()
 
         var insertCell3 = document.createElement("input");
         insertCell3.setAttribute('type','text');
-        insertCell3.setAttribute('class','match-field-input');
+        insertCell3.setAttribute('class','match-field-input winner-loser-field');
         insertCell3.setAttribute('name','loser-name[]');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
         cell3.appendChild(insertCell3);
+        
+        //adds a hidden cell to contain ids of losers
+        var hiddenInput2 = document.createElement("input");
+        hiddenInput2.setAttribute('type','hidden');
+        hiddenInput2.setAttribute('name','loser-id[]');
+        cell3.appendChild(hiddenInput2);
 
         var insertCell4 = document.createElement("button");
         insertCell4.innerHTML = "Search";
@@ -194,7 +206,10 @@ function showUploadMatchRows()
         insertCell5.setAttribute('class','delete-button');
         
         cell5.appendChild(insertCell5);
-      insertCell5.onclick = function() {deleteRow(this);};
+      insertCell5.onclick = function() {deleteRow(this);
+	};
+	
+	setupMatchAutoComplete();
       
       
      
@@ -229,11 +244,17 @@ function addMoreRows()
       
       var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
-        insertCell1.setAttribute('class','match-field-input');
+        insertCell1.setAttribute('class','match-field-input winner-loser-field');
          insertCell1.setAttribute('name','winner-name[]');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
         cell1.appendChild(insertCell1);
+        
+        //adds a hidden cell to contain ids of winners
+        var hiddenInput1 = document.createElement("input");
+        hiddenInput1.setAttribute('type','hidden');
+        hiddenInput1.setAttribute('name','winner-id[]');
+        cell1.appendChild(hiddenInput1);
 
         var insertCell2 = document.createElement("button");
         insertCell2.innerHTML = "Search";
@@ -242,11 +263,17 @@ function addMoreRows()
 
         var insertCell3 = document.createElement("input");
         insertCell3.setAttribute('type','text');
-        insertCell3.setAttribute('class','match-field-input');
+        insertCell3.setAttribute('class','match-field-input winner-loser-field');
         insertCell3.setAttribute('name','loser-name[]');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
         cell3.appendChild(insertCell3);
+        
+        //adds a hidden cell to contain ids of losers
+        var hiddenInput2 = document.createElement("input");
+        hiddenInput2.setAttribute('type','hidden');
+        hiddenInput2.setAttribute('name','loser-id[]');
+        cell3.appendChild(hiddenInput2);
 
         var insertCell4 = document.createElement("button");
         insertCell4.innerHTML = "Search";
@@ -258,7 +285,10 @@ function addMoreRows()
         insertCell5.setAttribute('class','delete-button');
         
         cell5.appendChild(insertCell5);
-      insertCell5.onclick = function() {deleteRow(this);};
+      insertCell5.onclick = function() {deleteRow(this);
+	};
+	
+	setupMatchAutoComplete();
   
      
 }
@@ -306,3 +336,46 @@ uploadEventChangeStates();
 
 //event listener for change of country
 $("#country-id").change(uploadEventChangeStates);
+
+
+$( function() {
+	setupMatchAutoComplete();
+});
+
+$("#state-name").change(setupMatchAutoComplete);
+
+function setupMatchAutoComplete()
+{
+	var state = $("#country-id").val();		//note that this will need to change to state not country
+
+	$( ".winner-loser-field" ).autocomplete({
+		source: 
+		function( request, response ) 
+		{
+			// Fetch data
+			$.ajax({
+				url: "./get-player-by-state.php",
+				type: 'POST',
+				dataType: "json",
+				data: 
+				{
+					name: request.term,
+					state: state
+				},
+				success: function( data ) 
+				{
+					response( data );
+				}
+			});
+		},
+		select: function(event,ui)
+		{
+			//the next elemtent in line will be the hidden cell to contain id
+			//fill this with the id. 
+			//name cell will be automatically filled in 
+			$(this).next().val(ui.item.id);
+		}
+	});
+
+}
+

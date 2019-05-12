@@ -12,7 +12,7 @@
 
 <article class ="event-details-border" >
   
-  <form class= "event-upload-form" action="">
+  <form class= "event-upload-form" autocomplete="off" action=".\process-event.php" method="post">
   <h1 class="event-details-header">Event Details</h1>
  
   <div class="event-form" action="">
@@ -60,6 +60,7 @@
   </div>
   
   <hr>
+  <div class="ui-widget"> 
     <h1 class="match-details-header">Match Details</h1>
     <input class="match-field-input" id="match-field-input" type="number" id="match-number"  name="match-number"  placeholder="Add/Delete Matches" min="1" >
   <button class = "match-number-input" id = "match-submit"  name="match-number-submission" value="Add Matches" onclick="showUploadMatchRows(); return false;">Add Matches</button><br/>
@@ -67,7 +68,8 @@
     
       <table id="match-input-table"></table>
       <button class="add-button"  name="add-button" id="add-button"  onclick="addMoreRows(); return false;" > Add Match </button>
-    
+   
+   </div>
 
       
     
