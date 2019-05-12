@@ -151,7 +151,7 @@ insert into `state`(name, country_id) VALUES ('Otago', '2');
 
 insert into `sport` (name) VALUES ('Badminton');
 insert into `sport` (name) VALUES ('Squash');
-insert into `sport` (name) VALUES ('Table tennis');
+insert into `sport` (name) VALUES ('Table Tennis');
 
 insert into `club` (name, country_id, state_id) VALUES ('Launceston Squash Club', 1, 1);
 insert into `club` (name, country_id, state_Id) VALUES ('Otago Badminton Club', 2, 4);
@@ -159,6 +159,12 @@ insert into `club` (name, country_id, state_Id) VALUES ('Otago Badminton Club', 
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id) 
   VALUES ('Grant', 'Upson', 'M', NOW(), 'grantaupson@gmail.com', NOW(), 'Y', '1', '1');
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (1500, 200, NOW(), 2, 1, null);
+insert into membership (club_id, player_id) VALUES ('1', '1');
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Jordan', 'Smith', 'F', NOW(), 'jordan@gmail.com', NOW(), 'Y', '2', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 2, null);
+insert into membership (club_id, player_id) VALUES ('2', '2');
 
 
 

@@ -40,9 +40,14 @@
   
     <div class="event-details-row">
        <select class="sport-type" name="sport-type">
-         <option value="badminton">Badminton</option> 
-         <option value="table-tennis">Table-Tennis</option>
-         <option value="squash">Squash</option>
+         <?php
+            $sports = $contentManager->getAllSports();
+
+            while ($sport = $sports->fetch())
+            {
+                echo "<option value=\"".$sport["sport_id"]."\">".$sport["name"]."</option>";
+            }
+        ?>
        </select><br/><br/>
         
       <select class="event-type" name="event-type">

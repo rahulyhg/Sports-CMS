@@ -3,16 +3,20 @@
   
   include("./includes/header.php");
   include("./includes/navigation.php");
+
+  //Testing purposes, this will get dynamically sent eventually.
+  $_SESSION["profile-id"] = 1;
+
+  if(isset($_SESSION["profile-id"])) //this will be $_POST later
+  {
+      $playerId = $_SESSION["profile-id"];
+      $playerInfo = $contentManager->getSpecificPlayerInformation($playerId);
+      $playerClub = $contentManager->getPlayerClub($playerId);
+  }
 ?>
 
-<article>
 
-  <div class="search-box">
-    <div class="search-field">
-      <input type="txt" class="search-input" placeholder="Search for Players">
-      <button class="search-button" onclick="" type="button">Search</button>
-    </div>
-  </div>
+<article>
 
   <div class="player-details-border">
 
@@ -21,19 +25,19 @@
     <ul class="player-bio-list">
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>First Name</b></span>
-      	<span id="player-bio-row-value">Jessica</span>
+      	<span id="player-bio-row-value"> <?php echo $playerInfo["given_name"]; ?> </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Last Name</b></span>
-      	<span id="player-bio-row-value">Simpson</span>
+      	<span id="player-bio-row-value"> <?php echo $playerInfo["family_name"]; ?> </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Gender</b></span>
-      	<span id="player-bio-row-value">F</span>
+      	<span id="player-bio-row-value"> <?php echo $playerInfo["gender"]; ?> </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Age</b></span>
-      	<span id="player-bio-row-value">38</span>
+      	<span id="player-bio-row-value">  </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Country</b></span>
@@ -44,8 +48,8 @@
       	<span id="player-bio-row-value">Texas</span>
       </li>
       <li id="player-bio-row">
-      	<span id="player-bio-row-heading"><b>Clubs</b></span>
-      	<span id="player-bio-row-value">A-Team</span>
+      	<span id="player-bio-row-heading"><b>Club</b></span>
+      	<span id="player-bio-row-value"> <?php echo $playerClub["name"]; ?> </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Sport</b></span>

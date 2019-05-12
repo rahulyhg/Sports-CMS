@@ -6,7 +6,7 @@
     <a href="./account.php">Account</a>
     <a href="./upload-event.php">Upload Event</a>
     <?php 
-      if($account->getAccessLevel() == 0)
+      if($account->getAccessLevel() <= 1)
       {
       	echo "<a href='./administration.php'>Administration</a>";
       }

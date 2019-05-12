@@ -474,6 +474,7 @@ article /* Never change this (Except height to 100% once content is added to pag
     position: relative;
     left: 4.7%;
     margin-bottom: 30px;
+    margin-top: 20px;
   }
 
   .player-details-border h1

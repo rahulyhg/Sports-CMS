@@ -18,21 +18,50 @@ class ContentManager
 		return $result;
 	}
 	
+
+	public function getSpecificPlayerInformation($player_id)
+	{
+		$query = "SELECT * FROM player WHERE player_id = ? ";
+		$result = $this->database->query($query, [$player_id])->fetch();
+
+		return $result;
+	}
+
+
+	public function getPlayerClub($player_id)
+	{
+		$query = "select club.name FROM club INNER JOIN membership on membership.club_id = club.club_id WHERE player_id = ? ";
+		$result = $this->database->query($query, [$player_id])->fetch();
+
+		return $result;
+	}
+
+
 	public function getAllCountries()
 	{
-		$query = "SELECT * FROM country;";
-		$result = $this->database->query($query,null);
+		$query = "SELECT * FROM country";
+		$result = $this->database->query($query, null);
 		
 		return $result;
 	}
 	
+
 	public function getStatesByCountry($countryID)
 	{
-		$query = "SELECT state_id, name FROM state WHERE country_id = ?;";
-		$result = $this->database->query($query,[$countryID]);
+		$query = "SELECT state_id, name FROM state WHERE country_id = ?";
+		$result = $this->database->query($query, [$countryID]);
 		
 		return $result;
 		
+	}
+
+
+	public function getAllSports()
+	{
+		$query = "SELECT * FROM sport";
+		$result = $this->database->query($query, null);
+		
+		return $result;
 	}
 	
 	//returns the type of sport being played in an event
