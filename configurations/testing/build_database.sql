@@ -31,8 +31,10 @@ CREATE TABLE IF NOT EXISTS `player` (
   `last_played` DATETIME NOT NULL,
   `receive_emails` VARCHAR(1) NOT NULL DEFAULT 'Y'  CHECK (receive_emails IN ('Y', 'N')),
   `country_id` INT NOT NULL,
+  `state_id` INT NOT NULL,
   PRIMARY KEY (`player_id`),
-  FOREIGN KEY (`country_id`) REFERENCES country(country_id)
+  FOREIGN KEY (`country_id`) REFERENCES country(country_id),
+  FOREIGN KEY (`state_id`) REFERENCES state(state_id)
 );
 
 CREATE TABLE IF NOT EXISTS `club` (

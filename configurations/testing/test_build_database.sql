@@ -31,8 +31,10 @@ CREATE TABLE IF NOT EXISTS `player` (
   `last_played` DATETIME NOT NULL,
   `receive_emails` VARCHAR(1) NOT NULL DEFAULT 'Y'  CHECK (receive_emails IN ('Y', 'N')),
   `country_id` INT NOT NULL,
+  `state_id` INT NOT NULL,
   PRIMARY KEY (`player_id`),
-  FOREIGN KEY (`country_id`) REFERENCES country(country_id)
+  FOREIGN KEY (`country_id`) REFERENCES country(country_id),
+  FOREIGN KEY (`state_id`) REFERENCES state(state_id)
 );
 
 CREATE TABLE IF NOT EXISTS `club` (
@@ -138,6 +140,7 @@ CREATE TABLE IF NOT EXISTS `membership` (
 
 
 
+
 insert into `country`(name) VALUES ('Australia');
 insert into `country`(name) VALUES ('New Zealand');
 
@@ -154,7 +157,7 @@ insert into `club` (name, country_id, state_id) VALUES ('Launceston Squash Club'
 insert into `club` (name, country_id, state_Id) VALUES ('Otago Badminton Club', 2, 4);
 
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id) 
-  VALUES ('Grant', 'Upson', 'M', NOW(), 'grantaupson@gmail.com', NOW(), 'Y', '1');
+  VALUES ('Grant', 'Upson', 'M', NOW(), 'grantaupson@gmail.com', NOW(), 'Y', '1', '1');
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (1500, 200, NOW(), 2, 1, null);
 
 
