@@ -94,23 +94,33 @@ class ContentManager
 		return $result;
 	}
 	
-	/**
-	 * problem with this function.
-	 * We actually want to selct by state not by country. Needs DB update.
-	 * ?fix phase 2.
-	 */
+
 	public function getPlayersByNameAndState($nameFilter, $stateID)
 	{
-		//$nameFilter = '%'.$nameFilter.'%';
-		//problem with this SQL statement. I (JW) can't get to execute with wild cards (%) in place. 
-		$query = "SELECT `player_id`,`given_name`,`family_name` FROM `player` WHERE `state_id` = ?";// AND 'given_name' LIKE ?;";
-		$result = $this->database->query($query,[$countryID]); //need to add here too.
+		$unfiltered = preg_replace("/[^a-zA-Z0-9\s]/", "", $nameFilter);
+		$nameString = explode(" ", $unfiltered);
 
-		
+		if(count($nameString) == 2)
+		{
+			$query = "SELECT `player_id`, `given_name`, `family_name` FROM player WHERE (state_id = '" . $stateID . "') AND (given_name LIKE '%" . $nameString[0] . "%' OR
+				family_name LIKE '%" . $nameString[1] . "%')";
+		}
+		else if(count($nameString) == 1)
+		{
+			$query = "SELECT `player_id`, `given_name`, `family_name` FROM player WHERE (state_id = '" . $stateID . "') AND (given_name LIKE '%" . $nameFilter . "%' OR
+				family_name LIKE '%" . $nameFilter . "%')";
+		}
+		else
+		{
+			//No error handling atm
+		}
+
+		$result = $this->database->query($query, null); 
+
 		return $result;
 	}
 	
-	//returns the type of sport being played in an event
+
 	public function getEventSport($eventID)
 	{
 		$query = "SELECT sport_id FROM event WHERE event_id = ?";

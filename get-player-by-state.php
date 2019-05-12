@@ -1,9 +1,7 @@
 <?php
 require("./includes/initialize.php");
 
-//when DB fixed change name of funtion called.
 $result = $contentManager->getPlayersByNameAndState($_POST['name'],$_POST['state']);
-
 $response = array();
 
 while ($row = $result->fetch())

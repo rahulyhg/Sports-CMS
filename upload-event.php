@@ -17,7 +17,7 @@
  
   <div class="event-form" action="">
     <div class="event-details-row">
-      <input class="event-field-input" type="text" name="event-name"placeholder="Name"><br/><br/>
+      <input class="event-field-input" type="text" id="event-name" name="event-name"placeholder="Name"><br/><br/>
       <select class="event-type" name="country-id" id="country-id">
 		  <?php
 			$countries = $contentManager->getAllCountries();

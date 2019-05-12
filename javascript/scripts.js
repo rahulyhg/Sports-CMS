@@ -229,6 +229,7 @@ function deleteRow(selectedRow)
   document.getElementById("match-input-table").deleteRow(findRow);
    
 }
+
 function addMoreRows()
 {
   
@@ -288,9 +289,7 @@ function addMoreRows()
       insertCell5.onclick = function() {deleteRow(this);
 	};
 	
-	setupMatchAutoComplete();
-  
-     
+	setupMatchAutoComplete();    
 }
 
 /**
@@ -305,27 +304,27 @@ function uploadEventChangeStates()
     
     //clear the options
     $("#state-name").empty();
-	
-	//run ajax
-	$.ajax
-	({
-		url: "./get-states-by-country-ID.php",
+    
+    //run ajax
+    $.ajax
+    ({
+        url: "./get-states-by-country-ID.php",
         type: "POST",
         dataType: "text",
         data: {countryID: country},
         success: function(data) 
         {
-			//parse the returned data
-			var jsonData = JSON.parse(data);
+            //parse the returned data
+            var jsonData = JSON.parse(data);
             
             //add a new option to state-name for each returned state.
             $.each(jsonData, function(index, value)
             {
-				$("#state-name").append($("<option>",{
-					value: value["state_id"],
-					text: value["name"]
-				}));
-			});
+                $("#state-name").append($("<option>",{
+                    value: value["state_id"],
+                    text: value["name"]
+                }));
+            });
         }
     });
 }
@@ -339,43 +338,42 @@ $("#country-id").change(uploadEventChangeStates);
 
 
 $( function() {
-	setupMatchAutoComplete();
+    setupMatchAutoComplete();
 });
 
 $("#state-name").change(setupMatchAutoComplete);
 
 function setupMatchAutoComplete()
 {
-	var state = $("#country-id").val();		//note that this will need to change to state not country
+    var state = $("#state-name").val();     //note that this will need to change to state not country
 
-	$( ".winner-loser-field" ).autocomplete({
-		source: 
-		function( request, response ) 
-		{
-			// Fetch data
-			$.ajax({
-				url: "./get-player-by-state.php",
-				type: 'POST',
-				dataType: "json",
-				data: 
-				{
-					name: request.term,
-					state: state
-				},
-				success: function( data ) 
-				{
-					response( data );
-				}
-			});
-		},
-		select: function(event,ui)
-		{
-			//the next elemtent in line will be the hidden cell to contain id
-			//fill this with the id. 
-			//name cell will be automatically filled in 
-			$(this).next().val(ui.item.id);
-		}
-	});
+    $( ".winner-loser-field" ).autocomplete({
+        source: 
+        function( request, response ) 
+        {
+            // Fetch data
+            $.ajax({
+                url: "./get-player-by-state.php",
+                type: 'POST',
+                dataType: "json",
+                data: 
+                {
+                    name: request.term,
+                    state: state
+                },
+                success: function( data ) 
+                {
+                    response( data );
+                }
+            });
+        },
+        select: function(event,ui)
+        {
+            //the next elemtent in line will be the hidden cell to contain id
+            //fill this with the id. 
+            //name cell will be automatically filled in 
+            $(this).next().val(ui.item.id);
+        }
+    });
 
 }
-

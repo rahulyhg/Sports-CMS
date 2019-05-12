@@ -777,6 +777,11 @@ article /* Never change this (Except height to 100% once content is added to pag
     grid-column: 1/span 2;
   }
 
+  #event-name
+  {
+    font-size: var(--font-small);
+  }
+
   input[type="date"]::-webkit-inner-spin-button
   {
     opacity: 0;
@@ -793,6 +798,11 @@ article /* Never change this (Except height to 100% once content is added to pag
   {
     background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png) center/80% no-repeat;
     opacity: 0.8;
+  }
+
+  #event-date
+  {
+    font-size: var(--font-small);
   }
 
   .match-details-row

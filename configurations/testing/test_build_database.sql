@@ -162,7 +162,7 @@ insert into `rating` (mean, standard_deviation, last_calculated, sport_id, playe
 insert into membership (club_id, player_id) VALUES ('1', '1');
 
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
-  VALUES ('Jordan', 'Smith', 'F', NOW(), 'jordan@gmail.com', NOW(), 'Y', '2', '1');
+  VALUES ('Jordan', 'Smith', 'F', NOW(), 'jordan@gmail.com', NOW(), 'Y', '2', '3');
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 2, null);
 insert into membership (club_id, player_id) VALUES ('2', '2');
 
