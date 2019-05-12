@@ -2,7 +2,7 @@
 require("./includes/initialize.php");
 
 //when DB fixed change name of funtion called.
-$result = $contentManager->getPlayersByNameAndCountry($_POST['name'],$_POST['state']);
+$result = $contentManager->getPlayersByNameAndState($_POST['name'],$_POST['state']);
 
 $response = array();
 

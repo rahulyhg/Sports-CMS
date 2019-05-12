@@ -64,7 +64,7 @@ class ContentManager
 		return $result;
 	}
 	
-	public function newGame($winnerID, $winnerMean, $winnerSD, $loserID, $loserMean, $loserSD, $eventID)
+	/*public function newGame($winnerID, $winnerMean, $winnerSD, $loserID, $loserMean, $loserSD, $eventID)
 	{
 		//create game
 		$query = "INSERT INTO `game` (`game_id`, `mean_before_winning`, `mean_after_winning`, `standard_deviation_before_winning`, `standard_deviation_after_winning`, `mean_before_losing`, `mean_after_losing`, `standard_deviation_before_losing`, `standard_deviation_after_losing`, `event_id`) VALUES (NULL, '?', NULL, '?', NULL, '?', NULL, '?', NULL, '?');";
@@ -79,7 +79,7 @@ class ContentManager
 		
 		return $gameID;
 
-	}
+	}*/
 	
 	public function getPlayerCurrentStats($playerID)
 	{
@@ -99,11 +99,11 @@ class ContentManager
 	 * We actually want to selct by state not by country. Needs DB update.
 	 * ?fix phase 2.
 	 */
-	public function getPlayersByNameAndCountry($nameFilter, $countryID)
+	public function getPlayersByNameAndState($nameFilter, $stateID)
 	{
 		//$nameFilter = '%'.$nameFilter.'%';
 		//problem with this SQL statement. I (JW) can't get to execute with wild cards (%) in place. 
-		$query = "SELECT `player_id`,`given_name`,`family_name` FROM `player` WHERE `country_id` = ?";// AND 'given_name' LIKE ?;";
+		$query = "SELECT `player_id`,`given_name`,`family_name` FROM `player` WHERE `state_id` = ?";// AND 'given_name' LIKE ?;";
 		$result = $this->database->query($query,[$countryID]); //need to add here too.
 
 		
