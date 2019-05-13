@@ -169,6 +169,8 @@ insert into membership (club_id, player_id) VALUES ('2', '2');
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id) 
   VALUES ('Test', 'McTest', 'M', NOW(), 'test@gmail.com', NOW(), 'Y', '1', '2');
 
+INSERT INTO `rating` (`rating_id`, `mean`, `standard_deviation`, `last_calculated`, `sport_id`, `player_id`, `team_id`) VALUES (NULL, '33.4', '5.1', '2019-05-14 00:00:00', '1', '3', NULL);
+
 
 
 

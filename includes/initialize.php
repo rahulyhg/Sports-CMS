@@ -7,6 +7,7 @@
     require("./classes/database.php");
     require("./classes/account.php");
     require("./classes/content-manager.php");
+    require("./classes/maple-file-manager.php");
 
     $database = new Database();
     $account = new Account($database);
