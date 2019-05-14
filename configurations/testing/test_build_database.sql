@@ -155,22 +155,706 @@ insert into `sport` (name) VALUES ('Table Tennis');
 insert into `club` (name, country_id, state_id) VALUES ('Launceston Squash Club', 1, 1);
 insert into `club` (name, country_id, state_Id) VALUES ('Otago Badminton Club', 2, 4);
 
-insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id) 
-  VALUES ('Grant', 'Upson', 'M', NOW(), 'grantaupson@gmail.com', NOW(), 'Y', '1', '1');
-insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (1500, 200, NOW(), 2, 1, null);
-insert into membership (club_id, player_id) VALUES ('1', '1');
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Sean', 'Allen', 'M', NOW(), 'Sean.Allen@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 1, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 1, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 1, null);
+
 
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
-  VALUES ('Jordan', 'Smith', 'F', NOW(), 'jordan@gmail.com', NOW(), 'Y', '2', '3');
+  VALUES ('Earl', 'Taylor', 'M', NOW(), 'Earl.Taylor@testonly.com', NOW(), 'Y', '1', '1');
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 2, null);
-insert into membership (club_id, player_id) VALUES ('2', '2');
-
-insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id) 
-  VALUES ('Test', 'McTest', 'M', NOW(), 'test@gmail.com', NOW(), 'Y', '1', '2');
-
-INSERT INTO `rating` (`rating_id`, `mean`, `standard_deviation`, `last_calculated`, `sport_id`, `player_id`, `team_id`) VALUES (NULL, '33.4', '5.1', '2019-05-14 00:00:00', '1', '3', NULL);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 2, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 2, null);
 
 
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Jeremy', 'Perez', 'M', NOW(), 'Jeremy.Perez@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 3, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 3, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 3, null);
 
 
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Raymond', 'Gonzales', 'M', NOW(), 'Raymond.Gonzales@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 4, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 4, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 4, null);
 
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Todd', 'Flores', 'M', NOW(), 'Todd.Flores@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 5, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 5, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 5, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Philip', 'Thompson', 'M', NOW(), 'Philip.Thompson@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 6, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 6, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 6, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Kevin', 'Young', 'M', NOW(), 'Kevin.Young@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 7, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 7, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 7, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Kenneth', 'Evans', 'M', NOW(), 'Kenneth.Evans@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 8, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 8, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 8, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Benjamin', 'Miller', 'M', NOW(), 'Benjamin.Miller@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 9, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 9, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 9, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Fred', 'Bailey', 'M', NOW(), 'Fred.Bailey@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 10, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 10, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 10, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Louis', 'Rivera', 'M', NOW(), 'Louis.Rivera@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 11, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 11, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 11, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Christopher', 'Jenkins', 'M', NOW(), 'Christopher.Jenkins@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 12, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 12, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 12, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Eugene', 'Lewis', 'M', NOW(), 'Eugene.Lewis@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 13, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 13, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 13, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Robert', 'Williams', 'M', NOW(), 'Robert.Williams@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 14, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 14, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 14, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Douglas', 'Johnson', 'M', NOW(), 'Douglas.Johnson@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 15, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 15, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 15, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Larry', 'Martin', 'M', NOW(), 'Larry.Martin@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 16, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 16, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 16, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('David', 'Barnes', 'M', NOW(), 'David.Barnes@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 17, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 17, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 17, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Carl', 'Perry', 'M', NOW(), 'Carl.Perry@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 18, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 18, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 18, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Johnny', 'Sanders', 'M', NOW(), 'Johnny.Sanders@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 19, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 19, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 19, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('William', 'Hughes', 'M', NOW(), 'William.Hughes@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 20, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 20, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 20, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Harry', 'Price', 'M', NOW(), 'Harry.Price@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 21, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 21, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 21, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Victor', 'Campbell', 'M', NOW(), 'Victor.Campbell@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 22, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 22, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 22, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Richard', 'Morgan', 'M', NOW(), 'Richard.Morgan@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 23, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 23, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 23, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Gerald', 'Ramirez', 'M', NOW(), 'Gerald.Ramirez@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 24, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 24, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 24, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Ernest', 'Clark', 'M', NOW(), 'Ernest.Clark@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 25, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 25, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 25, null);
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Craig', 'Walker', 'M', NOW(), 'Craig.Walker@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 26, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 26, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 26, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Peter', 'Baker', 'M', NOW(), 'Peter.Baker@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 27, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 27, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 27, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Edward', 'Martin', 'M', NOW(), 'Edward.Martin@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 28, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 28, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 28, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Nicholas', 'Carter', 'M', NOW(), 'Nicholas.Carter@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 29, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 29, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 29, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Keith', 'Campbell', 'M', NOW(), 'Keith.Campbell@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 30, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 30, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 30, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Justin', 'Flores', 'M', NOW(), 'Justin.Flores@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 31, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 31, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 31, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Carlos', 'Price', 'M', NOW(), 'Carlos.Price@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 32, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 32, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 32, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Mark', 'Roberts', 'M', NOW(), 'Mark.Roberts@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 33, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 33, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 33, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Juan', 'Murphy', 'M', NOW(), 'Juan.Murphy@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 34, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 34, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 34, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Adam', 'Rodriguez', 'M', NOW(), 'Adam.Rodriguez@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 35, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 35, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 35, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Andrew', 'Hill', 'M', NOW(), 'Andrew.Hill@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 36, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 36, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 36, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Alan', 'Butler', 'M', NOW(), 'Alan.Butler@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 37, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 37, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 37, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Larry', 'Bennett', 'M', NOW(), 'Larry.Bennett@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 38, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 38, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 38, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Jerry', 'Brown', 'M', NOW(), 'Jerry.Brown@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 39, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 39, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 39, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Earl', 'Young', 'M', NOW(), 'Earl.Young@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 40, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 40, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 40, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Gary', 'Torres', 'M', NOW(), 'Gary.Torres@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 41, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 41, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 41, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Dennis', 'James', 'M', NOW(), 'Dennis.James@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 42, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 42, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 42, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Samuel', 'Harris', 'M', NOW(), 'Samuel.Harris@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 43, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 43, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 43, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Charles', 'Simmons', 'M', NOW(), 'Charles.Simmons@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 44, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 44, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 44, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Terry', 'Edwards', 'M', NOW(), 'Terry.Edwards@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 45, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 45, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 45, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('George', 'Collins', 'M', NOW(), 'George.Collins@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 46, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 46, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 46, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Jeffrey', 'Bell', 'M', NOW(), 'Jeffrey.Bell@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 47, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 47, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 47, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Raymond', 'Johnson', 'M', NOW(), 'Raymond.Johnson@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 48, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 48, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 48, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Ryan', 'Smith', 'M', NOW(), 'Ryan.Smith@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 49, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 49, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 49, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Kenneth', 'Phillips', 'M', NOW(), 'Kenneth.Phillips@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 50, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 50, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 50, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Andrea', 'Patterson', 'F', NOW(), 'Andrea.Patterson@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 51, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 51, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 51, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Jean', 'Sanchez', 'F', NOW(), 'Jean.Sanchez@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 52, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 52, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 52, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Julie', 'Reed', 'F', NOW(), 'Julie.Reed@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 53, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 53, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 53, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Karen', 'Russell', 'F', NOW(), 'Karen.Russell@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 54, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 54, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 54, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Nicole', 'Barnes', 'F', NOW(), 'Nicole.Barnes@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 55, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 55, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 55, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Julia', 'Bell', 'F', NOW(), 'Julia.Bell@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 56, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 56, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 56, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Heather', 'Flores', 'F', NOW(), 'Heather.Flores@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 57, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 57, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 57, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Sarah', 'Gonzalez', 'F', NOW(), 'Sarah.Gonzalez@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 58, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 58, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 58, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Judith', 'Bailey', 'F', NOW(), 'Judith.Bailey@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 59, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 59, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 59, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Amanda', 'James', 'F', NOW(), 'Amanda.James@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 60, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 60, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 60, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Christine', 'Long', 'F', NOW(), 'Christine.Long@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 61, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 61, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 61, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Ashley', 'Wood', 'F', NOW(), 'Ashley.Wood@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 62, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 62, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 62, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Teresa', 'Diaz', 'F', NOW(), 'Teresa.Diaz@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 63, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 63, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 63, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Martha', 'Green', 'F', NOW(), 'Martha.Green@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 64, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 64, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 64, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Rebecca', 'Watson', 'F', NOW(), 'Rebecca.Watson@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 65, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 65, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 65, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Carol', 'Ramirez', 'F', NOW(), 'Carol.Ramirez@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 66, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 66, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 66, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Irene', 'Harris', 'F', NOW(), 'Irene.Harris@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 67, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 67, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 67, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Lisa', 'Martin', 'F', NOW(), 'Lisa.Martin@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 68, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 68, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 68, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Louise', 'Cooper', 'F', NOW(), 'Louise.Cooper@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 69, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 69, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 69, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Rachel', 'King', 'F', NOW(), 'Rachel.King@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 70, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 70, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 70, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Cynthia', 'Miller', 'F', NOW(), 'Cynthia.Miller@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 71, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 71, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 71, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Janet', 'Roberts', 'F', NOW(), 'Janet.Roberts@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 72, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 72, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 72, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Kathryn', 'Stewart', 'F', NOW(), 'Kathryn.Stewart@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 73, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 73, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 73, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Elizabeth', 'Simmons', 'F', NOW(), 'Elizabeth.Simmons@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 74, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 74, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 74, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Diane', 'Richardson', 'F', NOW(), 'Diane.Richardson@testonly.com', NOW(), 'Y', '1', '1');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 75, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 75, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 75, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Betty', 'Gonzales', 'F', NOW(), 'Betty.Gonzales@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 76, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 76, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 76, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Margaret', 'Bell', 'F', NOW(), 'Margaret.Bell@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 77, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 77, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 77, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Julie', 'Ramirez', 'F', NOW(), 'Julie.Ramirez@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 78, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 78, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 78, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Christina', 'Hall', 'F', NOW(), 'Christina.Hall@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 79, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 79, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 79, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Kelly', 'Washington', 'F', NOW(), 'Kelly.Washington@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 80, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 80, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 80, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Kathleen', 'Kelly', 'F', NOW(), 'Kathleen.Kelly@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 81, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 81, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 81, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Carolyn', 'Cook', 'F', NOW(), 'Carolyn.Cook@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 82, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 82, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 82, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Virginia', 'Gonzalez', 'F', NOW(), 'Virginia.Gonzalez@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 83, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 83, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 83, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Ruth', 'Walker', 'F', NOW(), 'Ruth.Walker@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 84, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 84, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 84, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Pamela', 'Rodriguez', 'F', NOW(), 'Pamela.Rodriguez@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 85, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 85, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 85, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Patricia', 'Griffin', 'F', NOW(), 'Patricia.Griffin@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 86, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 86, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 86, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Sarah', 'Coleman', 'F', NOW(), 'Sarah.Coleman@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 87, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 87, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 87, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Alice', 'Cooper', 'F', NOW(), 'Alice.Cooper@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 88, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 88, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 88, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Laura', 'Richardson', 'F', NOW(), 'Laura.Richardson@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 89, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 89, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 89, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Susan', 'Taylor', 'F', NOW(), 'Susan.Taylor@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 90, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 90, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 90, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Katherine', 'Hernandez', 'F', NOW(), 'Katherine.Hernandez@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 91, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 91, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 91, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Phyllis', 'Rogers', 'F', NOW(), 'Phyllis.Rogers@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 92, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 92, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 92, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Cheryl', 'Ross', 'F', NOW(), 'Cheryl.Ross@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 93, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 93, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 93, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Brenda', 'Brown', 'F', NOW(), 'Brenda.Brown@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 94, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 94, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 94, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Kimberly', 'Martinez', 'F', NOW(), 'Kimberly.Martinez@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 95, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 95, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 95, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Teresa', 'Smith', 'F', NOW(), 'Teresa.Smith@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 96, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 96, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 96, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Diane', 'King', 'F', NOW(), 'Diane.King@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 97, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 97, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 97, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Janice', 'Roberts', 'F', NOW(), 'Janice.Roberts@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 98, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 98, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 98, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Doris', 'Perry', 'F', NOW(), 'Doris.Perry@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 99, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 99, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 99, null);
+
+
+insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
+  VALUES ('Judy', 'Flores', 'F', NOW(), 'Judy.Flores@testonly.com', NOW(), 'Y', '1', '2');
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 100, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 100, null);
+insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 100, null);
+
+-- password = Abc123
+INSERT INTO `account` (`given_name`, `family_name`, `organisation`, `email`, `password`, `access_level`, `date_created`, `active`) VALUES ('Test', 'User', 'Fake Club', 'test@user.com', '$2y$10$iLapRftpH.OTlQZ0vXhAIOmv1X7U.mk3HIICY7XDCfWZJ4zyBTa9u', '2', '2019-05-14 22:45:55', 'Y');
+
+-- password = Abc123
+INSERT INTO `account` (`given_name`, `family_name`, `organisation`, `email`, `password`, `access_level`, `date_created`, `active`) VALUES ('Disabled', 'Account', 'Fake Club', 'locked@account.com', '$2y$10$p52ay93RXErJOVSCOCwBbe60bRdZfZXG29bZ232xpdaqAXcORj.xq', '2', '2019-05-14 22:48:47', 'N');
