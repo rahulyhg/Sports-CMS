@@ -17,7 +17,7 @@
  
   <div class="event-form" action="">
     <div class="event-details-row">
-      <input class="event-field-input" type="text" id="event-name" name="event-name"placeholder="Name"><br/><br/>
+      <input class="event-field-input" type="text" id="event-name" name="event-name" placeholder="Name"><br/><br/>
       <select class="event-type" name="country-id" id="country-id">
 		  <?php
 			$countries = $contentManager->getAllCountries();
@@ -51,8 +51,8 @@
        </select><br/><br/>
         
       <select class="event-type" name="event-type">
-          <option value="single">Singles</option>
-          <option value="double">Doubles</option>
+          <option value="Single">Singles</option>
+          <option value="Double">Doubles</option>
       </select><br/><br/>
        
       <input class="event-field-input" name="event-date" id="event-date" placeholder="Date"type="text"onfocus="(this.type='date')" onblur="(this.type='text')"><br/>

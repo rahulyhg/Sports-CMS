@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `event` (
   `event_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `type` VARCHAR(10) NOT NULL CHECK (type in ('Single', 'Double')),
-  `start_date` DATETIME NOT NULL,
+  `start_date` DATE NOT NULL,
   `country_id` INT NOT NULL,
   `state_id` INT NOT NULL,
   `sport_id` INT NOT NULL,

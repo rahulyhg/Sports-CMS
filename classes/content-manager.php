@@ -63,6 +63,18 @@ class ContentManager
 		
 		return $result;
 	}
+
+	public function createEvent($name, $countryID, $stateID, $sportType, $eventType, $date)
+	{
+		$query = "INSERT INTO event (name, type, country_id, state_id, sport_id) VALUES (?, ?, ?, ?, ?)";
+
+		$result = $this->database->query($query, [$name, $eventType, $countryID, $stateID, $sportType]);
+
+		$idQuery = $this->database->query("SELECT LAST_INSERT_ID()", null);
+		$id = $idQuery->fetchColumn();
+
+		return $id;
+	}
 	
 	/*public function newGame($winnerID, $winnerMean, $winnerSD, $loserID, $loserMean, $loserSD, $eventID)
 	{

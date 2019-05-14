@@ -7,13 +7,14 @@ require("./includes/initialize.php");
 	
 	//yet to be implemented
 
+	$eventName = $_POST["event-name"];
+	$countryID = $_POST["country-id"];
+	$stateID = $_POST["state-name"];
+	$sportID = $_POST["sport-type"];
+	$eventType = $_POST["event-type"];
+	$eventDate = $_POST["event-date"];
 
-//create an event and plays_at entry in the database
-
-	//yes to be implemented. likely grant will do.
-	
-	//need to get returned from that function the new event_id
-	$eventID = 123;	//for testing only. 
+	$eventID = $contentManager->createEvent($eventName, $countryID, $stateID, $sportID, $eventType, $eventDate);
 	
 	$mapleFileManager = new MapleFileManager($eventID, $_POST['event-date']);
 	
@@ -41,9 +42,5 @@ $mapleFileManager->addToQueue();
 //still need to implement creating maple file. 
 
 var_dump($_POST);
-
-
-
-
 
 ?>
