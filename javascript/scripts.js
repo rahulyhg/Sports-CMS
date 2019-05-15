@@ -220,8 +220,11 @@ function showUploadMatchRows()
   addButton.setAttribute('class','add-button');
   
   document.body.appendChild(addButton);*/
+  if(matchInputNumber != 0)
+  {
   document.getElementById("add-button").style.display = "block";
   document. getElementById("match-final-submit").style.display = "block";
+  }
 }
 function deleteRow(selectedRow)
 {
