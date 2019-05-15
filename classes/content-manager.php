@@ -66,9 +66,11 @@ class ContentManager
 
 	public function createEvent($name, $countryID, $stateID, $sportType, $eventType, $date)
 	{
-		$query = "INSERT INTO event (name, type, country_id, state_id, sport_id) VALUES (?, ?, ?, ?, ?)";
+		$formatedDate = date_format(date_create($date), 'Y-m-d');
+		
+		$query = "INSERT INTO event (name, type, country_id, state_id, sport_id, start_date) VALUES (?, ?, ?, ?, ?, ?)";
 
-		$result = $this->database->query($query, [$name, $eventType, $countryID, $stateID, $sportType]);
+		$result = $this->database->query($query, [$name, $eventType, $countryID, $stateID, $sportType, $formatedDate]);
 
 		$idQuery = $this->database->query("SELECT LAST_INSERT_ID()", null);
 		$id = $idQuery->fetchColumn();
@@ -76,22 +78,26 @@ class ContentManager
 		return $id;
 	}
 	
-	/*public function newGame($winnerID, $winnerMean, $winnerSD, $loserID, $loserMean, $loserSD, $eventID)
+	public function newGame($winnerID, $winnerMean, $winnerSD, $loserID, $loserMean, $loserSD, $eventID)
 	{
 		//create game
-		$query = "INSERT INTO `game` (`game_id`, `mean_before_winning`, `mean_after_winning`, `standard_deviation_before_winning`, `standard_deviation_after_winning`, `mean_before_losing`, `mean_after_losing`, `standard_deviation_before_losing`, `standard_deviation_after_losing`, `event_id`) VALUES (NULL, '?', NULL, '?', NULL, '?', NULL, '?', NULL, '?');";
+		$query = "INSERT INTO `game` (`game_id`, `mean_before_winning`, `mean_after_winning`, `standard_deviation_before_winning`, `standard_deviation_after_winning`, `mean_before_losing`, `mean_after_losing`, `standard_deviation_before_losing`, `standard_deviation_after_losing`, `event_id`) VALUES (NULL, ?, NULL, ?, NULL, ?, NULL, ?, NULL, ?)";
 		
 		$result = $this->database->query($query,[$winnerMean,$winnerSD,$loserMean,$loserSD,$eventID]);
 		
-		//need a way to get the game id back from db
-		$gameID= 456
+				
+		//get game id
+		$idQuery = $this->database->query("SELECT LAST_INSERT_ID()", null);
+		$gameID = $idQuery->fetchColumn();
 		
 		//create game result for both winner and loser
-			//not implemented yet
+		$query = "INSERT INTO `game_result` (`game_result_id`, `won`, `player_id`, `game_id`) VALUES (NULL, ?, ?, ?)";
+		$result = $this->database->query($query,['Y', $winnerID, $gameID]);
+		$result = $this->database->query($query,['N', $loserID, $gameID]);
 		
 		return $gameID;
 
-	}*/
+	}
 	
 	public function getPlayerCurrentStats($playerID)
 	{

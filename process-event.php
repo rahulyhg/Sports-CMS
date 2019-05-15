@@ -26,8 +26,7 @@ require("./includes/initialize.php");
 		$loserStats = $contentManager->getPlayerCurrentStats($_POST['loser-id'][$i]);
 		
 		//create new game in db and get the id
-		//$gameID = $contentManager->newGame($_POST['winner-id'][$i],$winnerStats['mean'],$winnerStats['standard_deviation'],$_POST['loser-id'][$i],$loserStats['mean'],$loserStats['standard_deviation'],$eventID);
-		$gameID = "44"; //for testing only
+		$gameID = $contentManager->newGame($_POST['winner-id'][$i],$winnerStats['mean'],$winnerStats['standard_deviation'],$_POST['loser-id'][$i],$loserStats['mean'],$loserStats['standard_deviation'],$eventID);
 		
 		//add the game to the maple manager
 		$mapleFileManager->addMatchData($_POST['winner-id'][$i],$winnerStats['mean'],$winnerStats['standard_deviation'],$winnerStats['last_played'],$_POST['loser-id'][$i],$loserStats['mean'],$loserStats['standard_deviation'],$loserStats['last_played'],$gameID);
@@ -38,9 +37,12 @@ $mapleFileManager->write();
 $mapleFileManager->addToQueue();
 	
 // redirect and show user some confirmation
+	//this will be a redirect. The following is for testing only. 
+	
+	?>
+You have successfully entered an event into the database. It will now be processed by Maple to determine players new mean and standard deviation. 
+<br /><br />
+This text is only a place holder and will be replcaed in future development phases. 
+<br />
+<a href='./index.php'>Click Here To Return Home</a>
 
-//still need to implement creating maple file. 
-
-var_dump($_POST);
-
-?>
