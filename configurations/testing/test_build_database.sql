@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `given_name` VARCHAR(45) NOT NULL,
   `family_name` VARCHAR(45) NOT NULL,
   `gender` VARCHAR(1) NOT NULL CHECK (gender in ('M', 'F')),
-  `date_of_birth` DATETIME NOT NULL,
+  `date_of_birth` DATE NOT NULL,
   `email` VARCHAR(45) NOT NULL UNIQUE,
   `last_played` DATETIME NOT NULL,
   `receive_emails` VARCHAR(1) NOT NULL DEFAULT 'Y'  CHECK (receive_emails IN ('Y', 'N')),
@@ -153,15 +153,15 @@ insert into `sport` (name) VALUES ('Badminton');
 insert into `sport` (name) VALUES ('Squash');
 insert into `sport` (name) VALUES ('Table Tennis');
 
-insert into `club` (name, country_id, state_id) VALUES ('Launceston Squash Club', 1, 1);
-insert into `club` (name, country_id, state_Id) VALUES ('Otago Badminton Club', 2, 4);
+insert into `club` (name, country_id, state_id) VALUES ('Launceston Badminton Club', 1, 1);
+insert into `club` (name, country_id, state_Id) VALUES ('Otago Squash Club', 2, 4);
 
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
-  VALUES ('Sean', 'Allen', 'M', NOW(), 'Sean.Allen@testonly.com', NOW(), 'Y', '1', '1');
+  VALUES ('Sean', 'Allen', 'M', '1993-03-17', 'Sean.Allen@testonly.com', NOW(), 'Y', '1', '1');
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 1, null);
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 1, null);
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 1, null);
-
+insert into `membership` (club_id, player_id) VALUES (1, 1);
 
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
   VALUES ('Earl', 'Taylor', 'M', NOW(), 'Earl.Taylor@testonly.com', NOW(), 'Y', '1', '1');
@@ -859,3 +859,5 @@ INSERT INTO `account` (`given_name`, `family_name`, `organisation`, `email`, `pa
 
 -- password = Abc123
 INSERT INTO `account` (`given_name`, `family_name`, `organisation`, `email`, `password`, `access_level`, `date_created`, `active`) VALUES ('Disabled', 'Account', 'Fake Club', 'locked@account.com', '$2y$10$p52ay93RXErJOVSCOCwBbe60bRdZfZXG29bZ232xpdaqAXcORj.xq', '2', '2019-05-14 22:48:47', 'N');
+
+INSERT INTO `account` (`given_name`, `family_name`, `organisation`, `email`, `password`, `access_level`, `date_created`, `active`) VALUES ('Grant', 'Upson', 'University of Tasmania', 'gupson@utas.edu.au', '$2y$10$7ODsm/dnPQamRGTGeVmg4ezNJS0LUe/QYvZcEjxPEMMygEjeQpF6m', '0', '2019-05-14 22:48:47', 'Y');

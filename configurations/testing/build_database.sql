@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `given_name` VARCHAR(45) NOT NULL,
   `family_name` VARCHAR(45) NOT NULL,
   `gender` VARCHAR(1) NOT NULL CHECK (gender in ('M', 'F')),
-  `date_of_birth` DATETIME NOT NULL,
+  `date_of_birth` DATE NOT NULL,
   `email` VARCHAR(45) NOT NULL UNIQUE,
   `last_played` DATETIME NOT NULL,
   `receive_emails` VARCHAR(1) NOT NULL DEFAULT 'Y'  CHECK (receive_emails IN ('Y', 'N')),

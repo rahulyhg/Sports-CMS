@@ -12,6 +12,10 @@
       $playerId = $_SESSION["profile-id"];
       $playerInfo = $contentManager->getSpecificPlayerInformation($playerId);
       $playerClub = $contentManager->getPlayerClub($playerId);
+
+      $userDob = new DateTime($playerInfo["date_of_birth"]);
+      $today = new Datetime(date("Y-m-d"));
+      $age = $today->diff($userDob)->y;
   }
 ?>
 
@@ -37,15 +41,15 @@
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Age</b></span>
-      	<span id="player-bio-row-value">  </span>
+      	<span id="player-bio-row-value"> <?php echo $age; ?> </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Country</b></span>
-      	<span id="player-bio-row-value">US</span>
+      	<span id="player-bio-row-value"> <?php echo $playerInfo["country_name"]; ?> </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>State</b></span>
-      	<span id="player-bio-row-value">Texas</span>
+      	<span id="player-bio-row-value"> <?php echo $playerInfo["state_name"]; ?> </span>
       </li>
       <li id="player-bio-row">
       	<span id="player-bio-row-heading"><b>Club</b></span>
@@ -55,9 +59,14 @@
       	<span id="player-bio-row-heading"><b>Sport</b></span>
       	<span id="player-bio-row-value">
       		<select class="select-sport-menu">
-      			<option id="select-sport-option">Badminton</option>
-      			<option>Squash</option>
-      			<option>Tennis</option>
+      			<?php
+            $sports = $contentManager->getAllSports();
+
+            while ($sport = $sports->fetch())
+            {
+                echo "<option value=\"".$sport["sport_id"]."\">".$sport["name"]."</option>";
+            }
+        ?>
       		</select>
       	</span>
       </li>
@@ -67,13 +76,13 @@
  	  <div class="mean-border">
 	    <div id="side-colour-mean">&nbsp</div>	    	
 		  <p id="mean-value">2267</p>
-		  <p>Tennis Rating</p>   	
+		  <p>Badminton Rating</p>   	
       </div>
 	     
 	  <div class="sd-border"> 
 	    <div id="side-colour-sd">&nbsp</div>	    	
 		  <p id="sd-value">75</p>
-		  <p>Accuracy</p>   	
+		  <p>Standard Deviation</p>   	
 	  </div>
 	</div>
 
@@ -83,7 +92,7 @@
 
     <h1>Player History</h1>
 
-    <h2>Tennis</h2>
+    <h2>Badminton</h2>
 
     <table class="player-history-table" border="0">
       <tr id="odd-row">

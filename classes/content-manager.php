@@ -21,7 +21,7 @@ class ContentManager
 
 	public function getSpecificPlayerInformation($player_id)
 	{
-		$query = "SELECT * FROM player WHERE player_id = ? ";
+		$query = "SELECT player.given_name, player.family_name, player.gender, player.date_of_birth, country.name as country_name, state.name as state_name FROM((player INNER JOIN country ON player.country_id = country.country_id) INNER JOIN state ON player.state_id = state.state_id) WHERE player_id = ?;";
 		$result = $this->database->query($query, [$player_id])->fetch();
 
 		return $result;

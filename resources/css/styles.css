@@ -501,7 +501,8 @@ article /* Never change this (Except height to 100% once content is added to pag
   #player-bio-row-value
   {
     position: absolute;
-    left: 80%;
+    text-align: right;
+    left: 55%;
   }
 
   .rating-border
@@ -517,9 +518,9 @@ article /* Never change this (Except height to 100% once content is added to pag
   {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -50px;
     text-align: right;
-    width: 120px;
+    width: 150px;
   }
 
   #side-colour-mean
@@ -540,9 +541,9 @@ article /* Never change this (Except height to 100% once content is added to pag
   {    
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -50px;
     text-align: right;
-    width: 120px;
+    width: 150px;
   }
 
   #side-colour-sd
