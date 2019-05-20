@@ -33,7 +33,7 @@
       <div class="search-box">
         <div class="search-field">
           <input type="txt" class="search-input" placeholder="Search for Players">
-          <button class="search-button" onclick="" type="button">Search</button>
+          <button class="search-button" onclick="window.location.href='./profile.php'" type="button">Search</button>
         </div>
       </div>
     </div>

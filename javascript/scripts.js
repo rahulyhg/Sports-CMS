@@ -167,10 +167,12 @@ function showUploadMatchRows()
         insertCell1.setAttribute('type','text');
         insertCell1.setAttribute('class','match-field-input winner-loser-field');
         insertCell1.setAttribute('name','winner-name[]');
+        insertCell1.setAttribute('pattern', '[a-zA-Z\s]{1,45}');
+        insertCell1.setAttribute('title', 'Winner name must be within 3-45 characters');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
         cell1.appendChild(insertCell1);
-        
+
         //adds a hidden cell to contain ids of winners
         var hiddenInput1 = document.createElement("input");
         hiddenInput1.setAttribute('type','hidden');
@@ -186,6 +188,8 @@ function showUploadMatchRows()
         insertCell3.setAttribute('type','text');
         insertCell3.setAttribute('class','match-field-input winner-loser-field');
         insertCell3.setAttribute('name','loser-name[]');
+        insertCell3.setAttribute('pattern', '[a-zA-Z\s]{1,45}');
+        insertCell3.setAttribute('title', 'Loser name must be within 3-45 characters');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
         cell3.appendChild(insertCell3);
@@ -249,7 +253,9 @@ function addMoreRows()
       var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
         insertCell1.setAttribute('class','match-field-input winner-loser-field');
-         insertCell1.setAttribute('name','winner-name[]');
+        insertCell1.setAttribute('name','winner-name[]');
+        insertCell1.setAttribute('pattern', '[a-zA-Z\s]{1,45}');
+        insertCell1.setAttribute('title', 'Winner name must be within 3-45 characters');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
         cell1.appendChild(insertCell1);
@@ -269,6 +275,8 @@ function addMoreRows()
         insertCell3.setAttribute('type','text');
         insertCell3.setAttribute('class','match-field-input winner-loser-field');
         insertCell3.setAttribute('name','loser-name[]');
+        insertCell1.setAttribute('pattern', '[a-zA-Z\s]{1,45}');
+        insertCell1.setAttribute('title', 'Loser name must be within 3-45 characters');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
         cell3.appendChild(insertCell3);

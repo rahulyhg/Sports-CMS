@@ -157,7 +157,7 @@ insert into `club` (name, country_id, state_id) VALUES ('Launceston Badminton Cl
 insert into `club` (name, country_id, state_Id) VALUES ('Otago Squash Club', 2, 4);
 
 insert into `player` (given_name, family_name, gender, date_of_birth, email, last_played, receive_emails, country_id, state_id)
-  VALUES ('Sean', 'Allen', 'M', '1993-03-17', 'Sean.Allen@testonly.com', NOW(), 'Y', '1', '1');
+  VALUES ('John', 'Smith', 'M', '1993-03-17', 'Sean.Allen@testonly.com', NOW(), 'Y', '1', '1');
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 1, 1, null);
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 2, 1, null);
 insert into `rating` (mean, standard_deviation, last_calculated, sport_id, player_id, team_id) VALUES (2500, 173, NOW(), 3, 1, null);

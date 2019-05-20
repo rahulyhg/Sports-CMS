@@ -10,15 +10,15 @@
 
 :root
 {
-  --primary-color: #31708F;
+  --primary-color: #0091d2;
   --primary-color-light: #89C5E8;
   --primary-color-dark: #1E4D69;
 
-  --secondary-color: #4F85A5;
+  --secondary-color: #fdc300;
   --secondary-color-light: #F9E352;
   --secondary-color-dark: #003e66;
 
-  --tertiary-color: #8FC1E2;
+  --tertiary-color: #e50076;
   --tertiary-color-light: green;
   --tertiary-color-dark: green;
 
