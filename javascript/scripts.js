@@ -167,7 +167,7 @@ function showUploadMatchRows()
         insertCell1.setAttribute('type','text');
         insertCell1.setAttribute('class','match-field-input winner-loser-field');
         insertCell1.setAttribute('name','winner-name[]');
-        insertCell1.setAttribute('pattern', '^[a-zA-Z,\s]+${1,45}');
+        insertCell1.setAttribute('pattern', '[a-zA-Z ]{1,45}');
         insertCell1.setAttribute('title', 'Winner name must be within 1-45 characters');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
@@ -188,7 +188,7 @@ function showUploadMatchRows()
         insertCell3.setAttribute('type','text');
         insertCell3.setAttribute('class','match-field-input winner-loser-field');
         insertCell3.setAttribute('name','loser-name[]');
-        insertCell3.setAttribute('pattern', '^[a-zA-Z,\s]+${1,45}');
+        insertCell3.setAttribute('pattern', '[a-zA-Z ]{1,45}');
         insertCell3.setAttribute('title', 'Loser name must be within 1-45 characters');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
@@ -242,7 +242,7 @@ function addMoreRows()
   
    var table = document.getElementById("match-input-table");
       
-          var row = table.insertRow(0);
+        var row = table.insertRow(0);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3  = row.insertCell(2);
@@ -250,12 +250,12 @@ function addMoreRows()
         var cell5  =  row.insertCell(4);
        
       
-      var insertCell1 = document.createElement("input");
+        var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
         insertCell1.setAttribute('class','match-field-input winner-loser-field');
         insertCell1.setAttribute('name','winner-name[]');
-        insertCell1.setAttribute('pattern', '^[a-zA-Z,\s]+${1,45}');
-        insertCell1.setAttribute('title', 'Winner name must be within 3-45 characters');
+        insertCell1.setAttribute('pattern', '[a-zA-Z ]{1,45}');
+        insertCell1.setAttribute('title', 'Winner name must be within 1-45 characters');
         insertCell1.onkeyup="checkForm()";
         insertCell1.placeholder = "Winner";
         cell1.appendChild(insertCell1);
@@ -275,8 +275,8 @@ function addMoreRows()
         insertCell3.setAttribute('type','text');
         insertCell3.setAttribute('class','match-field-input winner-loser-field');
         insertCell3.setAttribute('name','loser-name[]');
-        insertCell1.setAttribute('pattern', '^[a-zA-Z,\s]+${1,45}');
-        insertCell1.setAttribute('title', 'Loser name must be within 3-45 characters');
+        insertCell1.setAttribute('pattern', '[a-zA-Z ]{1,45}');
+        insertCell1.setAttribute('title', 'Loser name must be within 1-45 characters');
         insertCell3.placeholder = "Loser";
         insertCell3.onkeyup="checkForm()";
         cell3.appendChild(insertCell3);
