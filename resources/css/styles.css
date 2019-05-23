@@ -49,8 +49,9 @@ body
 
 article /* Never change this (Except height to 100% once content is added to pages) */
 {
-  height: 1000px; 
-  width: 1080px;
+  height: 1000px;
+  max-height: 5000px;
+  max-width: 1080px;
   margin: 0 auto;
   background-color: var(--content-background-color);
 }
@@ -770,6 +771,8 @@ article /* Never change this (Except height to 100% once content is added to pag
   .event-details-border
   {
     padding: 20px 20px 20px 20px;
+    height: 100%;
+    min-height: 1000px;
   }
 
   .event-name
