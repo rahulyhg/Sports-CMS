@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `family_name` VARCHAR(45) NOT NULL,
   `gender` VARCHAR(1) NOT NULL CHECK (gender in ('M', 'F')),
   `date_of_birth` DATE NOT NULL,
-  `email` VARCHAR(45) NOT NULL UNIQUE,
+  `email` VARCHAR(75) NOT NULL UNIQUE,
   `last_played` DATETIME NOT NULL,
   `receive_emails` VARCHAR(1) NOT NULL DEFAULT 'Y'  CHECK (receive_emails IN ('Y', 'N')),
   `country_id` INT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `player` (
 
 CREATE TABLE IF NOT EXISTS `club` (
   `club_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL UNIQUE,
+  `name` VARCHAR(90) NOT NULL UNIQUE,
   `country_id` INT NOT NULL,
   `state_id` INT NOT NULL,
   PRIMARY KEY (`club_id`),
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `club` (
 
 CREATE TABLE IF NOT EXISTS `event` (
   `event_id` INT NOT NULL UNIQUE AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(90) NOT NULL,
   `type` VARCHAR(10) NOT NULL CHECK (type in ('Single', 'Double')),
   `start_date` DATE NOT NULL,
   `country_id` INT NOT NULL,
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `account` (
   `given_name` VARCHAR(45) NOT NULL,
   `family_name` VARCHAR(45) NOT NULL,
   `organisation` VARCHAR(90) NOT NULL,
-  `email` VARCHAR(45) NOT NULL UNIQUE,
+  `email` VARCHAR(75) NOT NULL UNIQUE,
   `password` VARCHAR(255) NOT NULL,
   `access_level` TINYINT NOT NULL DEFAULT '2' CHECK (access_level IN ('0', '1', '2')),
   `date_created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,

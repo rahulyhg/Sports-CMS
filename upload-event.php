@@ -62,7 +62,7 @@
   <hr>
   <div class="ui-widget"> 
     <h1 class="match-details-header">Match Details</h1>
-    <input class="match-field-input" id="match-field-input" type="number" id="match-number"  name="match-number"  placeholder="Add/Delete Matches" min="1" max="300" pattern="[0-9]{1,3}" title="Number must be within 1-300">
+    <input class="match-field-input" id="match-field-input" type="number" id="match-number"  name="match-number"  placeholder="Add/Delete Matches" pattern="[0-9]{1,3}" title="Number must be within 1-300">
   <button class = "match-number-input" id = "match-submit"  name="match-number-submission" value="Add Matches" onclick="showUploadMatchRows(); return false;">Add Matches</button><br/>
     
     

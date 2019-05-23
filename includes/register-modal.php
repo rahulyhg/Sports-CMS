@@ -18,7 +18,7 @@
 
         <div class="register-input-group-double">
           <input type="text" id="input-organisation" name="organisation-name" placeholder="Organisation" pattern="[a-zA-Z\s]{1,90}" required title="Organisation name must be within 1-90 characters">
-          <input type="email" id="input-email" name="email" placeholder="Email"> 
+          <input type="email" id="input-email" name="email" placeholder="Email" pattern="{7,75}" required title="Email must not exceed 75 characters"> 
         </div>
 
         <div class="register-input-group-double">
