@@ -12,6 +12,7 @@
       $playerId = $_SESSION["profile-id"];
       $playerInfo = $contentManager->getSpecificPlayerInformation($playerId);
       $playerClub = $contentManager->getPlayerClub($playerId);
+      $playerRating = $contentManager->getPlayerRating($playerId, 1);
 
       $userDob = new DateTime($playerInfo["date_of_birth"]);
       $today = new Datetime(date("Y-m-d"));
@@ -75,13 +76,22 @@
     <div class="rating-border">
  	  <div class="mean-border">
 	    <div id="side-colour-mean">&nbsp</div>	    	
-		  <p id="mean-value">2267</p>
+		  <p id="mean-value">
+		  <?php
+			echo (int)$playerRating['mean'];
+		  ?>
+		  </p>
 		  <p>Badminton Rating</p>   	
       </div>
 	     
 	  <div class="sd-border"> 
 	    <div id="side-colour-sd">&nbsp</div>	    	
-		  <p id="sd-value">75</p>
+		  <p id="sd-value">
+		  <?php
+			echo (int)$playerRating['standard_deviation'];
+		  ?>
+		  
+		  </p>
 		  <p>Standard Deviation</p>   	
 	  </div>
 	</div>
@@ -134,4 +144,5 @@
 <?php
   include("./includes/footer.php");
 ?>
+
 
