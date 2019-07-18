@@ -36,6 +36,13 @@ class ContentManager
 		return $result;
 	}
 
+	public function getPlayerRating($playerId, $sportID)
+	{
+		$query = "SELECT * FROM `rating` WHERE `player_id`= ? AND `sport_id`= ?";
+		$result = $this->database->query($query, [$playerId, $sportID])->fetch();
+		
+		return $result;
+	}
 
 	public function getAllCountries()
 	{
@@ -162,7 +169,7 @@ class ContentManager
 						game.mean_after_losing = ?,
 						game.standard_deviation_after_losing = ?
 					WHERE 
-						game.game_id = ? AND;";
+						game.game_id = ?;";
 		
 		$result = $this->database->query($query,[$winnerNewMean,$winnerNewSD, $loserNewMean, $loserNewSD, $matchID]);
 		
@@ -176,7 +183,7 @@ class ContentManager
 						rating.last_calculated = NOW()
 					WHERE
 						player.player_id = ? AND
-						player.rating_id = rating.rating_id AND
+						player.player_id = rating.player_id AND
 						rating.sport_id = ?;";
 
 		$result = $this->database->query($query,[$tournamentDate,$winnerNewMean,$winnerNewSD,$winnerID,$sportID]);

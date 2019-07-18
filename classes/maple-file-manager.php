@@ -103,8 +103,9 @@ class MapleFileManager
 		$working_dir = getcwd();
 		chdir($this->mapleDirectory);
 
-		exec("echo \"php " . $this->mapleDirectory . "/tournamentProcess.php " . $this->tournamentID . "\"" . " | at -q T now");
-		
+		#exec("echo \"php tournamentProcess.php " . $this->tournamentID . "\"" . " | at now + 2 minutes");
+		exec("php tournamentProcess.php " . $this->tournamentID);
+
 		chdir($working_dir);
 	}
 	
