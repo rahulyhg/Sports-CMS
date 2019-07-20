@@ -125,6 +125,14 @@ function switchTab(tab, content)
     selectedContent.style.display = "block";
 }
 
+
+/**
+ * -------------------------------------------------------------*
+ * 		Begin Match Upload Section								*
+ * 																*
+ * -------------------------------------------------------------*
+ */
+
 function showUploadMatchRows()
 { 
     var matchInputNumber = document.getElementById("match-field-input").value;
@@ -165,7 +173,7 @@ function showUploadMatchRows()
       
       var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
-        insertCell1.setAttribute('class','match-field-input winner-loser-field');
+        insertCell1.setAttribute('class','match-field-input winner-loser-field winner-field');
         insertCell1.setAttribute('name','winner-name[]');
         insertCell1.setAttribute('pattern', '[a-zA-Z ]{1,45}');
         insertCell1.setAttribute('title', 'Winner name must be within 1-45 characters');
@@ -186,7 +194,7 @@ function showUploadMatchRows()
 
         var insertCell3 = document.createElement("input");
         insertCell3.setAttribute('type','text');
-        insertCell3.setAttribute('class','match-field-input winner-loser-field');
+        insertCell3.setAttribute('class','match-field-input winner-loser-field loser-field');
         insertCell3.setAttribute('name','loser-name[]');
         insertCell3.setAttribute('pattern', '[a-zA-Z ]{1,45}');
         insertCell3.setAttribute('title', 'Loser name must be within 1-45 characters');
@@ -214,6 +222,7 @@ function showUploadMatchRows()
 	};
 	
 	setupMatchAutoComplete();
+  setupMatchErrorChecking();
       
       
      
@@ -252,7 +261,7 @@ function addMoreRows()
       
         var insertCell1 = document.createElement("input");
         insertCell1.setAttribute('type','text');
-        insertCell1.setAttribute('class','match-field-input winner-loser-field');
+        insertCell1.setAttribute('class','match-field-input winner-loser-field winner-field');
         insertCell1.setAttribute('name','winner-name[]');
         insertCell1.setAttribute('pattern', '[a-zA-Z ]{1,45}');
         insertCell1.setAttribute('title', 'Winner name must be within 1-45 characters');
@@ -273,7 +282,7 @@ function addMoreRows()
 
         var insertCell3 = document.createElement("input");
         insertCell3.setAttribute('type','text');
-        insertCell3.setAttribute('class','match-field-input winner-loser-field');
+        insertCell3.setAttribute('class','match-field-input winner-loser-field loser-field');
         insertCell3.setAttribute('name','loser-name[]');
         insertCell1.setAttribute('pattern', '[a-zA-Z ]{1,45}');
         insertCell1.setAttribute('title', 'Loser name must be within 1-45 characters');
@@ -300,15 +309,41 @@ function addMoreRows()
       insertCell5.onclick = function() {deleteRow(this);
 	};
 	
-	setupMatchAutoComplete();    
+	setupMatchAutoComplete();
+  setupMatchErrorChecking();
 }
+
+
+
+/**
+ * on page load funcion.
+ * A number of items need to be setup on page load. 
+ * They are described in line. 
+ */
+$( function() {
+    uploadEventChangeStates();	//gets states based on country
+    setupMatchAutoComplete();	//gets players based on state
+    
+    //set the max event date to today
+	let now = new Date();
+	var nowString = now.toISOString().substring(0,10);
+	$("#event-date").attr({
+		"max" : nowString
+	});
+});
 
 /**
  * ajax query for event upload page to fill in state box based upon user
  * selection from country box.
  * 
  * Relies on getStatesByCountry.php for data. 
+ * 
+ * Triggers by change in country-id and on page load
  */
+ 
+ //event listener for change of country
+$("#country-id").change(uploadEventChangeStates);
+ 
 function uploadEventChangeStates()
 {
     var country = $("#country-id").val();
@@ -340,18 +375,15 @@ function uploadEventChangeStates()
     });
 }
 
-//This is required to fill in the boxes based upon the default contry selected
-//there must be a better way to do this.?
-uploadEventChangeStates();
 
-//event listener for change of country
-$("#country-id").change(uploadEventChangeStates);
-
-
-$( function() {
-    setupMatchAutoComplete();
-});
-
+/**
+ * 
+ * sets up auto complete for winner/loser boxes. Gets a list of players
+ * based upon 'state' selected'.
+ * 
+ * Triggered by change in state-name, on page load and when number of 
+ * matches changes.
+ */
 $("#state-name").change(setupMatchAutoComplete);
 
 function setupMatchAutoComplete()
@@ -384,7 +416,109 @@ function setupMatchAutoComplete()
             //fill this with the id. 
             //name cell will be automatically filled in 
             $(this).next().val(ui.item.id);
+            
+            //when an item is selected it is assumed that no error exists, remove the error class
+            $(this).removeClass("upload-page-error-on-submit");
         }
     });
 
 }
+
+/**
+ * Sets hidden id field for winners/losers to "" on a user key press,
+ * removes any validitiy set when a change is made to winner/losers.
+ * 
+ * This function needs to be executed every time there is a change in the
+ * number of matches.
+ */
+function setupMatchErrorChecking(){
+  $( ".winner-loser-field").keyup(function(e){
+    //user has used keyboard to change winner/loser field
+    //The winner/loser hidden field needs to be made blank
+    $(this).next().val("");
+  });
+  
+  $( ".winner-loser-field").change(function(e){
+	 //a field has been changed. Clear any validity message that has been set for all fields. they will be retested once submit is pressed
+	 $( ".winner-loser-field").each(function (){
+		this.setCustomValidity('');
+	 });
+  });
+}
+
+
+/**
+ * Form validity checking.
+ * 
+ * Most validity checking is done with HTML5. However, we also need to
+ * check validity of winners/losers. This is done by making use of the
+ * above funciton setupMatchErrorChecking, then checks to ensure a player
+ * has been selected rather than just typed in and that winner != loser.
+ * 
+ * If there is an error the submit of form is stopped and a HTML5 validity
+ * error message is shown to the user. 
+ */
+$("#event-upload-form").submit(function(){
+  
+  var rtn = true;
+  
+  //first check the date is not in the future
+  
+  
+  var winnerID;
+  
+  $( ".winner-loser-field").each(function (){
+    
+    if ( $(this).is(".winner-field") )
+    {
+      //save the winner field for comparrison when we get to loser field
+      winnerID = $(this).next().val();
+    }
+    
+    //check if id is set, if id is not set then user has not selected a player and has just entered the information by hand, possibly causing errors.
+    if ($(this).next().val() == "")
+    {
+      //val not set
+      this.setCustomValidity('You must select the player from the list.');
+      if  (rtn == true)
+      {
+		  //first error reported so show the error
+		this.reportValidity();
+	  }
+	  rtn = false;
+    }
+    else
+    {
+		if (! ($(this).is(".winner-field")) )
+		{
+			//check if winner id = loser id
+			if ( winnerID == $(this).next().val() )
+			{
+			  this.setCustomValidity('Winner and loser can not be the same player');
+			  if  (rtn == true)
+			  {
+				//first error reported so show the error.
+				this.reportValidity();
+			  }
+			  rtn = false;
+			}
+			else
+			{
+				//no error for this item
+			  this.setCustomValidity('');
+			}
+		}
+		else
+		{
+			//no error for this item
+			this.setCustomValidity('');
+		}
+    }
+    
+    
+    
+  });
+  
+  return rtn;
+  
+});
