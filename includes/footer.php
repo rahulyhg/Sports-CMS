@@ -1,5 +1,6 @@
 <?php
   include("./includes/register-modal.php");
+  include("./includes/forgot-password-modal.php")
 ?>
 
 <footer>

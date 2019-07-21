@@ -124,6 +124,8 @@ CREATE TABLE IF NOT EXISTS `account` (
   `organisation` VARCHAR(90) NOT NULL,
   `email` VARCHAR(75) NOT NULL UNIQUE,
   `password` VARCHAR(255) NOT NULL,
+  `token` VARCHAR(45),
+  `token_expiration_date` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `access_level` TINYINT NOT NULL DEFAULT '2' CHECK (access_level IN ('0', '1', '2')),
   `date_created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `active` VARCHAR(1) NOT NULL DEFAULT 'N',

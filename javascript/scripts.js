@@ -6,6 +6,7 @@ window.onload = function()
     document.getElementById("input-email").onchange = isEmailTaken;
     document.getElementById("player-tab").click();
     rotateSlideshow();
+    document.getElementById("reset-input-confirm-password").onchange = resetPasswordMatches;
 }
 
 function passwordMatches()
@@ -23,6 +24,24 @@ function passwordMatches()
     	{
     		document.getElementById("input-confirm-password").setCustomValidity(""); 
     	}
+    }
+}
+
+function resetPasswordMatches()
+{
+    var password = document.getElementById("reset-input-password").value;
+    var confirmPassword = document.getElementById("reset-input-confirm-password").value;
+
+    if(password && confirmPassword != null)
+    {
+        if(confirmPassword != password)
+        {
+            document.getElementById("reset-input-confirm-password").setCustomValidity("Passwords do not match");
+        }
+        else
+        {
+            document.getElementById("reset-input-confirm-password").setCustomValidity(""); 
+        }
     }
 }
 
@@ -50,6 +69,7 @@ function isEmailTaken()
     });
 }
 
+
 function showRegisterModal()
 {
 	document.querySelector(".register-modal-background").style.display = "flex";
@@ -59,6 +79,28 @@ function showRegisterModal()
 function hideRegisterModal()
 {
 	document.querySelector(".register-modal-background").style.display = "none";
+}
+
+function showPasswordModal()
+{
+    document.querySelector(".password-modal-background").style.display = "flex";
+    hideDropdownMenu();
+}
+
+function hidePasswordModal()
+{
+    document.querySelector(".password-modal-background").style.display = "none";
+}
+
+function showResetModal()
+{
+    document.querySelector(".reset-modal-background").style.display = "flex";
+    hideDropdownMenu();
+}
+
+function hideResetModal()
+{
+    document.querySelector(".reset-modal-background").style.display = "none";
 }
 
 function showDropdownMenu()
@@ -123,6 +165,27 @@ function switchTab(tab, content)
 
     selectedContent = document.getElementById(content);
     selectedContent.style.display = "block";
+}
+
+function resetPassword()
+{
+    var emailSentText = document.getElementById("email-sent");
+    var emailField = $("#password-input-email").val();
+
+    if(emailField != "")
+    {
+        emailSentText.style.visibility = "visible";
+
+        $.ajax
+        ({
+            url: "./forgotPassword.php",
+            type: "POST",
+            dataType: "text",
+            data: { resetPassword: emailField },
+            success: function(data) 
+            { }
+        });
+    }
 }
 
 

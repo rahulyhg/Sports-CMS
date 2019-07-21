@@ -157,6 +157,7 @@ class Account
 		return $result;
 	}
 
+
 	public function emailExists($email)
 	{
 		$filteredEmail = strtolower($email);
@@ -166,6 +167,69 @@ class Account
 
 		return ($result->rowCount() > 0);	
 	}
+
+
+	public function setToken($email, $token)
+	{
+		$filteredEmail = trim($email);
+		$datetime = new DateTime();
+		$datetime->setTimezone(new DateTimeZone('Australia/Melbourne'));
+		$datetime->modify("+60 minutes");
+		$dateString = $datetime->format('Y-m-d H:i:s');
+
+		$query = "UPDATE account SET token = ?, token_expiration_date = ? WHERE email = ?";
+		$result = $this->database->query($query, [$token, $dateString, $filteredEmail]);
+	}
+
+
+	public function sendRecoveryEmail($email, $token)
+	{
+		$mailer = new PHPMailer();
+		$mailer->isSMTP();
+		$mailer->Host = 'smtp.gmail.com';
+		$mailer->Port = 587;
+		$mailer->SMTPAuth = true;
+		$mailer->SMTPSecure = 'tls';
+
+		$mailer->Username = 'grantaupson@gmail.com';
+		$mailer->Password = 'FAKEPASSWORD';
+
+		$mailer->setFrom('grantaupson@gmail.com', 'Grant');
+		$mailer->addAddress($email, 'Grant');
+		$mailer->isHTML(true);
+
+  		$mailer->Subject = "Reset Password";
+  		$mailer->Body = "Hello, <br><br> In order to reset your password, please click on the link below: <br>
+  					  <a href='http://localhost/Sports-CMS/index.php?email=$email&token=$token'>http://localhost/Sports-CMS/index.php?email=$email&token=$token</a> <br><br>Kind regards,<br> Peterman Ratings";
+
+  		if(!$mailer->send()) 
+  		{
+   			echo 'Message could not be sent.';
+   			echo 'Mailer Error: ' . $mailer->ErrorInfo;
+   			exit;
+		}
+	}
+
+
+	public function tokenVerified($email, $token)
+	{
+		$query = "SELECT account_id FROM account WHERE email = ? AND token = ? AND token_expiration_date > NOW()";
+		$result = $this->database->query($query, [$email, $token]);
+
+		return ($result->rowCount() > 0);
+	}
+
+
+	public function changePassword($email, $password)
+	{
+		$filteredPassword = trim($password);
+		$hashedPassword = password_hash($filteredPassword, PASSWORD_DEFAULT);
+
+		$query = "UPDATE account SET password = ? WHERE email = ?";
+		$result = $this->database->query($query, [$hashedPassword, $email]);
+	}
+
+
 }
 
 ?>

@@ -758,6 +758,250 @@ article /* Never change this (Except height to 100% once content is added to pag
   }
 
 
+  /* Password Modal */
+
+
+  .password-modal-background
+  {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  .password-modal-content
+  {
+    width: 450px;
+    height: 450px;
+    background-color: var(--form-background);
+    border-radius: 5px;
+  }
+
+  .password-modal-header
+  {
+    height: 20%;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px 5px 0px 0px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .password-modal-fields
+  {
+    height: 80%%;
+    width: 100%;
+    padding: 40px;
+    font-size: var(--font-small);
+  }
+
+  .password-modal-fields h2
+  {
+    color: var(--text-dark);
+  }
+
+  .password-modal-fields-wrapper
+  {
+    display: block;
+  }
+
+  .password-modal-fields hr
+  {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px 0px 25px 0px;
+  }
+
+  .password-modal-fields input
+  {
+    height: 40px;
+    width: 100%;
+    font-size: var(--font-small);
+    padding: 0px 10px 0px 10px;
+    margin: 30px 0px 25px 0px;
+    background-color: var(--form-input-background);
+    box-shadow: none;
+    border: 1px solid var(--form-input-border);
+  }
+
+  .password-modal-exit-button
+  {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: var(--font-large);
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: var(--text-light); 
+  }
+
+  #reset-password-button
+  {
+    background: var(--primary-color);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: var(--font-medium);
+    margin: 0px 0px 0px 0px;
+    padding: 12px 20px 12px 20px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #reset-password-button:hover
+  {
+    background: var(--primary-color-dark);
+  }
+
+  .password-input-group input
+  {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  #input-email
+  {
+    width: 48%%;
+  }
+
+  #email-sent
+  {
+    visibility: hidden;
+    width: 100%;
+    float: left;
+    height: 20px;
+    margin-top: 20px;
+    color: var(--tertiary-color);
+  }
+
+
+  /* Reset Password Modal */
+
+
+  .reset-modal-background
+  {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    display: flex;
+  }
+
+  .reset-modal-content
+  {
+    width: 450px;
+    height: 450px;
+    background-color: var(--form-background);
+    border-radius: 5px;
+  }
+
+  .reset-modal-header
+  {
+    height: 20%;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px 5px 0px 0px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .reset-modal-fields
+  {
+    height: 80%%;
+    width: 100%;
+    padding: 40px;
+    font-size: var(--font-small);
+  }
+
+  .reset-modal-fields h2
+  {
+    color: var(--text-dark);
+  }
+
+  .reset-modal-fields-wrapper
+  {
+    display: block;
+  }
+
+  .reset-modal-fields hr
+  {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px 0px 25px 0px;
+  }
+
+  .reset-modal-fields input
+  {
+    height: 40px;
+    width: 100%;
+    font-size: var(--font-small);
+    padding: 0px 10px 0px 10px;
+    margin: 30px 0px 25px 0px;
+    background-color: var(--form-input-background);
+    box-shadow: none;
+    border: 1px solid var(--form-input-border);
+  }
+
+  .reset-modal-exit-button
+  {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: var(--font-large);
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: var(--text-light); 
+  }
+
+  #reset-password-button
+  {
+    background: var(--primary-color);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: var(--font-medium);
+    margin: 0px 0px 0px 0px;
+    padding: 12px 20px 12px 20px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #reset-password-button:hover
+  {
+    background: var(--primary-color-dark);
+  }
+
+  .reset-input-group input
+  {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  #reset-input-password
+  {
+    margin-top: 20px;
+  }
+
+  #reset-input-confirm-password
+  {
+    margin-top: 0px;
+  }
+
+
   /* Upload Event Page */
 
 

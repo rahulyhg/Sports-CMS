@@ -3,6 +3,7 @@
 
     include("./includes/header.php");
     include("./includes/navigation.php");
+
 ?>
 
 <article>

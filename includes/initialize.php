@@ -4,6 +4,7 @@
     error_reporting(E_ALL);
 
     include("./includes/functions.php");
+    require("./classes/PHPMailer/PHPMailerAutoload.php");
     require("./classes/database.php");
     require("./classes/account.php");
     require("./classes/content-manager.php");
