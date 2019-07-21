@@ -61,6 +61,17 @@ function hideRegisterModal()
 	document.querySelector(".register-modal-background").style.display = "none";
 }
 
+function showPasswordModal()
+{
+    document.querySelector(".password-modal-background").style.display = "flex";
+    hideDropdownMenu();
+}
+
+function hidePasswordModal()
+{
+    document.querySelector(".password-modal-background").style.display = "none";
+}
+
 function showDropdownMenu()
 {
     document.querySelector(".dropdown-menu").style.display = "inline-block";

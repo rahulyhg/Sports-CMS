@@ -166,6 +166,20 @@ class Account
 
 		return ($result->rowCount() > 0);	
 	}
+
+	public function resetPassword()
+	{
+
+	}
+
+	public function changePassword($email, $password)
+	{
+		$filteredPassword = trim($password);
+		$hashedPassword = password_hash($filteredPassword, PASSWORD_DEFAULT);
+
+		$query = "UPDATE account SET password = ? WHERE email = ?";
+		$result = $this->database->query($query, [$hashedPassword, $email]);
+	}
 }
 
 ?>
