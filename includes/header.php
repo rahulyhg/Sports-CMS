@@ -13,7 +13,22 @@
 
     if(isset($_POST["signout-account"]))
     {
-      $account->logout();
+        $account->logout();
+    }
+
+    if(isset($_POST["reset-password"]))
+    {
+        $account->changePassword($_SESSION['reset-email'], $_POST['reset-confirm-password']);
+        unset($_SESSION['reset-email']);
+    }
+
+    if(isset($_GET['email']) && isset($_GET['token']))
+    {
+        if($account->tokenVerified($_GET['email'], $_GET['token']))
+        {
+            include("./includes/reset-password-modal.php");
+            $_SESSION['reset-email'] = $_GET['email'];
+        }
     }
 ?>
 
