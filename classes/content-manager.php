@@ -153,6 +153,81 @@ class ContentManager
 		
 		return $result["sport_id"];
 	}
+
+
+	public function playerExists($playerID)
+	{
+		$query = "SELECT player_id FROM player WHERE player_id = ?";
+		$result = $this->database->query($query, [$playerID]);
+
+		return ($result->rowCount() > 0);
+	}
+
+
+	public function countryExists($countryID)
+	{
+		$query = "SELECT country_id FROM country WHERE country_id = ?";
+		$result = $this->database->query($query, [$countryID]);
+
+		return ($result->rowCount() > 0);
+	}
+
+
+	public function stateExists($stateID)
+	{
+		$query = "SELECT state_id FROM state WHERE state_id = ?";
+		$result = $this->database->query($query, [$stateID]);
+
+		return ($result->rowCount() > 0);
+	}
+
+
+	public function sportExists($sportID)
+	{
+		$query = "SELECT sport_id FROM sport WHERE sport_id = ?";
+		$result = $this->database->query($query, [$sportID]);
+
+		return ($result->rowCount() > 0);
+	}
+
+
+	public function eventTypeIsValid($eventType)
+	{	
+		$isValid = false;
+
+		if(strcmp($eventType, 'Single') == 0 || strcmp($eventType, 'Double') == 0)
+		{
+			$isValid = true;
+		}
+
+		return $isValid;
+	}
+
+
+	public function eventDateIsValid($eventDate)
+	{
+		if(preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}\z/', $eventDate))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+	public function eventDetailsValid($countryID, $stateID, $sportID, $eventType, $eventDate)
+	{
+		$isValid = true;
+
+		if(!$this->countryExists($countryID) || !$this->stateExists($stateID) || !$this->sportExists($sportID) || !$this->eventTypeIsValid($eventType) || !$this->eventDateIsValid($eventDate))
+		{
+			$isValid = false;
+		}
+
+		return $isValid;
+	}
 	
 	/**
 	 * After running maple script this function updates the ratings for 
