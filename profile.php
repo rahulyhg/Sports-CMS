@@ -20,8 +20,19 @@
   }
 ?>
 
-
 <article>
+
+  <script type="text/javascript">
+		  $(document).ready(function(){
+			  enlargeImageWhenHovered();
+		  });
+  </script>
+
+  <div class="favourite-icon-border">
+  	<a class="favourite-icon-link" href="#">
+  		<img class="favourite-icon" alt="favourite-icon" src="resources/images/favourite-icon-24.png" onclick="changeImageWhenClicked();">favourite
+  	</a>
+  </div>
 
   <div class="player-details-border">
 
@@ -133,7 +144,7 @@
 
     <div id="player-history-view-more">
       <span>View More</span>
-      <a href="#"><img alt="arrow_icon"></a>
+      <a href="#"><img alt="arrow-icon"></a>
     </div>
 
   </div>

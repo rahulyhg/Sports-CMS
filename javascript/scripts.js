@@ -509,6 +509,22 @@ function setupMatchErrorChecking(){
   });
 }
 
+function changeImageWhenClicked(){
+    $(".favourite-icon").click(function(e){
+        if($(".favourite-icon").attr('src') === "resources/images/favourite-icon-24.png"){
+            $(this).attr('src', 'resources/images/favourite-icon-filled-24.png');
+        }
+        else{
+            $(this).attr('src', 'resources/images/favourite-icon-24.png');
+        }       
+    });
+}
+
+function enlargeImageWhenHovered(){
+    $(".favourite-icon").hover(function(e){
+        $(this).css('background-image', 'url(resources/images/favourite-icon-36.png)');
+    });
+}
 
 /**
  * Form validity checking.

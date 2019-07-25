@@ -468,6 +468,25 @@ article /* Never change this (Except height to 100% once content is added to pag
 
   /* Profile Page */
 
+  .favourite-icon-border
+  {
+    float: right;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    border: 1px solid black;
+  }
+
+  .favourite-icon-link
+  {
+    text-decoration: none;
+    color: var(--secondary-color-dark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+  }
+
   .player-details-border
   {
     width: 658px;
