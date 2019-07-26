@@ -65,14 +65,13 @@ class Account
 			}
 			else
 			{
-				echo "Account is not Active.";
-				//TODO
+				$_SESSION['account-inactive'] = "accountInactive";
 			}
 		}
 		else
 		{
-			echo "Username or Password is incorrect";
-			//TODO
+			$_SESSION['login-incorrect'] = "loginIncorrect";
+			//header("Location: ".$_SERVER['PHP_SELF']);
 		}
 	}
 
@@ -192,7 +191,7 @@ class Account
 		$mailer->SMTPSecure = 'tls';
 
 		$mailer->Username = 'grantaupson@gmail.com';
-		$mailer->Password = 'FAKEPASSWORD';
+		$mailer->Password = 'passwordFAKE';
 
 		$mailer->setFrom('grantaupson@gmail.com', 'Grant');
 		$mailer->addAddress($email, 'Grant');

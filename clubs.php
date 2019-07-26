@@ -6,8 +6,6 @@
 ?>
 
 <article>
-  
-<!-- CODE HERE -->
 
 </article>
 
