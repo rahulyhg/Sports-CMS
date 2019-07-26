@@ -1,6 +1,7 @@
 <?php
   include("./includes/register-modal.php");
-  include("./includes/forgot-password-modal.php")
+  include("./includes/forgot-password-modal.php");
+  include("./includes/notification-modal.php");
 ?>
 
 <footer>
@@ -36,8 +37,9 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./javascript/jquery-ui.min.js"></script>
 <script src="./javascript/scripts.js"></script>
+
+<?php include("./includes/notifications.php"); ?>
 
 </body>
 </html>

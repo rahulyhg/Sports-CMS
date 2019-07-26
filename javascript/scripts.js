@@ -115,6 +115,19 @@ function hideDropdownMenu()
     document.querySelector(".nav-sign-in-button").style.backgroundColor = "var(--primary-color)";
 }
 
+function showNotificationModal(header, message)
+{
+    document.querySelector("#notification-header-text").innerHTML=header;
+    document.querySelector("#notification-modal-text").innerHTML=message;
+
+    document.querySelector(".notification-modal-background").style.display = "flex";
+}
+
+function hideNotificationModal()
+{
+    document.querySelector(".notification-modal-background").style.display = "none";
+}
+
 function toggleDropdownMenu()
 {
     if($(".dropdown-menu").css("display") === "none")
