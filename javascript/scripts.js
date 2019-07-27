@@ -653,8 +653,6 @@ $("#event-upload-form").submit(function(){
     
     //now bookmarked has been updated lets save it to the cookie.
     Cookies.set(cookieName, bookmarked, {expires: 1825});
-    
-    alert("cookie set");
  }
 
 //listener for when bookmark button pressed
