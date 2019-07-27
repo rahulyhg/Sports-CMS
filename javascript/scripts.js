@@ -614,3 +614,53 @@ $("#event-upload-form").submit(function(){
   return rtn;
   
 });
+
+/**
+ * ---------------------------------------------- *
+ *  Begin bookmark section                        *
+ * ---------------------------------------------- *
+ */
+ 
+ function createBookmark()
+ {
+    //initial values
+	 var getVariableName = 'id';
+	 var cookieName = 'bookmarked_players';
+	 
+     //get the player id from url
+	 var params = (new URL(document.location)).searchParams;
+	 var playerID = params.get(getVariableName);
+	 
+	 var bookmarked;
+     
+     bookmarked = Cookies.getJSON(cookieName);
+	 
+	 if (! (bookmarked) )
+	 {
+		 //cookie does not already exist so the list will be empty
+		bookmarked = [];
+	 }
+    if ( (bookmarked.indexOf(playerID)) == -1 )
+    {
+       //player not in bookmark list so add it
+       bookmarked.push(playerID);
+    }
+    else
+    {
+       //player in the list remove them
+       bookmarked.splice(bookmarked.indexOf(playerID));
+    }
+    
+    //now bookmarked has been updated lets save it to the cookie.
+    Cookies.set(cookieName, bookmarked, {expires: 1825});
+    
+    alert("cookie set");
+ }
+
+//listener for when bookmark button pressed
+$("#favourite-button").click(createBookmark);
+ 
+
+ $(document).ready(function(){
+			  enlargeImageWhenHovered();
+		  });

@@ -265,6 +265,24 @@ class ContentManager
 		
 		$result = $this->database->query($query,[$tournamentDate,$loserNewMean,$loserNewSD,$loserID,$sportID]);
 	}
+	
+	/**
+	 * Retrieves cookie that stores bookmarked players, retrieves their details from the database
+	 * and returns an array of players.
+	 */
+	public function getBookmarkedPlayers()
+	{
+		$cookie_name = "bookmarked_players";
+		$bookmarked = json_decode($_COOKIE[$cookie_name]);
+		$bookmarkedPlayers = [];
+		
+		foreach ($bookmarked as $b)
+		{
+			array_push($bookmarkedPlayers, $this->getSpecificPlayerInformation($b));
+		}
+		
+		return $bookmarkedPlayers;
+	}
 }
 	
 ?>

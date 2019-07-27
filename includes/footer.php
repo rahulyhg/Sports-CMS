@@ -37,6 +37,8 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./javascript/jquery-ui.min.js"></script>
+<script src="./javascript/js-cookie.js"></script>
 <script src="./javascript/scripts.js"></script>
 
 <?php include("./includes/notifications.php"); ?>
